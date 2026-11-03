@@ -1,0 +1,10 @@
+{
+  "name": "@ammora-examples/almm-unified",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "plan": "tsx plan.ts",
+    "execute": "tsx execute.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

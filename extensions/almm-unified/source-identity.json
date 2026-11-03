@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "publicSDK": "0.3.8",
+  "sdkSourceSHA256": "b5f22bd2ee02e9e4894bba69acc6cb7dc6b9638463f42af56de2290031be7e2a",
+  "adapterSHA256": "bfd5a4545676039e9ba03cef3ef5d8232f77863c048c9f9b7a2118e27c0c227c",
+  "transform": "Only the two imports refer to published SDK 0.3.8; one explanatory header added",
+  "published": false
+}

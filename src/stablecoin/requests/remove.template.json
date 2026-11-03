@@ -1,0 +1,8 @@
+{
+  "pool": null,
+  "tokenId": null,
+  "namespace": "managed",
+  "liquidityRaw": null,
+  "shareBps": null,
+  "slippageBps": 10
+}

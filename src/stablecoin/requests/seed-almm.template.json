@@ -1,0 +1,9 @@
+{
+  "pool": null,
+  "maximumBaseRaw": "10000000",
+  "maximumQuoteRaw": "10000000000000000000",
+  "lowerBinId": null,
+  "upperBinId": null,
+  "slippageBps": 10,
+  "maxActiveBinSlippage": 0
+}

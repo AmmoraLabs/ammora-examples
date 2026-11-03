@@ -1,0 +1,46 @@
+import { unifiedManifest, requiresExposureReview } from "./roles.js";
+import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { resolve } from "node:path";
+import { erc20Abi, keccak256 } from "viem";
+import { signer, requireSend } from "../../src/shared/env.js";
+import { main } from "../../src/shared/run.js";
+import { addr, digest, json, same } from "../../src/stablecoin/manifest.js";
+import { unifiedContext } from "./context.js";
+import { buildUnified, type Operation } from "./operations.js";
+import { verifyUnifiedPayout, verifyUnifiedRegistration } from "./proof.js";
+import { refreshCanonicalReceipt } from "./confirmation.js";
+main(async () => {
+  requireSend(); const file = process.argv[2]; if (!file) throw new Error("Provide the reviewed saved plan");
+  const p = JSON.parse(readFileSync(file, "utf8"));
+  const body = { schemaVersion: p.schemaVersion, operation: p.operation, caller: p.caller, manifest: p.manifest, request: p.request, block: p.block, expiresAt: p.expiresAt, transactions: p.transactions, approvals: p.approvals, payout: p.payout, ...(p.registryProbe ? { registryProbe: p.registryProbe } : {}) };
+  if (p.schemaVersion !== 1 || digest(body) !== p.reviewHash || process.env.AMMORA_UNIFIED_REVIEW_HASH !== p.reviewHash) throw new Error("Explicit exact plan review hash required");
+  const m = unifiedManifest(p.manifest), caller = addr(p.caller), pool = p.request.pool ? addr(p.request.pool) : undefined;
+  const c = await unifiedContext(m, caller, pool, requiresExposureReview(p.operation, p.request));
+  if (c.block.timestamp >= BigInt(p.expiresAt)) throw new Error("Expired plan; replan before signing");
+  const fresh = await buildUnified(c, p.operation as Operation, p.request);
+  if (digest({ transactions: fresh.transactions, approvals: fresh.approvals, payout: fresh.payout ?? null, ...(fresh.registryProbe ? { registryProbe: fresh.registryProbe } : {}) }) !== digest({ transactions: p.transactions, approvals: p.approvals, payout: p.payout, ...(p.registryProbe ? { registryProbe: p.registryProbe } : {}) })) throw new Error("State changed exact plan; review again");
+  if (fresh.transactions.length !== 1) throw new Error("Exactly one transaction required; inspect/no-op plans do not send");
+  for (const a of fresh.approvals) { const allowance = await c.client.readContract({ address: a.token, abi: erc20Abi, functionName: "allowance", args: [caller, a.spender] }); if (allowance < a.amount) throw new Error("Plan and execute each exact approval separately, then replan"); }
+  const tx = fresh.transactions[0]!, latest = await c.client.getTransactionCount({ address: caller, blockTag: "latest" }), pending = await c.client.getTransactionCount({ address: caller, blockTag: "pending" });
+  if (latest !== pending) throw new Error("Pending nonce; reconcile existing hash first");
+  await c.client.call({ ...tx, account: caller });
+  const gas = await c.client.estimateGas({ ...tx, account: caller }) * 12n / 10n, maxFeePerGas = await c.client.getGasPrice() * 2n + 1n;
+  if (gas * maxFeePerGas > BigInt(m.policy.maxGasWei)) throw new Error("Gas exceeds reviewed manifest budget");
+  const directory = resolve(".validation/almm-unified"); mkdirSync(directory, { recursive: true });
+  const journal = resolve(directory, caller.toLowerCase() + "-" + pending + ".json");
+  if (existsSync(journal)) throw new Error("Existing nonce journal; reconcile, never resend");
+  const { wallet, account } = signer(); if (!same(account.address, caller)) throw new Error("EOA signer differs; smart accounts must wrap this exact call in their reviewed executor");
+  const raw = await wallet.signTransaction({ ...tx, account, chain: wallet.chain, nonce: pending, gas, maxFeePerGas, maxPriorityFeePerGas: 0n });
+  const hash = keccak256(raw);
+  writeFileSync(journal, json({ phase: "SIGNED_HASH_BEFORE_BROADCAST", hash, nonce: pending, reviewHash: p.reviewHash }) + "\n", { flag: "wx" });
+  // No retry around a write, and no raw signature or secret in the journal.
+  const submitted = await c.client.sendRawTransaction({ serializedTransaction: raw }); if (submitted !== hash) throw new Error("Unexpected hash; reconcile signed hash");
+  console.log(json({ hash, journal, phase: "SUBMITTED" }));
+  const observed = await c.client.waitForTransactionReceipt({ hash, confirmations: 13, timeout: 120000, pollingInterval: 3000 });
+  writeFileSync(journal + ".observed-receipt.json", json(observed) + "\n", { flag: "wx" });
+  const { receipt: r, confirmation } = await refreshCanonicalReceipt(c.client, hash, observed);
+  const payout = fresh.payout ? await verifyUnifiedPayout(c.client, hash, { reward: addr(c.f.reward), pool: pool!, tokenId: fresh.payout.tokenId, recipient: fresh.payout.recipient, caller, base: m.base.address!, quote: m.quote.address! }) : null;
+  const registration = fresh.registryProbe ? await verifyUnifiedRegistration(c.client, hash, { registry: addr(c.f.registry), caller, ...fresh.registryProbe }) : null;
+  writeFileSync(journal + ".receipt.json", json({ classification: "PASSED_THIS_RUN", hash, blockNumber: r.blockNumber, blockHash: r.blockHash, confirmation, payout, registration }) + "\n", { flag: "wx" });
+  console.log(json({ hash, journal, transactionConfirmed: true, payoutVerified: payout !== null, registrationVerified: registration !== null, payout, registration }));
+});

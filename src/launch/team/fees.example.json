@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "chainId": 91342,
+  "registry": "0x6d043014972b87406C4757a5f2d655A24e0b0aF9",
+  "templateId": "6",
+  "templateHash": "0x6048908774397e0691bb0e19f72dabb790eb0d892d6081d3622b39e7f738e667",
+  "configOwner": "REPLACE_WITH_CONFIG_OWNER",
+  "partnerRecipient": "REPLACE_WITH_TEAM_FEE_RECIPIENT",
+  "liquidityPartner": "REPLACE_WITH_TEAM_LP_RECIPIENT",
+  "leftoverReceiver": "REPLACE_WITH_LEFTOVER_RECIPIENT",
+  "creatorShareOfNonProtocolBps": 7000
+}

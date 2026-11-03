@@ -1,0 +1,9 @@
+{
+  "tokenId":"REPLACE_WITH_ALMM_MANAGER_ID",
+  "withdrawals":[{"binId":0,"shares":"REPLACE_WITH_OWNED_SHARES_TO_WITHDRAW"}],
+  "deposits":[{"binId":1,"baseAmount":"REPLACE_WITH_RAW_BASE","quoteAmount":"0"}],
+  "slippageBps":50,
+  "maxActiveBinSlippage":1,
+  "recipient":"REPLACE_WITH_REVIEWED_PAYOUT",
+  "deadline":"REPLACE_WITH_FUTURE_UNIX_SECONDS"
+}

@@ -1,0 +1,531 @@
+[
+  {
+    "command": "almm:remove-liquidity",
+    "file": "src/almm/remove-liquidity.ts",
+    "sdkSymbols": [
+      "ALMMClient.planRemovePositionLiquidity"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <managerNftId> <shareBps>"
+  },
+  {
+    "command": "almm:close-empty-position",
+    "file": "src/almm/close-empty-position.ts",
+    "sdkSymbols": [
+      "ALMMClient.planCloseEmptyPosition"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <managerNftId>"
+  },
+  {
+    "command": "almm:claim-position-fees",
+    "file": "src/almm/claim-position-fees.ts",
+    "sdkSymbols": [
+      "ALMMClient.planClaimPositionFees"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <managerNftId>"
+  },
+  {
+    "command": "almm:position-delegate",
+    "file": "src/almm/position-delegate.ts",
+    "sdkSymbols": [
+      "ALMMClient.planUpdatePositionDelegatePermission"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <managerNftId> <delegate> <revoke|add|remove|remove-to-owner>"
+  },
+  {
+    "command": "arl:add-compounding-liquidity",
+    "file": "src/arl/add-compounding-liquidity.ts",
+    "sdkSymbols": [
+      "DammV2Client.planAddLiquidity"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <maximumBaseRaw> <maximumQuoteRaw>"
+  },
+  {
+    "command": "arl:remove-compounding-liquidity",
+    "file": "src/arl/remove-compounding-liquidity.ts",
+    "sdkSymbols": [
+      "DammV2Client.planRemoveLiquidity"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <tokenId> <liquidityRaw>"
+  },
+  {
+    "command": "arl:claim-compounding-fees",
+    "file": "src/arl/claim-compounding-fees.ts",
+    "sdkSymbols": [
+      "DammV2Client.planClaimCompoundingFees"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <tokenId>"
+  },
+  {
+    "command": "arl:merge-positions",
+    "file": "src/arl/merge-positions.ts",
+    "sdkSymbols": [
+      "DammV2Client.planMergeManagedConcentratedPositionsQuoted"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <destinationNftId> <sourceNftId>"
+  },
+  {
+    "command": "arl:refresh-vesting",
+    "file": "src/arl/refresh-vesting.ts",
+    "sdkSymbols": [
+      "DammV2Client.planRefreshManagedConcentratedVesting"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <managerNftId>"
+  },
+  {
+    "command": "arl:claim-position-reward",
+    "file": "src/arl/claim-position-reward.ts",
+    "sdkSymbols": [
+      "DammV2Client.planClaimManagedConcentratedReward"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <managerNftId> <rewardIndex>"
+  },
+  {
+    "command": "vault:redeem",
+    "file": "src/vault/redeem.ts",
+    "sdkSymbols": [
+      "buildRedeemAYVault"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <sharesRaw> <minimumAssetsRaw> <maximumStrategies>"
+  },
+  {
+    "command": "vault:request-redeem",
+    "file": "src/vault/request-redeem.ts",
+    "sdkSymbols": [
+      "buildRequestAYVaultRedeem"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <sharesRaw> <minimumAssetsRaw>"
+  },
+  {
+    "command": "vault:cancel-withdrawal",
+    "file": "src/vault/cancel-withdrawal.ts",
+    "sdkSymbols": [
+      "buildCancelAYVaultWithdrawal"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId>"
+  },
+  {
+    "command": "vault:process-withdrawal",
+    "file": "src/vault/process-withdrawal.ts",
+    "sdkSymbols": [
+      "buildProcessAYVaultWithdrawal"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId> <maximumStrategies>"
+  },
+  {
+    "command": "vault:lower-withdrawal-minimum",
+    "file": "src/vault/lower-withdrawal-minimum.ts",
+    "sdkSymbols": [
+      "buildLowerAYVaultWithdrawalMinimum"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId> <newMinimumRaw>"
+  },
+  {
+    "command": "vault:genesis-withdraw",
+    "file": "src/vault/genesis-withdraw.ts",
+    "sdkSymbols": [
+      "buildWithdrawAGVault"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <quoteAmountRaw>"
+  },
+  {
+    "command": "vault:genesis-claim-base",
+    "file": "src/vault/genesis-claim-base.ts",
+    "sdkSymbols": [
+      "buildClaimAGVaultBase"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault>"
+  },
+  {
+    "command": "vault:genesis-refund",
+    "file": "src/vault/genesis-refund.ts",
+    "sdkSymbols": [
+      "buildClaimAGVaultRefund"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault>"
+  },
+  {
+    "command": "vault:genesis-early-refund",
+    "file": "src/vault/genesis-early-refund.ts",
+    "sdkSymbols": [
+      "buildClaimAGVaultEarlyRefund"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault>"
+  },
+  {
+    "command": "vault:genesis-close-escrow",
+    "file": "src/vault/genesis-close-escrow.ts",
+    "sdkSymbols": [
+      "buildCloseAGVaultEscrow"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault>"
+  },
+  {
+    "command": "staking:stake",
+    "file": "src/staking/stake.ts",
+    "sdkSymbols": [
+      "buildStakeAStake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <amountRaw>"
+  },
+  {
+    "command": "staking:claim",
+    "file": "src/staking/claim.ts",
+    "sdkSymbols": [
+      "buildClaimAStake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault>"
+  },
+  {
+    "command": "staking:request-unstake",
+    "file": "src/staking/request-unstake.ts",
+    "sdkSymbols": [
+      "buildRequestAStakeUnstake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <amountRaw>"
+  },
+  {
+    "command": "staking:cancel-unstake",
+    "file": "src/staking/cancel-unstake.ts",
+    "sdkSymbols": [
+      "buildCancelAStakeUnstake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId>"
+  },
+  {
+    "command": "staking:withdraw-unstake",
+    "file": "src/staking/withdraw-unstake.ts",
+    "sdkSymbols": [
+      "buildWithdrawAStakeUnstake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId>"
+  },
+  {
+    "command": "staking:stake-v2",
+    "file": "src/staking/stake-v2.ts",
+    "sdkSymbols": [
+      "buildStakeAStakeV2"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vaultV2> <amountRaw>"
+  },
+  {
+    "command": "staking:claim-v2",
+    "file": "src/staking/claim-v2.ts",
+    "sdkSymbols": [
+      "buildClaimAStakeV2"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vaultV2> <maximumQuoteFeeRaw>"
+  },
+  {
+    "command": "token-lock:claim",
+    "file": "src/token-lock/claim.ts",
+    "sdkSymbols": [
+      "buildClaimAmmoraTokenLock"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<lock> <maximumAmountRaw>"
+  },
+  {
+    "command": "merkle:claim-locked",
+    "file": "src/merkle/claim-locked.ts",
+    "sdkSymbols": [
+      "buildClaimAmmoraMerkleDistributorLocked"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<distributor>"
+  },
+  {
+    "command": "presale:create-escrow",
+    "file": "src/presale/create-escrow.ts",
+    "sdkSymbols": [
+      "buildCreatePermissionlessAmmoraPresaleEscrow"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<presale>"
+  },
+  {
+    "command": "presale:deposit",
+    "file": "src/presale/deposit.ts",
+    "sdkSymbols": [
+      "buildDepositToAmmoraPresale"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<presale> <maximumQuoteRaw>"
+  },
+  {
+    "command": "presale:withdraw",
+    "file": "src/presale/withdraw.ts",
+    "sdkSymbols": [
+      "buildWithdrawFromAmmoraPresale"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<presale> <maximumQuoteRaw>"
+  },
+  {
+    "command": "presale:claim",
+    "file": "src/presale/claim.ts",
+    "sdkSymbols": [
+      "buildClaimAmmoraPresale"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<presale>"
+  },
+  {
+    "command": "arl:add-to-position",
+    "file": "src/arl/add-to-position.ts",
+    "sdkSymbols": [
+      "DammV2Client.planAddLiquidityToManagedConcentratedPosition"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <tokenId> <maxBaseRaw> <maxQuoteRaw>"
+  },
+  {
+    "command": "arl:remove-position-liquidity",
+    "file": "src/arl/remove-position-liquidity.ts",
+    "sdkSymbols": [
+      "DammV2Client.planRemoveManagedConcentratedLiquidity"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <tokenId> <liquidityRaw>"
+  },
+  {
+    "command": "arl:remove-all-position-liquidity",
+    "file": "src/arl/remove-all-position-liquidity.ts",
+    "sdkSymbols": [
+      "DammV2Client.planRemoveAllManagedConcentratedLiquidityQuoted"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <tokenId>"
+  },
+  {
+    "command": "almm:swap-exact-output",
+    "file": "src/almm/swap-exact-output.ts",
+    "sdkSymbols": [
+      "ALMMClient.planSwapExactOutput"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <amountOutRaw> <sell-base|sell-quote>"
+  },
+  {
+    "command": "arl:swap-exact-output",
+    "file": "src/arl/swap-exact-output.ts",
+    "sdkSymbols": [
+      "DammV2Client.planSwapExactOutput"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <amountOutRaw> <tokenOut>"
+  },
+  {
+    "command": "almm:claim-referral",
+    "file": "src/almm/claim-referral.ts",
+    "sdkSymbols": [
+      "ALMMClient.planClaimReferralFee"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <token>"
+  },
+  {
+    "command": "staking:request-unstake-v2",
+    "file": "src/staking/request-unstake-v2.ts",
+    "sdkSymbols": [
+      "buildRequestAStakeV2Unstake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <amountRaw>"
+  },
+  {
+    "command": "staking:cancel-unstake-v2",
+    "file": "src/staking/cancel-unstake-v2.ts",
+    "sdkSymbols": [
+      "buildCancelAStakeV2Unstake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId>"
+  },
+  {
+    "command": "staking:withdraw-unstake-v2",
+    "file": "src/staking/withdraw-unstake-v2.ts",
+    "sdkSymbols": [
+      "buildWithdrawAStakeV2Unstake"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <requestId>"
+  },
+  {
+    "command": "dfs:state",
+    "file": "src/dfs/state.ts",
+    "sdkSymbols": [
+      "DFSClient.getState"
+    ],
+    "mode": "READ_ONLY_RPC",
+    "usage": "<vault>"
+  },
+  {
+    "command": "dfs:fund",
+    "file": "src/dfs/fund.ts",
+    "sdkSymbols": [
+      "DFSClient.planCappedDirectFundingWithApproval"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <maxAmountRaw>"
+  },
+  {
+    "command": "dfs:claim",
+    "file": "src/dfs/claim.ts",
+    "sdkSymbols": [
+      "DFSClient.getState",
+      "DFSClient.getClaimPreview",
+      "DFSClient.planClaim"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <recipientIndex> [payoutAddress]"
+  },
+  {
+    "command": "dfs:fund-fee-vault",
+    "file": "src/dfs/fund-fee-vault.ts",
+    "sdkSymbols": [
+      "DFSClient.planAtomicFundingWithPreflight"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<vault> <feeVault>"
+  },
+  {
+    "command": "dfs:delegated-funding-preflight",
+    "file": "src/dfs/delegated-funding-preflight.ts",
+    "sdkSymbols": [
+      "DFSClient.preflightDelegatedFeeVaultFunding"
+    ],
+    "mode": "READ_ONLY_RPC",
+    "usage": "<vault> <feeVault> <beneficiary>"
+  },
+  {
+    "command": "dfs:create",
+    "file": "src/dfs/create.ts",
+    "sdkSymbols": [
+      "DFSFactoryClient.planCreateVault"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<token> <base> <recipientA> <shareA> <recipientB> <shareB> <salt32>"
+  },
+  {
+    "command": "revenue:almm-referral",
+    "file": "src/revenue/almm-referral.ts",
+    "sdkSymbols": [
+      "RevenueCenterClient.planClaimALMMReferral"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <token>"
+  },
+  {
+    "command": "revenue:arl-revenue",
+    "file": "src/revenue/arl-revenue.ts",
+    "sdkSymbols": [
+      "RevenueCenterClient.planClaimARLRevenue"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<pool> <token>"
+  },
+  {
+    "command": "arl-v5:inspect",
+    "file": "src/arl-v5/inspect.ts",
+    "sdkSymbols": [
+      "ArlV5FactoryClient.verifyDeploymentAtBlock",
+      "ArlV5FactoryClient.verifyPoolAtBlock",
+      "ArlV5PoolClient.getFees"
+    ],
+    "mode": "READ_ONLY_RPC",
+    "usage": "<reviewedV5Manifest.json> <pool>"
+  },
+  {
+    "command": "partner:graduation-state",
+    "file": "src/partner/graduation-state.ts",
+    "sdkSymbols": [
+      "PartnerGraduationClient.verifyDependencies",
+      "PartnerGraduationClient.previewPartnerGraduation"
+    ],
+    "mode": "READ_ONLY_RPC",
+    "usage": "<reviewedPartnerManifest.json> <curve>"
+  },
+  {
+    "command": "partner:pool-state",
+    "file": "src/partner/pool-state.ts",
+    "sdkSymbols": [
+      "PartnerArlPoolClient.getPoolState"
+    ],
+    "mode": "READ_ONLY_RPC",
+    "usage": "<reviewedPartnerManifest.json> <pool>"
+  },
+  {
+    "command": "portable:discover-pool",
+    "file": "src/portable/discover-pool.ts",
+    "sdkSymbols": [
+      "verifyAmmoraPortableDeploymentAtBlock",
+      "AmmoraPortableLifecyclePlanner.discoverGraduatedPool",
+      "AmmoraPortableLifecyclePlanner.discoverFeeVaultSources"
+    ],
+    "mode": "READ_ONLY_RPC",
+    "usage": "<reviewedPortableManifest.json> <lifecycleTargets.json> <curve>"
+  },
+  {
+    "command": "merkle:claim",
+    "file": "src/merkle/claim.ts",
+    "sdkSymbols": [
+      "buildNewAmmoraMerkleDistributorClaim"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<distributor> <unlockedRaw> <lockedRaw> <proof32CommaSeparated|empty>"
+  },
+  {
+    "command": "launch:claim-surplus",
+    "file": "src/launch/claim-surplus.ts",
+    "sdkSymbols": [
+      "AmmoraV4LaunchCurveClient.planClaimSurplus"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<curve>"
+  },
+  {
+    "command": "launch:withdraw-leftover",
+    "file": "src/launch/withdraw-leftover.ts",
+    "sdkSymbols": [
+      "AmmoraV4LaunchCurveClient.planWithdrawLeftover"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<curve>"
+  },
+  {
+    "command": "launch:claim-partner-creation-fee",
+    "file": "src/launch/claim-partner-creation-fee.ts",
+    "sdkSymbols": [
+      "AmmoraV4LaunchCurveClient.planClaimPartnerPoolCreationFee"
+    ],
+    "mode": "RPC_AND_UNSIGNED_PREVIEW; SEND_EXPLICIT",
+    "usage": "<curve>"
+  }
+]

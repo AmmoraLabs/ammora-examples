@@ -1,0 +1,13 @@
+{
+  "baseDecimals": 9,
+  "quoteDecimals": 6,
+  "totalSupplyRaw": "10000000000000",
+  "saleAllocationRaw": "5000000000000",
+  "lockedBaseRaw": "0",
+  "start": { "price": { "numerator": "1000", "denominator": "1" } },
+  "graduation": { "price": { "numerator": "4000", "denominator": "1" } },
+  "migrationQuoteThreshold": { "kind": "exact", "raw": "10000000000000" },
+  "migrationQuoteFeeBps": "0",
+  "migration": { "kind": "compounding", "baseBudgetRaw": "3000000000000", "quoteBudgetRaw": "10000000000000" },
+  "rounding": { "sqrtPrice": "floor", "liquidity": "floor", "requiredAmounts": "ceil", "quoteThreshold": "ceil", "maxPriceErrorBps": "0", "maxSaleDustRaw": "0" }
+}

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "chainId": 91342,
+  "registry": "0x6d043014972b87406C4757a5f2d655A24e0b0aF9",
+  "configOwner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+  "config": {
+    "quoteToken": "0x4200000000000000000000000000000000000006",
+    "partnerRecipient": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+    "poolCreationFee": "0",
+    "totalSupply": "1010204081633",
+    "tokenDecimals": 9,
+    "startSqrtPrice": "2608763565087129600",
+    "cliffFeeBps": 100,
+    "creatorShareOfNonProtocolBps": 3000,
+    "feeNumberOfPeriods": 0,
+    "feePeriodFrequency": 0,
+    "feeReductionFactorBps": 0,
+    "feeSchedulerMode": 0,
+    "rateLimiterEnabled": false,
+    "rateLimiterFeeIncrementBps": 0,
+    "rateLimiterDuration": 0,
+    "rateLimiterReferenceAmount": "0",
+    "dynamicFeeEnabled": false,
+    "maxVolatilityAccumulator": 0,
+    "variableFeeControl": 0,
+    "dynamicFeeBinStepBps": 0,
+    "dynamicFeeFilterPeriod": 0,
+    "dynamicFeeDecayPeriod": 0,
+    "dynamicFeeReductionFactorBps": 0,
+    "dynamicFeeBinStepQ64": "0",
+    "collectFeeMode": 0,
+    "enableFirstSwapWithMinFee": false,
+    "migrationQuoteThreshold": "1000000000000",
+    "migrationBaseThreshold": "10204081633",
+    "leftoverReceiver": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+    "migrationQuoteFeeBps": 0,
+    "creatorMigrationFeeShareBps": 0,
+    "postMigrationFeeBps": 100,
+    "postMigrationCompoundingFeeBps": 0,
+    "postMigrationCollectFeeMode": 0,
+    "migrationMode": 0,
+    "postMigrationSqrtMinPrice": "2608763565087129600",
+    "postMigrationSqrtMaxPrice": "260876356504598328492",
+    "postMigrationLiquidity": "2662003637844866653812166171386",
+    "liquidityDistribution": {
+      "partner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "partnerUnlockedBps": 0,
+      "partnerPermanentLockedBps": 6250,
+      "creatorPermanentLockedBps": 3750,
+      "partnerVesting": {
+        "allocationBps": 0,
+        "bpsPerPeriod": 0,
+        "numberOfPeriods": 0,
+        "periodFrequency": 0,
+        "cliffDuration": 0
+      },
+      "creatorVesting": {
+        "allocationBps": 0,
+        "bpsPerPeriod": 0,
+        "numberOfPeriods": 0,
+        "periodFrequency": 0,
+        "cliffDuration": 0
+      }
+    },
+    "lockedBaseVesting": {
+      "cliffUnlockAmount": "0",
+      "amountPerPeriod": "0",
+      "numberOfPeriods": 0,
+      "frequency": "0",
+      "cliffDuration": "0"
+    },
+    "postMigrationFeeNumberOfPeriods": 0,
+    "postMigrationFeePeriodFrequency": 0,
+    "postMigrationFeeReductionFactorBps": 0,
+    "postMigrationFeeSchedulerMode": 0,
+    "activationDelay": 0,
+    "activationType": 0
+  },
+  "segments": [
+    {
+      "lowerSqrtPrice": "2608763565087129600",
+      "upperSqrtPrice": "130438178252299164246",
+      "liquidity": "2662003637844866653812166171386"
+    }
+  ]
+}

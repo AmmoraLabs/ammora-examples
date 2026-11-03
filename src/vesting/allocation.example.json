@@ -1,0 +1,8 @@
+{
+  "totalAmountRaw": "100000000000000",
+  "cliffUnlockAmountRaw": "10000000000000",
+  "numberOfPeriods": 12,
+  "frequencySeconds": "2592000",
+  "cliffDurationSeconds": "7776000",
+  "rounding": "reject"
+}

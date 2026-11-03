@@ -1,0 +1,5 @@
+import { context,deviation,wad } from "./context.js";
+import { addr,json } from "./manifest.js";
+import { main } from "../shared/run.js";
+main(async()=>{const[file,pool,...extra]=process.argv.slice(2);if(!file||!pool||extra.length)throw new Error("usage: <manifest.json> <pool>");const c=await context(file,false,addr(pool)),age=c.now-c.m.reference.observedAt,dev=deviation(c.price!,wad(c.m.reference.quotePerBase)),referenceFresh=age>=0&&age<=c.m.reference.maxAgeSeconds,newExposureAllowed=referenceFresh&&dev<=BigInt(c.m.policy.maxPriceDeviationBps)&&c.state!.currentFeeBps<=c.m.policy.maxFeeBps;
+  console.log(json({classification:newExposureAllowed?"PASSED_THIS_RUN":"BLOCKED",scope:"Read-only configured thresholds; no automated pause, keeper or oracle guarantee",blockNumber:c.block.number,blockHash:c.block.hash,spotPriceWad:c.price,reference:c.m.reference,referenceAgeSeconds:age,deviationBps:dev,currentFeeBps:c.state!.currentFeeBps,newExposureAllowed,exitCommandsRequireFreshReference:false,issuerRedemptionAndReserveStatus:"NOT_CHECKED_BY_AMM",signing:false}));});

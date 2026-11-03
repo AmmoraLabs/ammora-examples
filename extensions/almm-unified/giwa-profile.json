@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "giwa-almm-unified-v1",
+  "chainId": 91342,
+  "feeClaimRoutingVersion": 1,
+  "scope": "Explicit opt-in GIWA testnet shared deployment; reviewed exact-transfer assets, arbitrary issuer-specific pairs",
+  "deployer": "0x26A5fb4908F35b3689044F6114B7E39a5DFBd884",
+  "factory": "0x15f19696bF1F415020a3E8C48063845882754B60",
+  "manager": "0x1dF49A1298354d10A548E68bB83E5b8AfA51B14D",
+  "reward": "0xF9232a06a4B46c83cE7CBf4AC5A39F7332D1724F",
+  "controller": "0xE64E835fbb93b83A16c141f69cae0fe53AB9a487",
+  "registry": "0xC9ca24791B0fE146c02299261A55220e4213645f",
+  "library": "0xC0bB67C111a03E4Fe005134f76bFC80D8277fa6D",
+  "lens": "0x2e6db44c2743666c858e87f15649354f394cc082",
+  "owner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+  "runtimeCodeHashes": {
+    "0x26a5fb4908f35b3689044f6114b7e39a5dfbd884": "0xc53b783ce691203c8b7acb69999dd706078e9f9ca182e18554fe8396ad6b1bc4",
+    "0x15f19696bf1f415020a3e8c48063845882754b60": "0x0b90a91fd21ee5beb226264a41bf782e63efac13cfe31f5889e4ac8555301459",
+    "0x1df49a1298354d10a548e68bb83e5b8afa51b14d": "0x9e5175ec360ea32d0ae9866269422d9288c85a359bf6342693651199d8a2fd3d",
+    "0xf9232a06a4b46c83ce7cbf4ac5a39f7332d1724f": "0xce01813f8566c8a450401cd14bdde79129644d5111802c9e63311396091585ae",
+    "0xe64e835fbb93b83a16c141f69cae0fe53ab9a487": "0x22028556355e1be8c20481ed44dd27220d960286f47769e03b46522d8b9f2ab1",
+    "0xc9ca24791b0fe146c02299261a55220e4213645f": "0x93149b63d9352990bb7464d7f421c9b9de5636238071123d6f76aeabf598bacb",
+    "0xc0bb67c111a03e4fe005134f76bfc80d8277fa6d": "0xd792f18a5b40580bf43608ce7363a4ca1a93b879067ba00075d58f51d39eea17",
+    "0x2e6db44c2743666c858e87f15649354f394cc082": "0x5882365fd2b2b50b8fbaaf29a209f2195ccede16822ca1631bebeb7962ded581",
+    "0xdfcb58f1438ad5a65ab25915eea6b157cc500c7d": "0xc5831c9514af5844ed3c758ffcda18f8f8084e911bb9838d8e2f89787c1af18a",
+    "0x2fcb8ea4f73c4fc76b0e23fdd124221d8750e6a9": "0x06de8ffb3f14ce85250a053fc071c174461c58842c853a344dfd81f44c0afdb0",
+    "0x4e9a6926cbc5eab7536d3f934d7a867c289913b0": "0x6a0b6cc4200d1d01f175b9ff544cbbb19b15921ae307aae5c2e191f5cc7c3ea6",
+    "0x740c106eae61b095eab23c1c9e5fb881ddb3bb34": "0x476d23032dafd0b34c14cbd4fd03477ad385bc1c52e023f15826aa313dc9321c"
+  },
+  "registryAggregation": "unavailable",
+  "defaultFeeBps": 1,
+  "protocolFeeShareBps": 1000,
+  "canonicalCatalogChanged": false,
+  "unsupportedModules": [],
+  "assetRestrictions": "Native issuer review / canonical address / runtime / decimals / transfer and authority controls remain mandatory; synthetic qualification is not official issuer support",
+  "limitOrderManager": "0xDfcb58F1438Ad5a65ab25915EEa6B157CC500C7d",
+  "zapRouter": "0x2Fcb8eA4f73c4Fc76B0e23Fdd124221D8750e6a9",
+  "oracle": "0x4e9a6926CBC5EaB7536d3f934d7a867C289913B0",
+  "marketSyncController": "0x740c106eae61B095EAb23C1C9E5Fb881DDB3Bb34",
+  "qualification": {
+    "base": "0x2984634Ed32bB37Db904367E01f1fBd42Fa36Fe0",
+    "quote": "0x5a3320FF8c30F449e39A450A5401C7e6486276A5",
+    "payout": "0xF8eD5c7a8e70BB148cFcC7422222473Df2F44764",
+    "smartAccountDelegate": "0xA21cAe7893238BB3221Db26e3E58bFDfB62dc1AB"
+  },
+  "unqualifiedOperations": [
+    "This run qualifies low-fee liquidity/trade/fee-only routing/full exit/re-entry, not new MarketSync policy or zap/order execution"
+  ],
+  "marketSyncOperatorEnabled": false,
+  "deploymentBlock": "39863482",
+  "sourceBaseCommit": "0ba9d4d119a4475983cbb4060a8afaa3fdd5ceee",
+  "sourceArtifactSealSHA256": "ef8a78ed572f1c0ada9a498b0e2bb2612cd1eb02f26e2c8bb8cdf1d5ba3a4c8a"
+}

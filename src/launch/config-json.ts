@@ -1,0 +1,31 @@
+/** launch:config-json -- preview|create <full-config.json> [reviewHash] */
+import { readFile } from "node:fs/promises";
+import { buildCreateAmmoraV4Config, getAmmoraV4ConfigAtBlock, parseAmmoraV4ConfigCreatedReceipt, verifyAmmoraV4CoreAtBlock } from "@ammora-protocol/sdk";
+import { address, readBlock, reader, signer, v4Deployment } from "../shared/env.js";
+import { printJson } from "../shared/input.js";
+import { main, send } from "../shared/run.js";
+import { parseConfigDocument } from "./config-document.js";
+import { assertTeamConfigReview } from "./team/policy.js";
+main(async () => {
+  const [mode, path, review, ...extra] = process.argv.slice(2);
+  if (!path || !["preview", "create"].includes(mode ?? "") || extra.length || (mode === "preview" ? !!review : !review)) throw new Error("usage: preview <full-config.json> OR create <full-config.json> <reviewHash>");
+  const plan = parseConfigDocument(JSON.parse(await readFile(path, "utf8")));
+  const client = await reader(), launch = v4Deployment().contracts.launch;
+  if (client.chain?.id !== plan.chainId || launch.configRegistry.toLowerCase() !== plan.registry.toLowerCase()) throw new Error("Config document chain/registry differs from reviewed deployment");
+  const caller = address("AMMORA_ACCOUNT");
+  if (caller.toLowerCase() !== plan.configOwner.toLowerCase()) throw new Error("Direct createConfig requires caller = configOwner");
+  const block = await readBlock(client);
+  await verifyAmmoraV4CoreAtBlock(client, { configRegistry: launch.configRegistry, launchFactory: launch.factory, graduationAdapter: launch.graduationAdapter, feePolicy: launch.feePolicy }, block.number);
+  await client.call({ account: caller, ...plan.transaction, blockNumber: block.number });
+  printJson({ mode, blockNumber: block.number, blockHash: block.hash, ...plan });
+  if (mode === "preview") return;
+  assertTeamConfigReview(review, plan.reviewHash);
+  const { account, wallet } = signer();
+  if (account.address.toLowerCase() !== caller.toLowerCase()) throw new Error("Signer differs from reviewed owner");
+  const hash = await send("create independent Config", plan.transaction, wallet, account, client);
+  const receipt = await client.getTransactionReceipt({ hash });
+  const created = parseAmmoraV4ConfigCreatedReceipt(receipt, launch.configRegistry);
+  const actual = await getAmmoraV4ConfigAtBlock(client, launch.configRegistry, created.configId, receipt.blockNumber);
+  if (actual.configHash !== created.configHash || actual.identity.owner.toLowerCase() !== caller.toLowerCase() || buildCreateAmmoraV4Config(actual.config, actual.segments, caller).data !== plan.transaction.data) throw new Error("Receipt Config differs from reviewed document");
+  printJson({ hash, ...created });
+});

@@ -1,0 +1,17 @@
+{
+  "sessionId": "replace-with-a-unique-session-id",
+  "account": "REPLACE_WITH_YOUR_PUBLIC_SIGNING_ADDRESS",
+  "expiresAt": 0,
+  "actions": ["config", "launch", "trade", "migrate", "claim-launch", "claim-lp", "approval"],
+  "configs": [{ "id": "6", "hash": "0x6048908774397e0691bb0e19f72dabb790eb0d892d6081d3622b39e7f738e667" }],
+  "payouts": ["REPLACE_WITH_YOUR_PUBLIC_SIGNING_ADDRESS", "REPLACE_WITH_YOUR_REVIEWED_PUBLIC_PAYOUT_ADDRESS"],
+  "assets": [{ "token": "0x4200000000000000000000000000000000000006", "maxInputRaw": "1000000000000000", "maxSessionInputRaw": "3000000000000000" }],
+  "launchTokenLimit": { "maxInputRaw": "1000000000", "maxSessionInputRaw": "3000000000" },
+  "maxNativePerTransactionWei": "100000000000000",
+  "maxNativeSessionWei": "3200000000000000",
+  "maxFeePerGasWei": "100000000",
+  "maxTransactions": 32,
+  "maxSlippageBps": 100,
+  "maxPlanAgeSeconds": 180,
+  "maxPlanAgeBlocks": 180
+}

@@ -1,0 +1,26 @@
+{
+  "objective": "dfs-claim-creator",
+  "role": "creator",
+  "transactions": [
+    {
+      "to": "0xD3Bf679A3717e7b2459B5E7F80808081C1ca66d6",
+      "data": "0x1bcc24fc000000000000000000000000000000000000000000000000000000000000000100000000000000000000000013cd27a6e337097db858c9c4fa472fbad2f2c637"
+    }
+  ],
+  "cli": {
+    "file": "src/dfs/claim.ts",
+    "args": [
+      "0xD3Bf679A3717e7b2459B5E7F80808081C1ca66d6",
+      "1",
+      "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637"
+    ],
+    "sha256": "5ad5b85c588506ba4b3c57fe8792933bce43720b89b17db2126ee6934a38189b"
+  },
+  "balanceTokens": [
+    "0x4200000000000000000000000000000000000006"
+  ],
+  "balanceAddresses": [
+    "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+    "0xD3Bf679A3717e7b2459B5E7F80808081C1ca66d6"
+  ]
+}

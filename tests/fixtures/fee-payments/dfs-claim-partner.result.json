@@ -1,0 +1,36 @@
+{
+  "classification": "PASSED_THIS_RUN",
+  "receipts": [
+    {
+      "hash": "0x6d24228c5d26dc561a355179ac98278d3e080c056a93f82369df2bef30866691",
+      "nonce": 5,
+      "blockNumber": "39749832",
+      "blockHash": "0xbfa31a41d7e8c8db710f7e5e79e74922176c52be4a5ba6c1d0eceb3ca70b720b",
+      "nativeFeesWei": "114351724637"
+    }
+  ],
+  "balances": [
+    {
+      "hash": "0x6d24228c5d26dc561a355179ac98278d3e080c056a93f82369df2bef30866691",
+      "token": "0x4200000000000000000000000000000000000006",
+      "address": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "before": "3339215194412443",
+      "after": "3339215394412443",
+      "delta": "200000000",
+      "transferDelta": "200000000"
+    },
+    {
+      "hash": "0x6d24228c5d26dc561a355179ac98278d3e080c056a93f82369df2bef30866691",
+      "token": "0x4200000000000000000000000000000000000006",
+      "address": "0xD3Bf679A3717e7b2459B5E7F80808081C1ca66d6",
+      "before": "200000000",
+      "after": "0",
+      "delta": "-200000000",
+      "transferDelta": "-200000000"
+    }
+  ],
+  "nativeFeesWei": "114351724637",
+  "keySHA256": "986d0c83dfd2687c7d1e05cb010683461af75163c8809a30e76214a1c1c66201",
+  "planSHA256": "ae284e0458e89bbfddf65477c3d2bfbd061fd89183e0c8c5e3ef84ab8b89a2be",
+  "guardJournalSHA256": "f126a34b01427d6ddee77b9f197fdeb809bcff54ba0eda2ef89b91247b152b08"
+}

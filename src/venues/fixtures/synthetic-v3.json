@@ -1,0 +1,14 @@
+{
+  "kind": "SYNTHETIC_OFFLINE",
+  "sqrtPriceX96": "79228162514264337593543950336",
+  "liquidity": "1000000000000000000",
+  "tick": 0,
+  "feePips": 3000,
+  "tickSpacing": 60,
+  "initializedTicks": [
+    { "tick": -120, "liquidityNet": "1000000000000000000" },
+    { "tick": 120, "liquidityNet": "-1000000000000000000" }
+  ],
+  "amountInRaw": "1000000",
+  "zeroForOne": true
+}

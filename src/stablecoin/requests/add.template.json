@@ -1,0 +1,7 @@
+{
+  "pool": null,
+  "tokenId": null,
+  "maximumBaseRaw": "1000000",
+  "maximumQuoteRaw": "1000000000000000000",
+  "slippageBps": 10
+}

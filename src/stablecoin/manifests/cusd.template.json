@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "chainId": 91342,
+  "generation": "auto-route",
+  "id": "cusd-giwa-sepolia-pending",
+  "origin": {
+    "kind": "native-issuer",
+    "issuer": "Cap cUSD — GIWA issuer approval/address unresolved",
+    "status": "pending",
+    "evidence": null
+  },
+  "model": "arl",
+  "base": {
+    "label": "Issuer native GIWA stablecoin — unresolved",
+    "address": null,
+    "decimals": null,
+    "codeHash": null,
+    "proxy": {
+      "kind": "unreviewed"
+    },
+    "review": {
+      "status": "pending",
+      "evidence": null,
+      "controls": null,
+      "pausedGetter": false,
+      "blacklistGetter": false,
+      "authorities": []
+    }
+  },
+  "quote": {
+    "label": "Reviewed GIWA quote asset — unresolved",
+    "address": null,
+    "decimals": null,
+    "codeHash": null,
+    "proxy": {
+      "kind": "unreviewed"
+    },
+    "review": {
+      "status": "pending",
+      "evidence": null,
+      "controls": null,
+      "pausedGetter": false,
+      "blacklistGetter": false,
+      "authorities": []
+    }
+  },
+  "roles": {
+    "liquidityOwner": null,
+    "payout": null,
+    "feeDelegate": null
+  },
+  "policy": {
+    "maxBaseRaw": "1",
+    "maxQuoteRaw": "1",
+    "maxFeeBps": 25,
+    "maxSlippageBps": 10,
+    "maxPriceDeviationBps": 100,
+    "maxQuoteCostBps": 50,
+    "planTtlSeconds": 900,
+    "maxGasWei": "50000000000000"
+  },
+  "reference": {
+    "quotePerBase": "1",
+    "observedAt": 0,
+    "maxAgeSeconds": 3600,
+    "evidence": "UNRESOLVED: replace with independent source/time; this value is not an oracle or redemption assurance"
+  }
+}

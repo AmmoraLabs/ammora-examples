@@ -1,0 +1,31 @@
+/** fees:claim-delegated -- <feeVault> <token> <beneficiary> <payout>. Default unsigned preview. */
+import { buildClaimFeeVaultFor } from "@ammora-protocol/sdk";
+import { parseEventLogs } from "viem";
+import { feeVaultContext } from "./context.js";
+import { nonzero } from "./policy.js";
+import { tokenCredit } from "./token-credit.js";
+import { execute } from "../shared/actions.js";
+import { signer } from "../shared/env.js";
+import { main, send } from "../shared/run.js";
+import { printJson } from "../shared/input.js";
+main(async () => {
+  const [vault, tokenArg, beneficiaryArg, payoutArg, ...extra] = process.argv.slice(2);
+  if (extra.length) throw new Error("Unexpected arguments");
+  const c = await feeVaultContext(vault), token = nonzero(tokenArg, "token"), beneficiary = nonzero(beneficiaryArg, "beneficiary"), payout = nonzero(payoutArg, "payout");
+  if (payout === c.vault || beneficiary.toLowerCase() === c.caller.toLowerCase()) throw new Error("Use a distinct beneficiary and payout outside the vault");
+  const allowed = await c.client.readContract({ address: c.vault, abi: c.abi, functionName: "claimDelegate", args: [beneficiary, c.caller] });
+  if (!allowed) throw new Error("Beneficiary has not delegated to this caller");
+  const claimable = await c.client.readContract({ address: c.vault, abi: c.abi, functionName: "claimable", args: [token, beneficiary] });
+  if (claimable === 0n) throw new Error("No positive fee; no payment claimed");
+  const transaction = { to: c.vault, ...buildClaimFeeVaultFor(token, beneficiary, payout) };
+  printJson({ beneficiary, caller: c.caller, token, payout, claimable });
+  if (process.env.AMMORA_SEND !== "1") return execute("delegated FeeVault claim", c, transaction);
+  const { wallet, account } = signer();
+  if (account.address.toLowerCase() !== c.caller.toLowerCase()) throw new Error("Caller/signer mismatch");
+  const hash = await send("delegated FeeVault claim", transaction, wallet, account, c.client);
+  const receipt = await c.client.getTransactionReceipt({ hash });
+  const events = parseEventLogs({ abi: c.abi, eventName: "ClaimedFor", logs: receipt.logs.filter(l => l.address.toLowerCase() === c.vault.toLowerCase()) });
+  const e = events[0]?.args;
+  if (events.length !== 1 || !e || e.token.toLowerCase() !== token.toLowerCase() || e.beneficiary.toLowerCase() !== beneficiary.toLowerCase() || e.recipient.toLowerCase() !== payout.toLowerCase() || e.caller.toLowerCase() !== c.caller.toLowerCase() || e.amount === 0n) throw new Error(`Claim event mismatch: reconcile ${hash}`);
+  printJson({ beneficiary, caller: c.caller, eventAmount: e.amount, ...await tokenCredit(c.client, hash, token, payout) });
+});

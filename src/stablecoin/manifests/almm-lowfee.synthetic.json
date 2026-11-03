@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "chainId": 91342,
+  "generation": "auto-route",
+  "id": "almm-lowfee-test-v1",
+  "origin": {
+    "kind": "synthetic-test",
+    "issuer": "AMMORA_SYNTHETIC_QUALIFICATION",
+    "status": "reviewed",
+    "evidence": "User authorized GIWA P0 qualification only; scope.json; not FDUSD/cUSD or a fiat-backed asset"
+  },
+  "model": "almm",
+  "base": {
+    "label": "TUSD18 — AMMORA SYNTHETIC TEST ONLY",
+    "address": "0x2984634ed32bb37db904367e01f1fbd42fa36fe0",
+    "decimals": 18,
+    "codeHash": "0xa513abcdb685a6797c967e2de92b4cc58f7b7327ac1d6da47ae148516f8c3c71",
+    "proxy": {
+      "kind": "immutable"
+    },
+    "review": {
+      "status": "reviewed",
+      "evidence": "Synthetic fixture source SHA256 d2f8c18e31127bd1a24ee957107fcc2834619f8ecbf166166de82200f1dd8665; constructor hash 0x73be1ea6c34e277edd4c32ca1d6f7cae1efd5ece19a60a812b1d471bcaae4cdf",
+      "controls": "OpenZeppelin ERC20 exact-transfer test token; owner-only mint held by controlled test EOA; no proxy/pause/blacklist. No fiat value, reserves, issuer affiliation or redemption.",
+      "pausedGetter": false,
+      "blacklistGetter": false,
+      "authorities": [
+        {
+          "kind": "owner",
+          "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637"
+        }
+      ]
+    }
+  },
+  "quote": {
+    "label": "TUSD6 — AMMORA SYNTHETIC TEST ONLY",
+    "address": "0x5a3320ff8c30f449e39a450a5401c7e6486276a5",
+    "decimals": 6,
+    "codeHash": "0x16086996a990550255df45d69caa12037f7ce11da66434b5cea0b749e585486a",
+    "proxy": {
+      "kind": "immutable"
+    },
+    "review": {
+      "status": "reviewed",
+      "evidence": "Synthetic fixture source SHA256 d2f8c18e31127bd1a24ee957107fcc2834619f8ecbf166166de82200f1dd8665; constructor hash 0xf5daccbc8e479d5107f7d996fa04b6fe029688757e9e5902e58061de67518daf",
+      "controls": "OpenZeppelin ERC20 exact-transfer test token; owner-only mint held by controlled test EOA; no proxy/pause/blacklist. No fiat value, reserves, issuer affiliation or redemption.",
+      "pausedGetter": false,
+      "blacklistGetter": false,
+      "authorities": [
+        {
+          "kind": "owner",
+          "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637"
+        }
+      ]
+    }
+  },
+  "roles": {
+    "liquidityOwner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+    "payout": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+    "feeDelegate": "0x3baDd4000256E47Fe4F05d7349Cb9bdD335777d7"
+  },
+  "policy": {
+    "maxBaseRaw": "2000000000000000000",
+    "maxQuoteRaw": "2000000",
+    "maxFeeBps": 1,
+    "maxSlippageBps": 10,
+    "maxPriceDeviationBps": 100,
+    "maxQuoteCostBps": 100,
+    "planTtlSeconds": 1800,
+    "maxGasWei": "50000000000000"
+  },
+  "reference": {
+    "quotePerBase": "1",
+    "observedAt": 0,
+    "maxAgeSeconds": 3600,
+    "evidence": "Refresh explicitly before new exposure; this historical synthetic ratio is not an independent issuer reference"
+  },
+  "deployment": "almm-lowfee-test-v1"
+}

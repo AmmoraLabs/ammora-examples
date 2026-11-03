@@ -1,0 +1,23 @@
+import { parseAmmoraTokenLockClaimReceipt } from "@ammora-protocol/sdk";
+import { erc20Abi } from "viem";
+import { caller } from "../shared/actions.js";
+import { printJson } from "../shared/input.js";
+import { main } from "../shared/run.js";
+import { context, confirmedReceipt } from "./client.js";
+import { addr, uint, reviewHash } from "./policy.js";
+import { submit } from "./submit.js";
+main(async () => {
+  const [lock, maximum, expected, ...extra] = process.argv.slice(2);
+  if (!lock || !maximum || extra.length) throw new Error("usage: <lock> <maximumRaw> [reviewHash]");
+  const lockAddress = addr(lock), cap = uint(maximum, "maximumRaw"), account = caller(), c = await context(true);
+  const plan = await c.locks.planClaimAtBlock({ lock: lockAddress, caller: account, maximumAmount: cap, blockNumber: c.block.number });
+  printJson({ mode: "UNSIGNED_PREVIEW", plan, reviewHash: reviewHash(plan), payoutVerified: false });
+  if (process.env.AMMORA_SEND !== "1") return;
+  const hash = await submit(c.client, plan, expected), { receipt } = await confirmedReceipt(c.client, hash);
+  const claim = parseAmmoraTokenLockClaimReceipt(receipt, plan);
+  const balance = (blockNumber: bigint) => c.client.readContract({ address: claim.token, abi: erc20Abi, functionName: "balanceOf", args: [claim.recipient], blockNumber });
+  const before = await balance(receipt.blockNumber - 1n), after = await balance(receipt.blockNumber);
+  if (after - before !== claim.amount) throw new Error(`Claim ${hash} mined but block balance delta differs; reconcile other block activity, never resend automatically`);
+  const state = await c.locks.readAtBlock(claim.lock, receipt.blockNumber);
+  printJson({ hash, claim, before, after, state, payoutVerified: true, scope: "Matching claim event and exact whole-block net balance increase; other activity may require separate reconciliation" });
+});

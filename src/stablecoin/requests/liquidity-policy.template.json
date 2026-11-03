@@ -1,0 +1,10 @@
+{
+  "maximumBaseRaw": "10000000",
+  "maximumQuoteRaw": "10000000000000000000",
+  "feeBps": 25,
+  "minPrice": "0.99",
+  "maxPrice": "1.01",
+  "binStepBps": 1,
+  "width": 1,
+  "userSalt": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}

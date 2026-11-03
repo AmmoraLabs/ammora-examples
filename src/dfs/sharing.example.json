@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "chainId": 91342,
+  "factory": "0xb6131d1f86321c3de61f0e92fe136fa82e078927",
+  "owner": "REPLACE_WITH_VAULT_CREATOR",
+  "token": "REPLACE_WITH_ONE_FEE_TOKEN",
+  "base": "REPLACE_WITH_ASSOCIATED_BASE_TOKEN",
+  "recipients": [
+    {
+      "recipient": "REPLACE_WITH_RECIPIENT_A",
+      "share": "50"
+    },
+    {
+      "recipient": "REPLACE_WITH_RECIPIENT_B",
+      "share": "30"
+    },
+    {
+      "recipient": "REPLACE_WITH_RECIPIENT_C",
+      "share": "20"
+    }
+  ],
+  "userSalt": "REPLACE_WITH_UNIQUE_BYTES32"
+}
