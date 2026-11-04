@@ -1,11 +1,11 @@
-# Build a launchpad with SDK 0.3.8
+# Build a launchpad with SDK 0.3.9
 
 Start with the **[single end-to-end launchpad guide](https://docs.ammora.org/guides/launchpad)** for the
 complete Config → issuance/ALC → trading → Graduation → ARL → fee/LP claim flow,
 platform roles and the prioritized feature review. This page is the source-level reference.
 
 These examples cover the user flow from an immutable Config to a trading token and its
-Graduation pool. Use the published `@ammora-protocol/sdk@0.3.8` (the version pinned by this repository). Examples use an RPC endpoint and the selected chain. Standalone creation/trading
+Graduation pool. Use the published `@ammora-protocol/sdk@0.3.9` (the version pinned by this repository). Examples use an RPC endpoint and the selected chain. Standalone creation/trading
 files read the adjacent reviewed `runtime-pins.giwa.json` (or `AMMORA_RUNTIME_PINS_FILE`)
 and verify actual bytecode against it. Use Node 22 or 24;
 the commands below run after `npm ci --ignore-scripts`.

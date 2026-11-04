@@ -1,6 +1,6 @@
-# Portable contract examples with SDK 0.3.8
+# Portable contract examples with SDK 0.3.9
 
-SDK **0.3.8** supports both shared native/ERC-20 balances and independent ETH/WETH
+SDK **0.3.9** supports both shared native/ERC-20 balances and independent ETH/WETH
 balances. Use the public npm package; no local SDK archive or protocol source
 checkout/build is needed. Math remains 0.3.0.
 
@@ -11,7 +11,7 @@ npm ci --ignore-scripts
 # A new project: default latest, or an exact pin for reproducibility.
 npm install @ammora-protocol/sdk viem dotenv
 # Or pin the version explicitly:
-# npm install --save-exact @ammora-protocol/sdk@0.3.8 viem dotenv
+# npm install --save-exact @ammora-protocol/sdk@0.3.9 viem dotenv
 ```
 
 

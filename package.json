@@ -206,7 +206,7 @@
     "test:agent": "node --import tsx --test tests/agent.test.ts tests/agent-walkthrough.test.ts"
   },
   "dependencies": {
-    "@ammora-protocol/sdk": "0.3.8",
+    "@ammora-protocol/sdk": "0.3.9",
     "dotenv": "^16.4.5",
     "viem": "^2.33.0"
   },

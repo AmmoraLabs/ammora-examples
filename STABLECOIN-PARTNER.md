@@ -2,7 +2,7 @@
 
 **Recommended starting point: [stablecoin partner quickstart](https://docs.ammora.org/guides/stablecoin-quickstart).** It connects wallets, funding, selected-Registry registration, low fees, fee-only delegation, separate payouts and withdrawal through one new ALMM profile. The model comparison and default-catalog paths below describe their existing deployments; do not mix their Registry/CLI with the new profile.
 
-Partners **issue and operate their own stablecoins on GIWA**, then provide trading and liquidity through Ammora. Use public `@ammora-protocol/sdk@0.3.8`. Existing issuer ERC-20s connect to independent ARL or ALMM pools; they are not minted again through Ammora Launch and do not pass through a bonding curve or graduation.
+Partners **issue and operate their own stablecoins on GIWA**, then provide trading and liquidity through Ammora. Use public `@ammora-protocol/sdk@0.3.9`. Existing issuer ERC-20s connect to independent ARL or ALMM pools; they are not minted again through Ammora Launch and do not pass through a bonding curve or graduation.
 
 These examples target **GIWA Sepolia testnet (91342)**. Mainnet requires separate deployment, support and asset review. SDK `createProductionPool` is an interface name; it does not make this example a production-network deployment.
 
@@ -242,8 +242,8 @@ Also see the [validation scope](https://github.com/AmmoraLabs/ammora-examples/bl
 
 The [separate execution guide](https://docs.ammora.org/guides/almm-preset) connects preset preflight → empty pool → LP/trades/claims/withdrawal. The default-catalog 30 bp path remains; 1 bp validation uses an explicit synthetic-test deployment. Real-asset pilots require official issuer assets and a reviewed canonical-owner preset. Consult the [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md).
 
-SDK 0.3.8 provides readiness directly. Regenerate and review earlier 0.3.7 transaction plans. Historical P0 transaction evidence retains its original SDK/source scope.
+SDK 0.3.9 provides readiness directly. Regenerate and review earlier 0.3.7 transaction plans. Historical P0 transaction evidence retains its original SDK/source scope.
 
 ## Integrate through one ALMM model
 
-For low fees, fee-only delegation, separate payouts, full LP exit and re-entry, use the [ALMM integration guide](https://docs.ammora.org/guides/almm-unified). It uses public SDK 0.3.8 with a source-pinned compatibility module while preserving existing deployments and evidence.
+For low fees, fee-only delegation, separate payouts, full LP exit and re-entry, use the [ALMM integration guide](https://docs.ammora.org/guides/almm-unified). It uses public SDK 0.3.9 with a source-pinned compatibility module while preserving existing deployments and evidence.

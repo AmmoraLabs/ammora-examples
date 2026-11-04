@@ -4,7 +4,21 @@ New integrators should follow the [partner quickstart](https://docs.ammora.org/g
 
 This guide uses the **explicit opt-in deployment `giwa-almm-unified-v1`** on GIWA Sepolia (91342). It connects 1 bp trading, LP deposits, fee-only delegation, claims to a separate payout, full LP withdrawal, empty-NFT closure and re-entry in the same pool. Existing canonical deployments and LP positions are not migrated automatically.
 
-Install public SDK **0.3.8**. The new fee API is an unpublished addition to the SDK source; this repository supplies the same code through a [source-pinned compatibility module](https://docs.ammora.org/examples/source/extensions/almm-unified/fee-claims-compat.ts.txt). Do not assume the new API is already exported by npm 0.3.8. These examples work without republishing the SDK.
+Install public SDK **0.3.9**. Fee readiness, delegation, revocation and separate-payout claim planners are official `@ammora-protocol/sdk` exports. The retained [import path](https://docs.ammora.org/examples/source/extensions/almm-unified/fee-claims-compat.ts.txt) only re-exports those functions and types; install the public npm package and retain the reviewed GIWA profile.
+
+## Use the official fee SDK
+
+```ts
+import {
+  getALMMFeeClaimReadiness,
+  planSetALMMFeeClaimDelegate,
+  planRevokeALMMFeeClaimDelegate,
+  planClaimALMMPositionFeesTo,
+} from "@ammora-protocol/sdk";
+```
+
+The CLI builds these calls with `selectedProfile().feeOptions`, which explicitly selects fee-routing revision1 and pins the GIWA contracts. A fixed payout is the default. Only a reviewed fee owner may grant or revoke a delegate; NFT approval alone does not grant fee-routing authority. Readiness and plans do not send a transaction or prove payment. Existing deployments retain their own revision and behavior.
+
 
 ## Preparation
 
@@ -87,7 +101,7 @@ Claim execution uses the [verification function](https://docs.ammora.org/example
 
 ## Separate fee owners and authority rejections
 
-If `roles.feeOwner` differs from the LP owner, `seed` uses public SDK 0.3.8's `createBootstrapPosition` ABI. It uses the same strategy quote and minimum shares; the provider is NFT recipient/operator and `lockReleasePoint=0`. **This example does not add a time lock.** The bootstrap ABI enforces `deadline` and per-bin `minimumShares`; it has no strategy-creation active-bin pin parameter. Price, code and roles are rechecked immediately before execution, so changed state also requires a fresh bootstrap review. Omitting feeOwner or setting it equal to the LP owner uses ordinary seed. Existing NFT/fee ownership is unchanged.
+If `roles.feeOwner` differs from the LP owner, `seed` uses public SDK 0.3.9's `createBootstrapPosition` ABI. It uses the same strategy quote and minimum shares; the provider is NFT recipient/operator and `lockReleasePoint=0`. **This example does not add a time lock.** The bootstrap ABI enforces `deadline` and per-bin `minimumShares`; it has no strategy-creation active-bin pin parameter. Price, code and roles are rechecked immediately before execution, so changed state also requires a fresh bootstrap review. Omitting feeOwner or setting it equal to the LP owner uses ordinary seed. Existing NFT/fee ownership is unchanged.
 
 For an existing bootstrap NFT, read `positionFeeOwner(tokenId)` first and set manifest `feeOwner` accordingly. A mismatch stops fee operations before signing. A grant's `delegate` must also match reviewed `roles.feeDelegate`. The actual feeOwner can revoke historical grants even if the currently selected delegate has changed.
 

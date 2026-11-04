@@ -1,4 +1,4 @@
-# ALMM operations — public SDK 0.3.8
+# ALMM operations — public SDK 0.3.9
 
 For the default launchpad, start with the [complete guide](https://docs.ammora.org/guides/launchpad). ALMM bin pools are a separate product; do not pass graduated ARL pool addresses or NFT IDs into them.
 

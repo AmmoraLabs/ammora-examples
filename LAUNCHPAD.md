@@ -1,10 +1,10 @@
-# Build a launchpad with SDK 0.3.8
+# Build a launchpad with SDK 0.3.9
 
 For a contract agent, follow the [agent quickstart](https://docs.ammora.org/guides/agent-quickstart) and [full agent lifecycle](https://docs.ammora.org/guides/agent-launchpad). Creating your own Config needs no per-team Ammora approval; see [permission boundaries](https://docs.ammora.org/guides/self-service-access).
 
 New partners should start with the [quickstart](https://docs.ammora.org/guides/partner-quickstart) for SDK installation, wallets, funds, GIWA setup and the path from fee configuration to claims. Continue here for detailed implementation.
 
-This guide describes the **shared path for any launchpad to choose its Config and recipients, issue new tokens through Ammora contracts and operate them**. It assumes neither a particular partner's existing token nor an issuance gate. Use public SDK `@ammora-protocol/sdk@0.3.8` and Math `0.3.0`; run commands at this repository's root.
+This guide describes the **shared path for any launchpad to choose its Config and recipients, issue new tokens through Ammora contracts and operate them**. It assumes neither a particular partner's existing token nor an issuance gate. Use public SDK `@ammora-protocol/sdk@0.3.9` and Math `0.3.0`; run commands at this repository's root.
 
 The [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md) covers clean-project installation and this guide's GIWA atomic-launch preview. Actual issuance, trading and claims reuse preserved GIWA evidence within its original SDK/block scope. The [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md) remains available as history.
 
@@ -109,7 +109,7 @@ AMMORA_READ_RECEIPT=
 
 Never commit local `.env`. These steps need no private key. An Explorer timeout is not proof of an unverified contract; preserve the original error and recheck after connectivity recovers. Runtime-pin matches do not replace Explorer verification.
 
-Use Node 22 or 24. A new project's direct dependencies can be installed with `npm install --save-exact @ammora-protocol/sdk@0.3.8 viem dotenv`; the full command set here requires the repository source and `npm ci` above. Copy required `src/shared` files together with `src/launch` or `src/arl`. Standalone `src/quickstart` verify/create/swap files need adjacent `runtime-pins.giwa.json`.
+Use Node 22 or 24. A new project's direct dependencies can be installed with `npm install --save-exact @ammora-protocol/sdk@0.3.9 viem dotenv`; the full command set here requires the repository source and `npm ci` above. Copy required `src/shared` files together with `src/launch` or `src/arl`. Standalone `src/quickstart` verify/create/swap files need adjacent `runtime-pins.giwa.json`.
 
 Do not mix `legacy` and `auto-route` Registry, Config IDs, Factory or Manager. Preserve explicit deployment selection instead of relying on implicit SDK GIWA defaults. Resolve runtime/Explorer verification failures before proceeding.
 
@@ -226,14 +226,14 @@ Do not confirm a token address from a prediction or metadata response. Preserve 
 <a id="atomic-first-buy"></a>
 ## 4-A. Combine Config creation, token issuance and the first buy
 
-**Public SDK 0.3.8 includes the verified GIWA helper, so the convenience path needs no separate deployment files.** Atomic creation combines token/ALC creation and first buy in one transaction; failure of the buy reverts that transaction's creation too. Required ERC-20 approvals remain separate prior transactions.
+**Public SDK 0.3.9 includes the verified GIWA helper, so the convenience path needs no separate deployment files.** Atomic creation combines token/ALC creation and first buy in one transaction; failure of the buy reverts that transaction's creation too. Required ERC-20 approvals remain separate prior transactions.
 
 | Desired UX | Example / public SDK call | Caller |
 | --- | --- | --- |
 | New Config + new token/ALC + first buy | `launch:create-config-and-pool-with-first-buy` / `createConfigAndPoolWithFirstBuy` | Config owner = Creator = buyer/funder/recipient |
 | New token/ALC + first buy with existing platform Config | `portable:existing-config-first-buy` / `planExistingConfigAtomicFirstBuy` | Token Creator = buyer/funder/recipient; may differ from Config owner |
 
-The first row uses public SDK 0.3.8’s `createConfigAndPoolWithFirstBuy` convenience function. Existing explicit-manifest `planAtomicFirstBuy` remains supported. After approval preparation, **all three operations share one transaction**. `launch:quick-create` stops at Config+issuance. Choose one path; do not run step 3-3 create or step 4 issuance before the new-Config atomic path.
+The first row uses public SDK 0.3.9’s `createConfigAndPoolWithFirstBuy` convenience function. Existing explicit-manifest `planAtomicFirstBuy` remains supported. After approval preparation, **all three operations share one transaction**. `launch:quick-create` stops at Config+issuance. Choose one path; do not run step 3-3 create or step 4 issuance before the new-Config atomic path.
 
 ### Current support and historical BLOCKED status
 
@@ -243,16 +243,16 @@ The first row uses public SDK 0.3.8’s `createConfigAndPoolWithFirstBuy` conven
 | [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md), blocks 39691306 / 39692625 | Both new/existing-Config paths issued, bought and received tokens; evidence `REUSED` |
 | Historical public SDK 0.3.6 default auto-route catalog alone | `firstBuyExecutor=null`; additional configuration below required |
 | Historical SDK 0.3.6 plus verified configuration below | Supported; SDK rechecks runtime, Factory binding, callback approval, funds and allowance |
-| **Current public SDK 0.3.8** default GIWA catalog/convenience function | Helper and 11 runtime pins included; preview, approval and creation without deployment/targets JSON |
+| **Current public SDK 0.3.9** default GIWA catalog/convenience function | Helper and 11 runtime pins included; preview, approval and creation without deployment/targets JSON |
 
 This approves **first-buy executor contract code**, not partner registration. New partners using the same verified GIWA helper need not register their wallets as registrars. Do not copy this configuration to another chain/Factory or treat an arbitrary observed runtime hash as trusted. See the [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md).
 
-### Public SDK 0.3.8 convenience path without deployment files
+### Public SDK 0.3.9 convenience path without deployment files
 
 The SDK includes GIWA helper/runtime pins and `createConfigAndPoolWithFirstBuy(client, { ...parameters, blockNumber })`. It **does not sign or send**; it returns `APPROVAL_REQUIRED` or `READY` plans.
 
 ```bash
-npm install --save-exact @ammora-protocol/sdk@0.3.8 viem dotenv
+npm install --save-exact @ammora-protocol/sdk@0.3.9 viem dotenv
 ```
 
 No local SDK checkout, build or candidate tarball is required. Review [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md). Your `team-recipients.json` policy is required; deployment/targets JSON is not.
@@ -653,6 +653,6 @@ The [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/V
 
 For partners issuing stablecoins directly on GIWA and supplying DEX liquidity, use the [native stablecoin partner guide](https://docs.ammora.org/guides/stablecoin-partner). It connects issuer ERC-20s to independent pools, distinct from new Launch token issuance/graduation.
 
-## SDK 0.3.8: token vesting and ALMM readiness
+## SDK 0.3.9: token vesting and ALMM readiness
 
-The [executable vesting guide](https://docs.ammora.org/guides/vesting) uses `launch:vesting-config`, `launch:vesting-from-graduation`, `token-lock:inspect`, `token-lock:create` and `token-lock:claim-verified`. Launch vesting starts at graduation; reserve its amount in total supply. Existing Configs, LP ratios and recipients are not changed automatically. ALMM preset/position readiness now uses public SDK 0.3.8 functions.
+The [executable vesting guide](https://docs.ammora.org/guides/vesting) uses `launch:vesting-config`, `launch:vesting-from-graduation`, `token-lock:inspect`, `token-lock:create` and `token-lock:claim-verified`. Launch vesting starts at graduation; reserve its amount in total supply. Existing Configs, LP ratios and recipients are not changed automatically. ALMM preset/position readiness now uses public SDK 0.3.9 functions.

@@ -1,4 +1,18 @@
-# Validation — public SDK 0.3.8
+# Validation — SDK 0.3.9
+
+## SDK 0.3.9 compatibility and fee-routing release
+
+The current package pin is SDK **0.3.9** and Math **0.3.0**. Fee readiness, delegation, revocation and separate-payout planners are official SDK exports; `extensions/almm-unified/fee-claims-compat.ts` retains only re-exports. Install the public npm package; the deployment profile remains explicit.
+
+- **PASSED_THIS_RUN:** final physical archive consumer,190 downstream declaration imports, fresh example project types, unified types,185 existing cases and3 official-export cases. Registry installation is recorded separately after publication.
+- **REUSED:** unchanged GIWA lifecycle, Creator/Partner/multiple-recipient and LP delegation/denial proofs below, and the qualified43-transaction ALMM fee-routing flow. No past transaction is replayed.
+- **PASSED_THIS_RUN:** official0.3.9 historical ALMM planners and current runtime checks;91 read-only RPC items rechecked both fixed/explicit-any claim receipts and actual recipient balance increases. This is fresh reconciliation of existing payments, not new payouts.
+- **NOT_APPLICABLE:** GitHub CI, new contract deployments, mainnet and production API/Indexer changes.
+- **BLOCKED:** official issuer assets without confirmed GIWA addresses, token-control review and funding; synthetic tests do not certify an issuer.
+
+Reuse requires unchanged relevant source/runtime/declaration/deployment/receipt identities and intact evidence. The original failures and historicalSDK0.3.8 execution scope remain below.
+
+## Preserved SDK 0.3.8 lifecycle execution
 
 Reviewed 2026-11-04 KST. These are GIWA Sepolia (91342) contract examples for controlled test assets. They do not certify a partner’s assets, roles, funds, metadata hosting or mainnet readiness.
 

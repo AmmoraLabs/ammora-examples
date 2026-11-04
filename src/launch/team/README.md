@@ -165,6 +165,6 @@ See the [LP payout guide](https://docs.ammora.org/guides/src-arl-readme) for own
 
 ## Atomic creation paths
 
-The public SDK introduced `launch:create-config-and-pool-with-first-buy` in 0.3.7; it remains available in 0.3.8. This uses the GIWA SDK catalog without separate deployment files. Specify your team's recipient policy, amounts, and deadline explicitly. Install the public 0.3.8 package; no local SDK candidate is needed. See [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md).
+The public SDK introduced `launch:create-config-and-pool-with-first-buy` in 0.3.7; it remains available in 0.3.9. This uses the GIWA SDK catalog without separate deployment files. Specify your team's recipient policy, amounts, and deadline explicitly. Install the public 0.3.9 package; no local SDK candidate is needed. See [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md).
 
 To combine a new Config, token creation, and first buy, follow [section 4-A](https://docs.ammora.org/guides/launchpad#atomic-first-buy) with `launch:create-config-and-first-buy`. It reads the same `team-recipients.json` and calls `planAtomicFirstBuy`, retained from 0.3.7. This path uses the same wallet for Config owner, Creator, and payer. For a separate Creator, use the guide's existing-Config path.

@@ -40,7 +40,7 @@ test("ALMM example import path now resolves the exact published SDK functions", 
 test("old stablecoin plans cannot pass the execution boundary even with a valid review hash", () => {
   const dir = mkdtempSync(join(tmpdir(), "ammora-plan-version-"));
   try {
-    for (const version of ["0.3.7", "0.3.8"]) {
+    for (const version of ["0.3.7", "0.3.9"]) {
       const payload = {schemaVersion:1,sdkVersion:version};
       const reviewHash = createHash("sha256").update(JSON.stringify(payload,null,2)).digest("hex");
       const file=join(dir,"plan.json");writeFileSync(file,JSON.stringify({...payload,reviewHash}));

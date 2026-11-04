@@ -1,8 +1,10 @@
 {
-  "schemaVersion": 1,
-  "publicSDK": "0.3.8",
-  "sdkSourceSHA256": "b5f22bd2ee02e9e4894bba69acc6cb7dc6b9638463f42af56de2290031be7e2a",
-  "adapterSHA256": "bfd5a4545676039e9ba03cef3ef5d8232f77863c048c9f9b7a2118e27c0c227c",
-  "transform": "Only the two imports refer to published SDK 0.3.8; one explanatory header added",
-  "published": false
+  "schemaVersion": 2,
+  "publicSDK": "0.3.9",
+  "source": "@ammora-protocol/sdk",
+  "implementation": "Official @ammora-protocol/sdk exports",
+  "adapterSHA256": "8d9555215a5bfaca8ad4a6d302c7db55c92dca8abab380452da0763bfecb2c6b",
+  "sdkArchiveSHA256": "c07db2b89c3f13292f40f7cf89236dca82e0c575ae175776f73072e56e593fb3",
+  "sdkIntegrity": "sha512-+0zBuXCNpa62oy5hmGx4w/jGnqxIedPTCuIrICWcpWfjVUAAGluo78MSHHxh6pORpkpc4gowtjOn4TIgepCY3Q==",
+  "published": true
 }

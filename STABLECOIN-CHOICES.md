@@ -1,6 +1,6 @@
 # Stablecoin issuers: choosing an integration path
 
-Use this guide to choose model, fees, payout, and withdrawal conditions for the [partner integration](https://docs.ammora.org/guides/stablecoin-partner). It describes **public SDK 0.3.8 / GIWA Sepolia 91342**, with on-chain state rechecked on 2026-10-29. It does not extend support approval to other chains or official issuer assets.
+Use this guide to choose model, fees, payout, and withdrawal conditions for the [partner integration](https://docs.ammora.org/guides/stablecoin-partner). It describes **public SDK 0.3.9 / GIWA Sepolia 91342**, with on-chain state rechecked on 2026-10-29. It does not extend support approval to other chains or official issuer assets.
 
 ## Recommended starting point
 

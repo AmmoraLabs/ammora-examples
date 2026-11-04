@@ -9,8 +9,8 @@ import { createHash } from "node:crypto";
 
 const walk = (root) => readdirSync(root, { withFileTypes: true }).flatMap((entry) => entry.isDirectory() ? walk(join(root, entry.name)) : [join(root, entry.name)]);
 const pkg = JSON.parse(readFileSync("package.json", "utf8"));
-const sdkVersion = "0.3.8";
-const sdkIntegrity = "sha512-EUv4h31rFa3DVnEz/CoUWuz69peG4Qphh4xVuMDDtxef878FpBlrew0DI9uSSyLzL61rctvYGTuQAhz1h8L8lA==";
+const sdkVersion = "0.3.9";
+const sdkIntegrity = "sha512-+0zBuXCNpa62oy5hmGx4w/jGnqxIedPTCuIrICWcpWfjVUAAGluo78MSHHxh6pORpkpc4gowtjOn4TIgepCY3Q==";
 const lock = JSON.parse(readFileSync("package-lock.json", "utf8"));
 const installed = JSON.parse(readFileSync("node_modules/@ammora-protocol/sdk/package.json", "utf8"));
 const math = JSON.parse(readFileSync("node_modules/@ammora-protocol/math/package.json", "utf8"));
@@ -21,7 +21,7 @@ if (pkg.dependencies["@ammora-protocol/sdk"] !== sdkVersion
   || lockedSdk.resolved !== `https://registry.npmjs.org/@ammora-protocol/sdk/-/sdk-${sdkVersion}.tgz`
   || installed.version !== sdkVersion || installed.dependencies["@ammora-protocol/math"] !== "0.3.0"
   || lock.packages["node_modules/@ammora-protocol/math"].version !== "0.3.0" || math.version !== "0.3.0") {
-  throw new Error("SDK dependency, registry lock integrity and installed SDK/math must match reviewed SDK 0.3.8 / math 0.3.0");
+  throw new Error("SDK dependency, registry lock integrity and installed SDK/math must match reviewed SDK 0.3.9 / math 0.3.0");
 }
 const manifest = JSON.parse(readFileSync("node_modules/@ammora-protocol/sdk/dist/build-manifest.json", "utf8"));
 for (const [file, expected] of Object.entries(manifest.distributionSha256)) {

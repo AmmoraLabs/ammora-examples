@@ -87,7 +87,7 @@ export class AgentRuntime {
     invariant(rule && BigInt(amount) <= BigInt(rule.maxInputRaw), "ASSET_OR_AMOUNT_NOT_APPROVED");
     return { token, maximumRaw: amount, sessionLimitRaw: rule.maxSessionInputRaw };
   }
-  async getContext() { return publicJson({ chainId: 91342, generation: "auto-route", sdkVersion: "0.3.8", account: this.policy.account, core, snapshot: await this.snapshot() }); }
+  async getContext() { return publicJson({ chainId: 91342, generation: "auto-route", sdkVersion: "0.3.9", account: this.policy.account, core, snapshot: await this.snapshot() }); }
   async getConfig(id: string) { const s = await this.snapshot(); return publicJson(await this.config(id, BigInt(s.number))); }
   async getLaunch(curve: Address) { const s = await this.snapshot(); const { state, config } = await this.launch(curve, BigInt(s.number)); return publicJson({ snapshot: s, state, config }); }
   async getBalances(tokens: readonly Address[]) {

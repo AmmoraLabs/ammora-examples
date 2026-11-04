@@ -33,7 +33,7 @@ const version = name => lock.packages[`node_modules/${name}`].version;
 const pkg = {
   name: "ammora-agent-starter", version: "1.0.0", private: true, type: "module", engines: { node: ">=24.18.0 <25" },
   scripts: { typecheck: "tsc --noEmit", "agent:tools": "node --import tsx src/agent/list-tools.ts", "agent:tool": "node --import tsx src/agent/cli.ts" },
-  dependencies: { "@ammora-protocol/sdk": "0.3.8", viem: version("viem") },
+  dependencies: { "@ammora-protocol/sdk": "0.3.9", viem: version("viem") },
   devDependencies: { "@types/node": version("@types/node"), tsx: version("tsx"), typescript: version("typescript") },
 };
 fs.writeFileSync(path.join(out, "package.json"), JSON.stringify(pkg, null, 2) + "\n");
@@ -43,7 +43,7 @@ fs.writeFileSync(path.join(out, "tsconfig.json"), JSON.stringify(config, null, 2
 fs.writeFileSync(path.join(out, ".gitignore"), "node_modules/\n.agent-state/\n*.local.json\n*.sqlite*\n.env*\n");
 fs.writeFileSync(path.join(out, "README.md"), `# Ammora agent starter
 
-Public SDK 0.3.8, GIWA Sepolia 91342, direct contracts. No Ammora API or
+Public SDK 0.3.9, GIWA Sepolia 91342, direct contracts. No Ammora API or
 individual Config approval is required for the supported WETH launch path.
 New quote assets/custom callbacks remain subject to deployed protocol policy.
 
@@ -77,5 +77,5 @@ Existing public non-agent examples are available at
 https://docs.ammora.org/guides/launchpad . This archive is not a public-site deployment.
 `);
 const entries = [...files].sort().map(file => ({ file, sha256: crypto.createHash("sha256").update(fs.readFileSync(path.join(out, file))).digest("hex") }));
-fs.writeFileSync(path.join(out, "SOURCE-MANIFEST.json"), JSON.stringify({ sdk: "0.3.8", files: entries }, null, 2) + "\n");
-console.log(JSON.stringify({ destination: out, sourceFiles: entries.length, sdk: "0.3.8", keysIncluded: false }));
+fs.writeFileSync(path.join(out, "SOURCE-MANIFEST.json"), JSON.stringify({ sdk: "0.3.9", files: entries }, null, 2) + "\n");
+console.log(JSON.stringify({ destination: out, sourceFiles: entries.length, sdk: "0.3.9", keysIncluded: false }));

@@ -1,6 +1,6 @@
 # Ammora examples
 
-Contract integration examples for **@ammora-protocol/sdk 0.3.8** on GIWA Sepolia.
+Contract integration examples for **@ammora-protocol/sdk 0.3.9** on GIWA Sepolia.
 MIT licensed. No Ammora invitation is required to read, install or use these examples.
 Creating a launchpad Config is permissionless; a wallet owner still authorizes their transactions. Token-policy and administrator-only operations retain their contract permission checks.
 
