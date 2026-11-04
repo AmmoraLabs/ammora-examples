@@ -30,6 +30,8 @@ For the **synthetic standard only**, `partner:create-test-source` builds an unsi
 npm run partner:create-test-source -- profile.json test-source-input.json
 ```
 
+Copy `fixtures/self-service-source-input.template.json`, replace its two wallet placeholders with your own addresses, and keep your original partner different from the Ammora receiver. The exact V3/V4 verifier, driver, source/token/dependency hashes, market addresses, fee limits and Ammora receiver are in [synthetic standard terms](fixtures/self-service-standard-terms.test.json). Use those terms to fill `ExtensionConfigV2`; predicted template IDs alone are not active admission.
+
 Input fields are `controller`, `partner`, `quote`, `base`, `market` and `family`(0 for V3 or1 for V4). Use the exact published test token/market addresses for that test standard. This repository includes the frozen fixture ABI/creation bytecode and runtime pins in `fixtures/self-service-test-artifacts.json`; no private repository, SDK source checkout or compiler build is required. These fixtures are openly mintable, valueless and implement synthetic1:1 exact-input transfers with a1% fee. They are **not** launch presets, actual DEX price discovery or stablecoin reserves. Their Graduation/exact-output methods are deliberately unsupported.
 
 Your own wallet submits the prepared deployment once and reconciles its canonical receipt. Then import `prepareSelfServiceTestFunding` from `src/partner/self-service/test-source.ts` if test inventory is needed. Check both token runtimes against the returned pin before authorizing its four unsigned, bounded mint requests. This helper is only for the test bundle's open-mint tokens; it cannot fund a real asset.

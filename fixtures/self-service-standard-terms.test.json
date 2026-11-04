@@ -1,0 +1,71 @@
+{
+  "schema": "ammora.synthetic-standard-terms/1",
+  "testOnly": true,
+  "scope": "Only valueless frozen fixture sources/assets; no issuer or independently audited production standard",
+  "chainId": 91342,
+  "profile": "self-service-giwa.test.json",
+  "quote": {
+    "address": "0x895Accaa08592db82FE689f3453AD81C8D319027",
+    "runtimeHash": "0xa23d806a2bc27dfd6d96db5c3cd736828e1314bef677dad18e8c3bca9b909295"
+  },
+  "base": {
+    "address": "0xD75683D949180970F500fF791de97Df9ab728aaa",
+    "runtimeHash": "0xa23d806a2bc27dfd6d96db5c3cd736828e1314bef677dad18e8c3bca9b909295"
+  },
+  "standards": [
+    {
+      "label": "V3",
+      "family": 0,
+      "templateId": "0x170fe40d872e93e5c9202209e95b7e57d695e4fbf1b8d45813b7e72afc72e603",
+      "verifier": {
+        "address": "0x0feA57E19C999CaB57c1143eA9bf2a74e50Fc7c2",
+        "runtimeHash": "0xd6482569c9417fcb893fc949194dc4e070284d2aee2f94c09106a8c6a7b46862"
+      },
+      "driver": {
+        "address": "0xc11A1e3C96a81EF22dB6B63DF652A95f4cf0690c",
+        "runtimeHash": "0x175ea68cf3c02b17df016ac81a9e94409c148d6118d1352ee29e44818b9fd72a"
+      },
+      "market": {
+        "address": "0xc81083Bf204d4A261b14C4f90D9Ba04342381ebD",
+        "runtimeHash": "0x0a866e09dce029a843aed55b94b6d72772b1573427bf8b1931bbebabc77366f0"
+      },
+      "sourceRuntimeHash": "0x3676b69a88528878f840eaebf110a6ddb3726a26643f18ff9730037c286dd79e",
+      "stageMask": 3,
+      "maxFeeBps": 100,
+      "sourceFeeBps": 100,
+      "ammoraReceiver": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "ammoraManagedRevenueBps": 2000,
+      "partnerManagedRevenueBps": 8000,
+      "status": "BOOTSTRAP_TIMELOCK_PENDING",
+      "evidence": "0xc5a4a05bc70d768f3cf746d61b4a628c18cdbbdb36516a954abb7546220927d5"
+    },
+    {
+      "label": "V4",
+      "family": 1,
+      "templateId": "0x4e4411357fa62327071a2b6685aeee18970433f8b506c569e12d39c924268720",
+      "verifier": {
+        "address": "0x8909c2Daff591EFFe39527591A004Fe87e68C2cd",
+        "runtimeHash": "0x7175d0196d2cc993d572a8f53ce385ffb90048790a755d7c9a920df9ffe238d1"
+      },
+      "driver": {
+        "address": "0x8E5aEa73a0aBc113228e089DB5D0c49FD33b0194",
+        "runtimeHash": "0x175ea68cf3c02b17df016ac81a9e94409c148d6118d1352ee29e44818b9fd72a"
+      },
+      "market": {
+        "address": "0x2D032A62251f1eE66C143b3fD50D01e2088F0a9D",
+        "runtimeHash": "0x0a866e09dce029a843aed55b94b6d72772b1573427bf8b1931bbebabc77366f0"
+      },
+      "sourceRuntimeHash": "0x3676b69a88528878f840eaebf110a6ddb3726a26643f18ff9730037c286dd79e",
+      "stageMask": 3,
+      "maxFeeBps": 100,
+      "sourceFeeBps": 100,
+      "ammoraReceiver": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "ammoraManagedRevenueBps": 2000,
+      "partnerManagedRevenueBps": 8000,
+      "status": "BOOTSTRAP_TIMELOCK_PENDING",
+      "evidence": "0xc5a4a05bc70d768f3cf746d61b4a628c18cdbbdb36516a954abb7546220927d5"
+    }
+  ],
+  "callerInput": "Use your own sourceOwner/controller and original partner/rights holders; partner must differ from Ammora receiver. Do not reuse an Ammora-owned source address.",
+  "stateNote": "Predicted template IDs are not active admission; verify actual listStandards enabled flag and current chain conditions"
+}
