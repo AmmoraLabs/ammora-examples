@@ -1,5 +1,7 @@
 # Ammora copy-and-run quick starts
 
+See [partner permissions and review boundaries](../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 These contract action files contain their own RPC and SDK setup. Copy the chosen
 TypeScript file into your project. For `verify-deployment.ts`, `create-launch.ts` and
 `safe-swap.ts`, also copy the reviewed `runtime-pins.giwa.json` beside it; `AMMORA_RUNTIME_PINS_FILE`

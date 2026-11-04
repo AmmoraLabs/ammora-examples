@@ -1,5 +1,9 @@
 # Validation — SDK 0.3.9
 
+## Approval-boundary documentation clarification — 2026-11-04
+
+This update changes Markdown guidance only. SDK/dependency artifacts, executable examples, deployment profiles and historical transaction records are unchanged. Existing SDK/type/helper, launchpad, Creator/Partner and LP delegation proofs are **REUSED** within their original scope; no new transaction or payout is claimed. Local document links and permission cross-references are checked for this update. SDK republication, GitHub CI, mainnet and production changes are **NOT_APPLICABLE**. See [the permission/review matrix](PERMISSIONS.md).
+
 ## SDK 0.3.9 compatibility and fee-routing release
 
 The current package pin is SDK **0.3.9** and Math **0.3.0**. Fee readiness, delegation, revocation and separate-payout planners are official SDK exports; `extensions/almm-unified/fee-claims-compat.ts` retains only re-exports. Install the public npm package; the deployment profile remains explicit.

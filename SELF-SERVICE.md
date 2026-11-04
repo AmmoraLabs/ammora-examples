@@ -4,6 +4,12 @@ Use this guide when your team already owns a compatible external revenue source 
 
 No Ammora invitation, API credential or per-partner approval is part of registration against an enabled standard. A wallet owner still authorizes its transactions. A previously unknown source implementation, proxy, Hook, token behavior or dependency does not become supported merely by matching an ABI. A new standard needs implementation review and one platform bootstrap; that bootstrap is shared across all conforming source instances, rather than repeated for every team.
 
+## Approval and review boundaries
+
+**Per-partner platform approval is not required for a new instance that an already enabled standard accepts.** Your controller registers directly after actual owner/partner/initial-holder consent, then waits for that instance's on-chain ticket. New addresses are allowed when the exact implementation, token/dependency runtime and live identity rules still match. An ABI match alone is insufficient.
+
+A new implementation/standard needs shared review and bootstrap. Existing-module weighted-right changes require the specified governance and affected-holder consents; cancellation/emergency stop cannot be bypassed through self-registration. These requirements are separate from ordinary launchpad Config creation and wallet/allowance approval. See the [permission and review matrix](PERMISSIONS.md). This guide's bundled standards are synthetic GIWA fixtures, not blanket real-issuer support.
+
 ## Prepare your team's inputs
 
 Install Node24, clone this repository and run `npm ci --ignore-scripts`. Its lockfile uses the published `@ammora-protocol/sdk`0.3.9 package. Keep `AMMORA_SEND=0` and `AMMORA_READ_RECEIPT=''` for the commands below. These commands only read, prepare unsigned requests, or reconcile known hashes. They never load a private key or send a transaction. Your application connects its own wallet and durable submission journal.

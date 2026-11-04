@@ -4,6 +4,12 @@ Use this guide at the Config step of the [integrated launchpad guide](https://do
 It uses the public `@ammora-protocol/sdk@0.3.9` for direct contract calls.
 Choose recipients and the Creator/Partner split for a new Config, preview distributions before and after graduation, then follow the claim path for each role.
 
+## Approval and review boundaries
+
+Your team can choose permitted recipients and splits for its own **new** Config/vault and use supported own/delegated fee claims without per-partner Ammora approval. The actual beneficiary or feeOwner must authorize the caller and permitted payout; Config ownership, NFT approval and an issuer title do not automatically grant all fee rights. Alternate payouts depend on the specific claim API/grant. External weighted-module claims remain fixed to their beneficiary.
+
+Changing an existing external-source module's weighted rights or recovering a stopped module has its own governance/affected-holder procedure. That is separate from ordinary owner-authorized FeeVault/LP delegate grants and revocations. Protocol fee settings and other people's rights remain restricted. See [partner permissions and review boundaries](PERMISSIONS.md).
+
 ## 1. Who configures and who claims?
 
 | Role | Configuration | Claim authority / payout address |

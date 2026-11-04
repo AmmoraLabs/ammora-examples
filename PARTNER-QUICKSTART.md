@@ -5,6 +5,12 @@ Create new tokens with Ammora contracts and connect trading and fee sharing befo
 - [Implementation sequence and arguments: complete launchpad guide](https://docs.ammora.org/guides/launchpad)
 - [Recipients, splits, payout addresses, and authority: fee-sharing guide](https://docs.ammora.org/guides/fee-sharing)
 
+## Approval and review boundaries
+
+No per-team Ammora approval is needed to install the public SDK, read contracts, create your own valid Config or use the supported launch/trade/claim path. Your actual owner/trader/beneficiary wallets still authorize requests and allowances and supply gas and quote-token funds. `reviewHash` means your application's acceptance of the exact request.
+
+A different quote asset must satisfy the selected launch Factory's pool **and aggregation** policy; ordinary pool registration alone is insufficient. New implementations/helpers, restricted asset policies, privileged settings and recovery remain separate gates. External-source admission is a different flow from Config creation. See the [complete permission and review matrix](PERMISSIONS.md).
+
 ## 1. Install
 
 Use Node 24.18.0 (`nvm use` with `.nvmrc`). The public GitHub repository, npm package and [Docs source downloads](https://docs.ammora.org/examples) are available without an invitation or npm login. Run the examples from a fresh clone:

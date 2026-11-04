@@ -2,6 +2,12 @@
 
 Use public SDK **0.3.9** and Math **0.3.0**. Existing launch, revenue, and LP examples remain available; the new CLI is in `src/vesting/`. Commands default to reads or unsigned plans. A send requires `AMMORA_SEND=1`, your own signing wallet, and the reviewed reviewHash.
 
+## Approval and review boundaries
+
+Using the supported lock path with your own assets does not require per-team Ammora approval. The actual asset owner supplies the required allowance/signature; claimants must satisfy the deployed lock's beneficiary, schedule and release rules. A `reviewHash` is your own request review, not platform consent or permission to unlock early.
+
+New token behavior, unsupported lock/LP models or changes to existing rights need their corresponding review and contract authority. An SDK installation cannot change existing lock terms or permanently locked principal. See [partner permissions](PERMISSIONS.md); LP lock behavior belongs to the relevant position guide.
+
 ## 0. First installation
 
 The public examples repository and npm SDK are available without an invitation. Use the repository lockfile or the public Docs source setup; no SDK source build is needed.

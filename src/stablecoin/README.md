@@ -1,5 +1,7 @@
 # GIWA native issuer partner examples
 
+See [partner permissions and review boundaries](../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 Start with [STABLECOIN-PARTNER.md](https://docs.ammora.org/guides/stablecoin-partner). The issuer deploys and operates its native GIWA token.
 These examples consume that existing asset; they do not mint FDUSD/cUSD, provide fiat redemption or change token governance.
 Public SDK 0.3.9 is pinned. The P0 runner accepts GIWA Sepolia 91342 / auto-route only.

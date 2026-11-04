@@ -8,6 +8,12 @@ These examples target **GIWA Sepolia testnet (91342)**. Mainnet requires separat
 
 Read the [issuer selection guide](https://docs.ammora.org/guides/stablecoin-choices) for models, low-fee presets, delegation and withdrawal conditions. The [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md) did not resend earlier successful transactions.
 
+## Approval and review boundaries
+
+Providing liquidity and trading a supported pair do not require per-partner Ammora approval. Unclassified exact-transfer tokens may use the selected Registry's supported permissionless probe; an issuer gate/registrar role is not a universal prerequisite. Pool support and aggregation/launch-quote support are separate.
+
+A Registry-owner restriction, new implementation/token behavior, new preset or network and official issuer operating requirements need their respective review. Claims still require the actual feeOwner/beneficiary or its explicit delegate. Read the [permission and review matrix](PERMISSIONS.md) and use the selected product profile's checks; this comparison does not activate another deployment.
+
 ## Choose a supported path before execution
 
 | Requirement | Current path and validation scope |

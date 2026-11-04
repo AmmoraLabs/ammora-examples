@@ -8,6 +8,12 @@ npm install @ammora-protocol/sdk viem
 
 A fresh anonymous project installed the versionless SDK as 0.3.9. All 74 package files, SDK runtime/declarations, Math and the four entrypoints matched the qualified public artifact. The examples pin 0.3.9 with a committed lockfile. Their 188 offline tests and root/unified typechecks passed with the actual npm package. Use [the launchpad guide](LAUNCHPAD.md), [agent guide](AGENT-LAUNCHPAD.md), or [stablecoin quickstart](STABLECOIN-QUICKSTART.md).
 
+## Permission boundaries are separate from package availability
+
+Public SDK installation needs no Ammora invitation. Valid Config creation and already supported/enabled product paths need no per-partner platform approval, while actual wallet/holder consent, token policies, timelocks and current contract roles still apply. New standards, restricted asset policies, privileged configuration, post-registration external-module rights changes and stopped-module recovery keep their designated review/authority gates.
+
+Use the [permission and review matrix](PERMISSIONS.md) to distinguish those cases. A public export or a synthetic GIWA proof does not certify arbitrary assets, a new implementation, mainnet or independent custody.
+
 ## Package availability is separate from deployment and authority
 
 All nine groups below were imported from the actual public 0.3.9 package. An import does not deploy contracts, activate a route or grant revenue rights. `REUSED` retains the original source, assets, roles, dependency environment and canonical receipt scope; it is not a new trade or payout.
