@@ -4,6 +4,12 @@
 
 Target **GIWA Sepolia 91342** with the explicit opt-in profile **`giwa-almm-unified-v1`**. Use public SDK **0.3.9** with official fee-routing exports from `@ammora-protocol/sdk`. The retained [import path](https://docs.ammora.org/examples/source/extensions/almm-unified/fee-claims-compat.ts.txt) only re-exports the SDK; install the public npm package and retain the reviewed GIWA profile. The [profile JSON](https://docs.ammora.org/examples/source/extensions/almm-unified/giwa-profile.json.txt) separates protocol configuration from assets. Do not copy its synthetic test tokens, Ammora wallets or existing NFTs into partner configuration.
 
+## Approval and review boundaries
+
+A partner can use an already supported pair and ready pool/preset without per-partner Ammora approval. For an unclassified standard ERC20 with no owner override, the selected Registry's small exact-transfer registration probe is self-service. It does not require making the issuer's wallet or issuance gate a registrar and does not grant aggregation admission.
+
+An owner policy blocking the requested operation or needing a change, unsupported token behavior, a new preset/deployment and actual issuer controls require their designated owner/issuer review. Fee delegation comes from the actual feeOwner, not automatically from the issuer or NFT owner. See [partner permissions](PERMISSIONS.md) and section 4 below; test success does not certify official issuer assets or mainnet.
+
 ## 1. Prepare wallets and funds
 
 | Role | Responsibilities | Requirements |
@@ -103,7 +109,7 @@ Review `summary.registry`, `summary.assets[].policy`, `ownerConfigured` and `poo
 | --- | --- |
 | `poolSupported:true` | Already supported; continue without registration |
 | `kind=0`, `ownerConfigured:false` | Eligible for the small exact-transfer round trip below |
-| Existing owner classification or `poolAllowed=false` | Preserve policy and consult Registry owner; a probe cannot overwrite it |
+| Owner policy blocks pool use or needs a change | Preserve policy and consult Registry owner; a probe cannot overwrite it. If pool use is already supported, continue without new approval |
 | Pause/blacklist, changed code/authority or unsupported token behavior | Resolve the cause and issuer requirements first |
 
 Create the following requests **only for the unregistered asset**, separately for base and quote as needed. `PROBE_RAW` is a positive raw amount reviewed against decimals, minimum transfers and manifest budget. Caller is `roles.liquidityOwner`; Registry-owner or registrar authority is unnecessary.

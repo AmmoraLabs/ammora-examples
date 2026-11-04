@@ -1,5 +1,7 @@
 # FeeVault delegation and batch claims — SDK 0.3.9
 
+See [partner permissions and review boundaries](../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 Start with the [complete guide](https://docs.ammora.org/guides/launchpad), then [fee configuration and claims](https://docs.ammora.org/guides/fee-sharing). These examples use public SDK 0.3.9 and the GIWA `auto-route` deployment.
 
 ```bash

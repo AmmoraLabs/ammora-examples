@@ -1,5 +1,7 @@
 # SDK 0.3.9 partner examples
 
+See [partner permissions and review boundaries](../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 The [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md)
 maps SDK coverage and remaining operational gates. These commands retain the local
 synthetic scope below. Direct FeeVault/LP examples have separate

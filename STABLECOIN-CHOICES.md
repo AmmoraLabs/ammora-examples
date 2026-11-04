@@ -2,6 +2,12 @@
 
 Use this guide to choose model, fees, payout, and withdrawal conditions for the [partner integration](https://docs.ammora.org/guides/stablecoin-partner). It describes **public SDK 0.3.9 / GIWA Sepolia 91342**, with on-chain state rechecked on 2026-10-29. It does not extend support approval to other chains or official issuer assets.
 
+## Approval and review boundaries
+
+Choosing a model does not itself grant token, preset, fee or administrator rights. A partner may use an already supported pair and enabled preset without per-team Ammora approval, with its own liquidity and current wallet/feeOwner authorization. Where supported, an unclassified exact-transfer ERC20 can be registered by a small round-trip probe.
+
+New/restricted asset policies, new presets, unreviewed implementations and real-issuer controls require the designated Registry/Factory owner or issuer review. A probe does not grant aggregation admission. See the [common permission matrix](PERMISSIONS.md); the [quickstart](STABLECOIN-QUICKSTART.md) supplies the selected deployment's actual checks.
+
 ## Recommended starting point
 
 **Start a first pilot with ALMM, direct LP-owner fee claims, and one reviewed pair.** New LP entry, swaps in both directions, positive claims, full share withdrawal, and empty-NFT closure were verified. A basic issuer DEX pilot does not require delegation, arbitrary payouts, and automatic rebalancing from the outset. If issuer treasury owns the LP, default LP fees are paid to that owner. Do not substitute treasury key sharing for permission separation. Validate actual multisig or smart-account signing/execution separately.

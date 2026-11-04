@@ -1,5 +1,7 @@
 # Configure your team's recipients
 
+See [partner permissions and review boundaries](../../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 This example uses public SDK 0.3.9 and creates a **new immutable Config** from a reviewed concentrated
 Launch template. It explicitly sets four independent roles. It preserves the template's
 fee rates, creator share, LP distribution percentages, locks and vesting. It cannot

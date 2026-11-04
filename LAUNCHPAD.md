@@ -1,6 +1,6 @@
 # Build a launchpad with SDK 0.3.9
 
-For a contract agent, follow the [agent quickstart](https://docs.ammora.org/guides/agent-quickstart) and [full agent lifecycle](https://docs.ammora.org/guides/agent-launchpad). Creating your own Config needs no per-team Ammora approval; see [permission boundaries](https://docs.ammora.org/guides/self-service-access).
+For a contract agent, follow the [agent quickstart](https://docs.ammora.org/guides/agent-quickstart) and [full agent lifecycle](https://docs.ammora.org/guides/agent-launchpad). Creating your own Config needs no per-team Ammora approval; see [permission boundaries](PERMISSIONS.md).
 
 New partners should start with the [quickstart](https://docs.ammora.org/guides/partner-quickstart) for SDK installation, wallets, funds, GIWA setup and the path from fee configuration to claims. Continue here for detailed implementation.
 
@@ -24,6 +24,12 @@ Post-graduation ARL pool + Config-defined LP positions
 Trade on ARL / claim Creator and Partner FeeVault fees / claim LP NFT fees
 ```
 
+## Approval and review boundaries
+
+Creating a valid Config and choosing its initial recipients needs no per-launchpad Ammora approval. The actual Config owner must use a supported caller path. Token issuance, trading, Graduation and authorized claims then follow the selected deployment's existing asset, helper, stage and wallet rules; they are not customer-onboarding approvals.
+
+The default supported-WETH path does not require a partner registrar role. A new quote must pass the launch Factory's pool and aggregation policies, and a custom callback/helper needs shared code admission. Creating a Config does not override those checks or modify existing recipients/protocol fees. See [partner permissions](PERMISSIONS.md); [external-source self-service](SELF-SERVICE.md) is only for a separate compatible external revenue source.
+
 ## How to follow this guide
 
 Start with **one reusable Config and concentrated graduation**. Connect steps 2–9 in order. For issuance plus an initial buy, [step 4-A](#atomic-first-buy) offers a new-Config path or an existing-Config path. Full economic-policy editing, Compounding and time locks are optional in step 12. Quick Create and ordinary ARL pool creation are alternative workflows, not additional default steps.
@@ -31,7 +37,7 @@ Start with **one reusable Config and concentrated graduation**. Connect steps 2�
 | Step / app screen | Caller | Main command | Save after completion |
 | --- | --- | --- | --- |
 | 2. Connection/deployment verification | Anyone; reads only | `quickstart:verify`, `launch:get-config` | Chain, generation, Registry, template hash |
-| 3. Platform policy registration | Config owner | Addresses only: `launch:team-config`; custom split: `launch:fee-config` → `launch:config-json` | Actual Config ID/hash, recipients/split, receipt |
+| 3. Create your launchpad Config | Config owner | Addresses only: `launch:team-config`; custom split: `launch:fee-config` → `launch:config-json` | Actual Config ID/hash, recipients/split, receipt |
 | 4. Token creation form | Token Creator | `launch:create-launch` | Token, curve, Creator, receipt |
 | 4-A. Creation + first buy | New Config: owner=Creator=payer; existing Config: Creator | `launch:create-config-and-first-buy` / `portable:existing-config-first-buy` | Actual Config ID/hash, token/curve, first-buy receipt |
 | 5. Pre-graduation trades | Each trader | `launch:quote` → `quickstart:swap` (`dbc`) | Input/received amounts, receipt, curve status |

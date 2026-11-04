@@ -4,6 +4,12 @@
 
 Use the existing `createPoolFromPreset` path for **reviewed, exact-transfer ERC20s issued on GIWA**. This does not reissue tokens, use Launch Config/curve/graduation, or change existing fee sharing and LP locks. It uses public **0.3.9** without republishing the SDK.
 
+## Approval and review boundaries
+
+Using an **already enabled, ready preset** for supported assets does not need per-LP or per-partner Ammora approval. Creating/changing/re-enabling a preset is a separate Factory-owner action; SDK readiness cannot grant that role or create a missing low-fee preset.
+
+Token policies, LP/fee ownership and issuer controls still apply. A new address is not itself an approval requirement, while a restricted asset or new implementation may require review. See [partner permissions](PERMISSIONS.md) and the deployment-specific support table below; isolated or disabled test presets are not live issuer targets.
+
 ## Support status
 
 | Path | Verified status |

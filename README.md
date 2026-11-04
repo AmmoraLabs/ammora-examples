@@ -4,6 +4,19 @@ Contract integration examples for **@ammora-protocol/sdk 0.3.9** on GIWA Sepolia
 MIT licensed. No Ammora invitation is required to read, install or use these examples.
 Creating a launchpad Config is permissionless; a wallet owner still authorizes their transactions. Token-policy and administrator-only operations retain their contract permission checks.
 
+## Approval and review boundaries
+
+**No Ammora invitation or per-team approval is needed for valid Config creation or an already supported, enabled contract path.** Your users still authorize their wallets, allowances and fee rights, supply funds and respect on-chain delays.
+
+| Your integration | Can proceed directly | Needs separate review/authority |
+| --- | --- | --- |
+| Launchpad or agent | Own valid Config; supported quote/helper; issue, trade, graduate and claim under current rules | New/restricted quote policy, custom helper or privileged configuration; Config creation does not admit every asset |
+| Stablecoin/ordinary pool | Supported pair/preset, or supported self-service probe for an unclassified exact-transfer token without an owner override | Owner policy blocking the operation or needing a change, new preset/implementation, issuer controls; a pool probe does not grant aggregation admission |
+| External revenue source | New conforming instance of an already enabled standard, real holder consent and its registration delay | New standard, post-registration rights changes or stopped-module recovery |
+| Fee claims/delegation | Actual beneficiary/feeOwner or its explicit current delegate, with the permitted payout | Other people's rights, protocol fee changes or a capability absent from that contract |
+
+See **[PERMISSIONS.md](PERMISSIONS.md)** for who approves each action, the precise token-policy distinction and review cases. Wallet signatures, ERC20 approvals and local `reviewHash` checks are your own authorization, not Ammora customer approval. The bundled self-service standards are synthetic GIWA fixtures; they do not automatically support an arbitrary issuer or new implementation.
+
 ## Start
 
 Use Node 24 and a fresh project:
@@ -24,6 +37,7 @@ Partner teams should start with [PARTNER-QUICKSTART.md](PARTNER-QUICKSTART.md), 
 
 ## Choose a flow
 
+- [Permission and review matrix](PERMISSIONS.md)
 - [Partner quickstart](PARTNER-QUICKSTART.md)
 - [Config → issuance → trading → graduation → claims](LAUNCHPAD.md)
 - [Agent tools and connected lifecycle](AGENT-LAUNCHPAD.md)

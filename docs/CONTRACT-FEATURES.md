@@ -1,6 +1,6 @@
 # Contract example inventory — SDK 0.3.9
 
-Each command calls a contract operation or exposes an agent tool. Shared helpers handle transport, previews and owner authorization.
+Each command calls a contract operation or exposes an agent tool. Shared helpers handle transport, previews and owner authorization. See [permission and review boundaries](../PERMISSIONS.md): a command, preview or SDK export does not grant wallet, asset-policy or administrator authority.
 
 Start with [the launchpad guide](../LAUNCHPAD.md), [agent integration](../AGENT-LAUNCHPAD.md), or [stablecoin onboarding](../STABLECOIN-QUICKSTART.md).
 

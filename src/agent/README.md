@@ -1,5 +1,7 @@
 # Agent contract examples
 
+See [partner permissions and review boundaries](../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 Start with [the agent launchpad guide](../../AGENT-LAUNCHPAD.md). Import
 [index.ts](index.ts) into trusted application code and register only
 `agentTools(agent)` with the model. The same handlers work with local tools,

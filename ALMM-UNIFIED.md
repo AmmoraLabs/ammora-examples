@@ -6,6 +6,12 @@ This guide uses the **explicit opt-in deployment `giwa-almm-unified-v1`** on GIW
 
 Install public SDK **0.3.9**. Fee readiness, delegation, revocation and separate-payout claim planners are official `@ammora-protocol/sdk` exports. The retained [import path](https://docs.ammora.org/examples/source/extensions/almm-unified/fee-claims-compat.ts.txt) only re-exports those functions and types; install the public npm package and retain the reviewed GIWA profile.
 
+## Approval and review boundaries
+
+For this explicitly selected GIWA profile, a partner can use an already supported pair and ready preset without per-partner Ammora approval. It supplies its own liquidity and gas; the actual feeOwner grants/revokes fee-only delegation and the caller/payout must match that grant. NFT ownership or approval alone does not establish fee-routing authority.
+
+Unclassified standard tokens may use this profile's supported policy probe. Owner-restricted policies, new presets/implementations and production/issuer deployment acceptance need separate review. Do not transfer this profile's permissions to another catalog or fee-routing revision. See [partner permissions](PERMISSIONS.md).
+
 ## Use the official fee SDK
 
 ```ts

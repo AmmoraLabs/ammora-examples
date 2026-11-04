@@ -17,6 +17,12 @@ structured tools, wallet authority, execution records and recovery. The
 [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md)
 distinguishes new agent executions from reused historical contract evidence.
 
+## Approval and review boundaries
+
+An agent can use the supported Config-to-claims path without per-team Ammora approval, under the same contract conditions as a human wallet. Host/session approval, an approved Config and ERC20 allowances come from your own wallet/application policy; they do not grant new asset, standard, callback or administrator permissions.
+
+Connect your own wallet and durable journal. Preserve actual beneficiary/delegate rights and every current quote, stage, runtime and nonce check. New token policies or implementations and stopped-module recovery need the authority described in the [permission and review matrix](PERMISSIONS.md).
+
 ## Which approval is required
 
 **SDK installation, reading, creating your own valid Config and the default

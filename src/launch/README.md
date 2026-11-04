@@ -1,5 +1,7 @@
 # Build a launchpad with SDK 0.3.9
 
+See [partner permissions and review boundaries](../../PERMISSIONS.md). Wallet signatures, token approvals and local request review are your own authorization; asset policies, actual fee rights and administrator actions retain their contract checks.
+
 Start with the **[single end-to-end launchpad guide](https://docs.ammora.org/guides/launchpad)** for the
 complete Config → issuance/ALC → trading → Graduation → ARL → fee/LP claim flow,
 platform roles and the prioritized feature review. This page is the source-level reference.
