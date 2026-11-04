@@ -28,3 +28,7 @@ The agent graduation example comment now calls the retained amount unused input.
 - **NOT_APPLICABLE:** SDK publication, GitHub CI, new signing/transactions, mainnet and backend/Indexer changes. Actual main/public Docs delivery is recorded separately from the source review.
 
 Reopen affected proof if relevant SDK/source/gate/dependency, runtime/profile, caller/rights, assets, canonical receipt or preserved evidence integrity changes. Each new partner must run fresh read/simulation/authority checks for its own inputs before authorizing a transaction. Never report a zero claim, unsigned request, historical receipt or unsupported fixture as a new positive payment.
+
+## Subsequent fresh execution — 2026-11-05
+
+The [fresh public SDK 0.3.9 consumer report](FRESH-PARTNER-GIWA-039.md) now records actual documented command execution, a new 18-transaction launchpad/agent lifecycle, positive FeeVault/LP balances and approval cleanup. It explicitly separates new runs from reused stablecoin, external-source, vesting and prior delegation evidence. The original documentation-only review above remains historical.

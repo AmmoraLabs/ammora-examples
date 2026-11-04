@@ -1,5 +1,9 @@
 # Validation — SDK 0.3.9
 
+## Fresh partner execution — 2026-11-05
+
+See [the new public SDK 0.3.9 consumer report](docs/FRESH-PARTNER-GIWA-039.md): 18 new canonical GIWA transactions, Config #25 through Graduation and pool swaps, positive FeeVault/LP payouts, typed refusal controls and zero task allowances. Ten documented keyless commands and two unified stablecoin planner commands passed. Unchanged stablecoin, external-source, vesting and distinct-payee/delegation financial proofs are **REUSED** within their original scope. SDK publication and GitHub CI were not performed. Historical sections below retain their original run classifications.
+
 ## Approval-boundary documentation clarification — 2026-11-04
 
 This update changes Markdown guidance only. SDK/dependency artifacts, executable examples, deployment profiles and historical transaction records are unchanged. Existing SDK/type/helper, launchpad, Creator/Partner and LP delegation proofs are **REUSED** within their original scope; no new transaction or payout is claimed. Local document links and permission cross-references are checked for this update. SDK republication, GitHub CI, mainnet and production changes are **NOT_APPLICABLE**. See [the permission/review matrix](PERMISSIONS.md).

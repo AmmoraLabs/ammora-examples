@@ -64,3 +64,5 @@ npm run unified:typecheck
 ```
 
 Tests are local and offline. Live transactions are separate, explicit operations. Confirm each submitted hash and canonical receipt before continuing; reuse the same journal and request ID after an uncertain response.
+
+[Fresh partner SDK 0.3.9 GIWA execution](docs/FRESH-PARTNER-GIWA-039.md) records the new 18-transaction lifecycle, positive payouts, cleanup and product-specific reused evidence.
