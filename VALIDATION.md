@@ -4,13 +4,58 @@
 
 The current package pin is SDK **0.3.9** and Math **0.3.0**. Fee readiness, delegation, revocation and separate-payout planners are official SDK exports; `extensions/almm-unified/fee-claims-compat.ts` retains only re-exports. Install the public npm package; the deployment profile remains explicit.
 
-- **PASSED_THIS_RUN:** final physical archive consumer,190 downstream declaration imports, fresh example project types, unified types,185 existing cases and3 official-export cases. Registry installation is recorded separately after publication.
+- **PASSED_THIS_RUN:** final physical archive consumer,190 downstream declaration imports, fresh example project types, unified types,185 existing cases and3 official-export cases. The actual anonymous registry install and locked 188-case example suite passed; default versionless installation also selected 0.3.9.
 - **REUSED:** unchanged GIWA lifecycle, Creator/Partner/multiple-recipient and LP delegation/denial proofs below, and the qualified43-transaction ALMM fee-routing flow. No past transaction is replayed.
 - **PASSED_THIS_RUN:** official0.3.9 historical ALMM planners and current runtime checks;91 read-only RPC items rechecked both fixed/explicit-any claim receipts and actual recipient balance increases. This is fresh reconciliation of existing payments, not new payouts.
 - **NOT_APPLICABLE:** GitHub CI, new contract deployments, mainnet and production API/Indexer changes.
 - **BLOCKED:** official issuer assets without confirmed GIWA addresses, token-control review and funding; synthetic tests do not certify an issuer.
 
 Reuse requires unchanged relevant source/runtime/declaration/deployment/receipt identities and intact evidence. The original failures and historicalSDK0.3.8 execution scope remain below.
+
+## Fresh SDK 0.3.9 GIWA fee-only delegation and cleanup
+
+A fresh project used the actual public npm SDK 0.3.9, official fee-routing exports and the same extensions/almm-unified planners/proof helper. The explicit version-1 profile was checked before signing. Only a new controlled, unlocked synthetic LP NFT #7 in pool 0x7b3a0194597b7E8e159C3A48393a8E16c88898e2 was used. Existing NFTs and permanent LP were untouched; no new deployment or governance change was made.
+
+**PASSED_THIS_RUN:** 19 unique canonical successful transactions, nonces 1969–1987; final latest/pending nonce 1988. Actual native fees totaled 706701737 wei, within the 50000000000000 wei cap. Receipts had at least 13 confirmations at observation; this is not a finalized-status claim.
+
+The flow covered bounded approvals, LP creation, swaps in both directions, fixed-payee fee-only delegation and payout, single-grant revocation, explicit-any-payee delegation and payout, revoke-all, full principal exit and empty-NFT closure.
+
+| Claim | Canonical transaction | Actual base increase (18 decimals, raw) | Actual quote increase (6 decimals, raw) | Result |
+| --- | --- | --- | --- | --- |
+| Fixed separate payout | [0xdbfcfbe41c6d2156b8ab1505605f8c5e5b7c2a8855533756dd8c492000a85d10](https://sepolia-explorer.giwa.io/tx/0xdbfcfbe41c6d2156b8ab1505605f8c5e5b7c2a8855533756dd8c492000a85d10) | 1799999999999 | 1 | PASSED_THIS_RUN |
+| Explicit-any payout | [0xc92534aad43f413ce1ce3f747898acbf34fabebda16eff5efd3697129e483c03](https://sepolia-explorer.giwa.io/tx/0xc92534aad43f413ce1ce3f747898acbf34fabebda16eff5efd3697129e483c03) | 1799999999999 | 1 | PASSED_THIS_RUN |
+
+Each proof independently matched the RewardManager claim event (pool/NFT/caller/recipient), ERC20 Transfers and recipient balance differences between receipt block−1 and receipt block. Both assets increased; a zero-fee no-op was not counted as payment. Assets are controlled, valueless test tokens, not official issuer assets.
+
+**PASSED_THIS_RUN:** 9 typed live-chain eth_call authority rejections: unauthorized-wallet claims; fixed delegate with a wrong payee; fee delegate trying principal withdrawal, NFT transfer or owner-grant revocation; and claims after single/all-grant revocation. These are real chain simulations, not nine reverted broadcasts. Granting fee-only rights did not grant principal or NFT approval.
+
+**PASSED_THIS_RUN:** full new-position cleanup: both principal assets returned, NFT #7 burned, its shares/bin count zero, all four task-specific token allowances to Pool/Manager zero, and fee-controller/delegate token custody zero. The shared signer lease was released only after canonical closeout. This does not claim all allowances of the wallet are zero; the older graduated-curve allowance retains its original scope.
+
+| Step | Nonce | Canonical transaction |
+| --- | --- | --- |
+| 01-approve-manager-base | 1969 | [0xe85ba9a8549b3291697c075b7c9b32168d03d6ebc7f67339b56e0ae1a0642d0d](https://sepolia-explorer.giwa.io/tx/0xe85ba9a8549b3291697c075b7c9b32168d03d6ebc7f67339b56e0ae1a0642d0d) |
+| 02-approve-manager-quote | 1970 | [0x8f721bde106ca00a1f45b576a8b1343b82da0e9cdbded4b3c24691ecbc44ded3](https://sepolia-explorer.giwa.io/tx/0x8f721bde106ca00a1f45b576a8b1343b82da0e9cdbded4b3c24691ecbc44ded3) |
+| 03-seed | 1971 | [0x4c2ea0a2737b9bbdf0896665b27d43afefe860d5b904046ac56aa570a9e77045](https://sepolia-explorer.giwa.io/tx/0x4c2ea0a2737b9bbdf0896665b27d43afefe860d5b904046ac56aa570a9e77045) |
+| 04-approve-pool-base | 1972 | [0x03d27b8ae4ca5f8afea1959165cb91db2997d3a89fd28138598f1fa390ab8f0c](https://sepolia-explorer.giwa.io/tx/0x03d27b8ae4ca5f8afea1959165cb91db2997d3a89fd28138598f1fa390ab8f0c) |
+| 05-swap-base | 1973 | [0x547b0059ce43bf4a6a65dfe3c960b1ad33bcbc7e0fc95307bb299f8271dfe9e9](https://sepolia-explorer.giwa.io/tx/0x547b0059ce43bf4a6a65dfe3c960b1ad33bcbc7e0fc95307bb299f8271dfe9e9) |
+| 06-approve-pool-quote | 1974 | [0x6e24c6a5097f6dcaed461fb6278968ee2b8b9ce7a05eb3dbac6cfd213e0f5519](https://sepolia-explorer.giwa.io/tx/0x6e24c6a5097f6dcaed461fb6278968ee2b8b9ce7a05eb3dbac6cfd213e0f5519) |
+| 07-swap-quote | 1975 | [0xf4cc172408430c12ece33b2ea3cb97c44ce3dc860c4c8ffe3f2d941d5103c2c2](https://sepolia-explorer.giwa.io/tx/0xf4cc172408430c12ece33b2ea3cb97c44ce3dc860c4c8ffe3f2d941d5103c2c2) |
+| 08-grant-fixed | 1976 | [0x638ba106c5694d523c4f2bafd7139cdc6a2684020763182792ccb177db1481aa](https://sepolia-explorer.giwa.io/tx/0x638ba106c5694d523c4f2bafd7139cdc6a2684020763182792ccb177db1481aa) |
+| 09-claim-fixed | 1977 | [0xdbfcfbe41c6d2156b8ab1505605f8c5e5b7c2a8855533756dd8c492000a85d10](https://sepolia-explorer.giwa.io/tx/0xdbfcfbe41c6d2156b8ab1505605f8c5e5b7c2a8855533756dd8c492000a85d10) |
+| 10-revoke-one | 1978 | [0xd5e6f07ac3ed632453f0624eea5cb671389c794cb1200c0c47d948074ec61349](https://sepolia-explorer.giwa.io/tx/0xd5e6f07ac3ed632453f0624eea5cb671389c794cb1200c0c47d948074ec61349) |
+| 11-grant-any | 1979 | [0x025372c2d842e4c821407b2116fa6bd48c7b09cc33dd7123f991d6ba07f84176](https://sepolia-explorer.giwa.io/tx/0x025372c2d842e4c821407b2116fa6bd48c7b09cc33dd7123f991d6ba07f84176) |
+| 12-approve-pool-base | 1980 | [0x47e9b26d9c19fe7553d6ae8f416cbf556dca76c3f8f9216c96f25f8687d6800d](https://sepolia-explorer.giwa.io/tx/0x47e9b26d9c19fe7553d6ae8f416cbf556dca76c3f8f9216c96f25f8687d6800d) |
+| 13-swap-base | 1981 | [0xf1d9a79357a6dd08b48680e475eb0b3f6a7f14852b19badf3cab715782d4c964](https://sepolia-explorer.giwa.io/tx/0xf1d9a79357a6dd08b48680e475eb0b3f6a7f14852b19badf3cab715782d4c964) |
+| 14-approve-pool-quote | 1982 | [0x44b18ea542cc42a47ac2e825fb60db06cb9b9030179257fd376df2539c81648d](https://sepolia-explorer.giwa.io/tx/0x44b18ea542cc42a47ac2e825fb60db06cb9b9030179257fd376df2539c81648d) |
+| 15-swap-quote | 1983 | [0xe4351d56d57cbf3c3958737308e25a33909a86e16ec1da894b0799f538cfe3d9](https://sepolia-explorer.giwa.io/tx/0xe4351d56d57cbf3c3958737308e25a33909a86e16ec1da894b0799f538cfe3d9) |
+| 16-claim-any | 1984 | [0xc92534aad43f413ce1ce3f747898acbf34fabebda16eff5efd3697129e483c03](https://sepolia-explorer.giwa.io/tx/0xc92534aad43f413ce1ce3f747898acbf34fabebda16eff5efd3697129e483c03) |
+| 17-revoke-all | 1985 | [0x22872d9c8ed15f09d43a06a69f0fead0e6acfe799882a689a2c0008923505ba0](https://sepolia-explorer.giwa.io/tx/0x22872d9c8ed15f09d43a06a69f0fead0e6acfe799882a689a2c0008923505ba0) |
+| 18-exit | 1986 | [0xf49530d20979b107a25da1ebad3bbd4ed484c02c4e205c08bc6c469708f831cf](https://sepolia-explorer.giwa.io/tx/0xf49530d20979b107a25da1ebad3bbd4ed484c02c4e205c08bc6c469708f831cf) |
+| 19-close | 1987 | [0x192c328d0f2cbda99f17698245942c302e970d1b3d71e66f0f11f31560fa9d41](https://sepolia-explorer.giwa.io/tx/0x192c328d0f2cbda99f17698245942c302e970d1b3d71e66f0f11f31560fa9d41) |
+
+Original nonce-diagnostic and receipt/header disagreement failures were retained. The original hashes were reconciled under the canonical header and exact-block state before continuation; no successful or unknown transaction was resent. Earlier historical fee/LP proofs remain REUSED, never counted as new payments.
+
+See [current module availability and deployment requirements](SDK-STATUS.md). New self-service admission deployment and official issuer onboarding retain their explicit BLOCKED prerequisites.
 
 ## Preserved SDK 0.3.8 lifecycle execution
 

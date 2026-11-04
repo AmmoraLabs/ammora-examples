@@ -1,6 +1,6 @@
 # Configure your team's recipients
 
-This example uses public SDK 0.3.7 and creates a **new immutable Config** from a reviewed concentrated
+This example uses public SDK 0.3.9 and creates a **new immutable Config** from a reviewed concentrated
 Launch template. It explicitly sets four independent roles. It preserves the template's
 fee rates, creator share, LP distribution percentages, locks and vesting. It cannot
 redirect protocol fees or change an existing Config or token.

@@ -236,7 +236,7 @@ See the [stablecoin example index](https://docs.ammora.org/guides/src-stablecoin
 
 Joint announcements describe only completed scope. Agree separately on synthetic testnet results, partner approval and mainnet support.
 
-Also see the [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md). The public SDK 0.3.7 P0 [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md) records 40 transactions, positive LP payouts, authority rejections, allowance cleanup and remaining limitations. Official FDUSD/cUSD pilots, low-fee presets and full ARL closure require separately resolving that report's `BLOCKED` conditions.
+Also see the [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md). The public SDK 0.3.7 P0 [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md) records 40 transactions, positive LP payouts, authority rejections, allowance cleanup and remaining limitations. Those results retain their original scope. For current low-fee ALMM onboarding and full fee/LP closure, follow [ALMM-UNIFIED.md](./ALMM-UNIFIED.md). Official FDUSD/cUSD pilots still require confirmed issuer addresses, reviewed token controls and funding.
 
 ## ALMM low-fee preset path
 
@@ -246,4 +246,4 @@ SDK 0.3.9 provides readiness directly. Regenerate and review earlier 0.3.7 trans
 
 ## Integrate through one ALMM model
 
-For low fees, fee-only delegation, separate payouts, full LP exit and re-entry, use the [ALMM integration guide](https://docs.ammora.org/guides/almm-unified). It uses public SDK 0.3.9 with a source-pinned compatibility module while preserving existing deployments and evidence.
+For low fees, fee-only delegation, separate payouts, full LP exit and re-entry, use the [ALMM integration guide](https://docs.ammora.org/guides/almm-unified). It uses public SDK 0.3.9 with official SDK fee-routing functions; the retained compatibility file only re-exports them. The reviewed deployment profile remains explicit and existing evidence retains its original scope.

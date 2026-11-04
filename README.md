@@ -31,6 +31,7 @@ Partner teams should start with [PARTNER-QUICKSTART.md](PARTNER-QUICKSTART.md), 
 - [Stablecoin pool onboarding](STABLECOIN-QUICKSTART.md)
 - [Vesting](VESTING.md)
 - [All 190 contract/tool commands](docs/CONTRACT-FEATURES.md)
+- [SDK 0.3.9 module availability and deployment requirements](SDK-STATUS.md)
 - [Validation and execution scope](VALIDATION.md)
 
 Browse [public documentation](https://docs.ammora.org/) or [source downloads](https://docs.ammora.org/examples).

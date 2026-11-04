@@ -39,7 +39,7 @@ All commands run as `npm run <command> -- <arguments>` from the repository root.
 
 For ALC and graduated swaps, use [safe-swap.ts](https://docs.ammora.org/examples/source/src/quickstart/safe-swap.ts.txt) as in the guide.
 Creator transfer uses [transfer-creator.ts](https://docs.ammora.org/examples/source/src/launch/transfer-creator.ts.txt) and its [guide](https://docs.ammora.org/guides/src-launch-creator-transfer).
-Atomic Config + launch + first buy uses [the SDK 0.3.7 convenience example](https://docs.ammora.org/examples/source/src/launch/team/create-config-and-pool-with-first-buy.ts.txt)
+Atomic Config + launch + first buy uses [the convenience example introduced in SDK 0.3.7](https://docs.ammora.org/examples/source/src/launch/team/create-config-and-pool-with-first-buy.ts.txt)
 and [the integrated first-buy instructions](https://docs.ammora.org/guides/launchpad#atomic-first-buy). Quick Create itself has no first buy.
 For beneficiary delegation and sequential batch claims, see [FeeVault examples](https://docs.ammora.org/guides/src-fees-readme).
 
