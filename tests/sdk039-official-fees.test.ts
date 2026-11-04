@@ -12,7 +12,7 @@ test('fee adapter contains re-exports rather than a second fee implementation', 
   assert.doesNotMatch(code, /async function|encodeFunctionData|readContract|privateKey/);
 });
 test('SDK 0.3.9 keeps fee-only routing separate from custody authority', () => {
-  const names = new Set(fees.almmFeeClaimRoutingAbi.map(x => 'name' in x ? x.name : ''));
+  const names = new Set<string>(fees.almmFeeClaimRoutingAbi.map(x => 'name' in x ? x.name : ''));
   for (const name of ['setFeeClaimDelegate', 'setFeeClaimDelegateAnyRecipient', 'revokeFeeClaimDelegate', 'revokeAllFeeClaimDelegates', 'claimPositionFeeTo', 'claimPositionFeeToChunk']) assert(names.has(name));
   for (const name of ['transferFrom', 'safeTransferFrom', 'removeLiquidity', 'claimReward']) assert(!names.has(name));
 });
