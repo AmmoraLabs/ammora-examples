@@ -4,7 +4,7 @@ Each command calls a contract operation or exposes an agent tool. Shared helpers
 
 Start with [the launchpad guide](../LAUNCHPAD.md), [agent integration](../AGENT-LAUNCHPAD.md), or [stablecoin onboarding](../STABLECOIN-QUICKSTART.md).
 
-The 198 registered commands are listed below. A command being included does not imply that your assets, permissions, funding or deployment are ready. Use unsigned previews and read [validation scope](../VALIDATION.md).
+The 203 registered commands are listed below. A command being included does not imply that your assets, permissions, funding or deployment are ready. Use unsigned previews and read [validation scope](../VALIDATION.md).
 
 | Command | Executable source |
 | --- | --- |
@@ -213,3 +213,8 @@ Follow [SELF-SERVICE.md](../SELF-SERVICE.md). These commands read, prepare unsig
 | `npm run partner:cancel-registration -- …` | [src/partner/self-service/cancel.ts](../src/partner/self-service/cancel.ts) |
 | `npm run partner:reconcile-registration -- …` | [src/partner/self-service/reconcile.ts](../src/partner/self-service/reconcile.ts) |
 | `npm run partner:create-test-source -- …` | [src/partner/self-service/test-source.ts](../src/partner/self-service/test-source.ts) |
+| `npm run partner:create-test-assets -- …` | [src/partner/self-service/test-assets.ts](../src/partner/self-service/test-assets.ts) |
+| `npm run partner:configure-test-source -- …` | [src/partner/self-service/configuration.ts](../src/partner/self-service/configuration.ts) |
+| `npm run partner:verify-module-deployment -- …` | [src/partner/self-service/deployment-pin.ts](../src/partner/self-service/deployment-pin.ts) |
+| `npm run partner:quote-module -- …` | [src/partner/self-service/trade.ts](../src/partner/self-service/trade.ts) |
+| `npm run partner:prepare-module-claim -- …` | [src/partner/self-service/claim.ts](../src/partner/self-service/claim.ts) |

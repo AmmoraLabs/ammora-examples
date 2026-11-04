@@ -5,7 +5,9 @@ maps SDK coverage and remaining operational gates. These commands retain the loc
 synthetic scope below. Direct FeeVault/LP examples have separate
 [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md).
 
-For external-source registration on GIWA, use the [self-service guide](../../../SELF-SERVICE.md) and the feature examples in `self-service/`. They use the public 0.3.9 package and are separate from the offline fixtures below.
+For external-source registration on GIWA, use the [self-service guide](../../SELF-SERVICE.md) and the feature examples in `self-service/`. They use the public 0.3.9 package and are separate from the offline fixtures below.
+
+Live-profile self-service feature commands prepare/read only: `partner:create-test-assets`, `partner:create-test-source`, `partner:configure-test-source`, `partner:diagnose-standard`, `partner:deploy-module`, `partner:verify-module-deployment`, `partner:register`, `partner:activate`, `partner:quote-module`, `partner:prepare-module-claim`, `partner:cancel-registration` and `partner:reconcile-registration`. See the guide for wallet-owned consent, actual timelocks, genuine local plan handling and positive receipt-block payout checks. `partner:standards` lists enabled standards. Quote/claim commands in the offline section below remain separate demonstrations.
 
 These five commands are deterministic **SYNTHETIC_OFFLINE** examples. They use local
 installed SDK 0.3.9 APIs, chain **31337** and a bounded in-memory RPC fixture. No API service,

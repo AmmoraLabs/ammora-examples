@@ -30,8 +30,9 @@ Partner teams should start with [PARTNER-QUICKSTART.md](PARTNER-QUICKSTART.md), 
 - [Fee splits, Creator/Partner claims and LP delegation](FEE-SHARING.md)
 - [Stablecoin pool onboarding](STABLECOIN-QUICKSTART.md)
 - [External-source self-service registration](SELF-SERVICE.md)
+- [New partner-address GIWA walkthrough and payment results](docs/PARTNER-PERSPECTIVE-GIWA.md)
 - [Vesting](VESTING.md)
-- [All 198 contract/tool commands](docs/CONTRACT-FEATURES.md)
+- [All 203 contract/tool commands](docs/CONTRACT-FEATURES.md)
 - [SDK 0.3.9 module availability and deployment requirements](SDK-STATUS.md)
 - [Validation and execution scope](VALIDATION.md)
 

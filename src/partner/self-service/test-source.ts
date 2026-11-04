@@ -5,6 +5,15 @@ import { cli, required, address, loadSelfServiceProfile, type SelfServiceProfile
 const bundle = JSON.parse(readFileSync(new URL("../../../fixtures/self-service-test-artifacts.json", import.meta.url), "utf8"));
 // The fixture bundle is data, not a remote plugin or SDK replacement.
 const artifact = (name: string) => bundle.artifacts[name] as { abi: Abi; bytecode: Hex; runtimeBytecode: Hex };
+/** New independent fixture addresses, still subject to the enabled standard's code hashes. */
+export function prepareSelfServiceTestAssets(profile: SelfServiceProfile, controller: Address, family: 0 | 1 = 0) {
+  if (!profile.testOnly || profile.chainId !== 91342 || (family !== 0 && family !== 1)) throw new Error("An isolated synthetic GIWA profile and family0 or1 are required");
+  address(controller);
+  return { testOnly: true, economicValue: false, automaticSend: false, deployments: ([["quote", "StandardTokenFixture"], ["base", "StandardTokenFixture"], ["market", "StandardMarketFixture"]] as const).map(([label, name]) => {
+    const a = artifact(name);
+    return { label, runtimeHashRequired: keccak256(a.runtimeBytecode), request: { account: controller, data: encodeDeployData({ abi: a.abi, bytecode: a.bytecode, args: label === "market" ? [family] : [] }), value: 0n } };
+  }) };
+}
 export function prepareSelfServiceTestSource(profile: SelfServiceProfile, input: { controller: Address; partner: Address; quote: Address; base: Address; market: Address; family: 0 | 1 }) {
   if (!profile.testOnly || (input.family !== 0 && input.family !== 1)) throw new Error("An isolated synthetic GIWA test profile is required");
   for (const value of [input.controller, input.partner, input.quote, input.base, input.market]) address(value);
