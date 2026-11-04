@@ -55,7 +55,7 @@ Each proof independently matched the RewardManager claim event (pool/NFT/caller/
 
 Original nonce-diagnostic and receipt/header disagreement failures were retained. The original hashes were reconciled under the canonical header and exact-block state before continuation; no successful or unknown transaction was resent. Earlier historical fee/LP proofs remain REUSED, never counted as new payments.
 
-See [current module availability and deployment requirements](SDK-STATUS.md). Owned synthetic self-service now has49 canonical transactions: full runtime/consent checks, two active standards, three direct controller registrations, actual waiting/denial and valueless inventory checks; [remaining live gates](docs/SELF-SERVICE-VALIDATION.md) are module activation after2026-11-04T08:38:09Z and actual trade/payment/cleanup closure. Real-standard review and official issuer onboarding remain separate BLOCKED prerequisites.
+See [current module availability and deployment requirements](SDK-STATUS.md). Owned synthetic self-service completed76 canonical transactions: two enabled standards, three direct registrations and delayed activations, six trades, twelve positive 20:80 fixed-beneficiary payments, typed authority/stopped-state refusals and zero task custody/allowance cleanup. See [complete live qualification](docs/SELF-SERVICE-VALIDATION.md). The three test modules are stopped; real-standard review and official issuer onboarding remain separate BLOCKED prerequisites.
 
 ## Preserved SDK 0.3.8 lifecycle execution
 

@@ -75,5 +75,7 @@
     }
   ],
   "callerInput": "Use your own sourceOwner/controller and original partner/rights holders; partner must differ from Ammora receiver. Do not reuse an Ammora-owned source address.",
-  "stateNote": "Predicted template IDs are not active admission; verify actual listStandards enabled flag and current chain conditions"
+  "stateNote": "Both synthetic common standards were activated and left enabled at final qualification. Verify current chain conditions; a new source still needs its own registration/ticket delay. Prior test modules were deliberately stopped.",
+  "qualification": "COMPLETED_SYNTHETIC_FLOW_TEST_MODULES_STOPPED",
+  "qualificationReport": "../docs/SELF-SERVICE-VALIDATION.md"
 }

@@ -1,58 +1,79 @@
-# GIWA self-service qualification — registration delay
+# GIWA self-service qualification — completed synthetic flow
 
-Published SDK0.3.9, GIWA Sepolia91342. Current checkpoint: **49 successful canonical transactions**, nonces1988..2036, nextNonce2037. These are isolated Ammora-owned synthetic standards and valueless fixtures. A real partner source or independent standard review has not been selected.
+Published SDK 0.3.9, GIWA Sepolia (chain 91342). **76 successful canonical transactions**, nonces 1988–2063; final latest and pending nonce 2064. Actual native fees: **14,535,538,337 wei**, below the 125,000,000,000,000 wei task cap. Every transaction had value0. No SDK publication, GitHub CI, mainnet or production change occurred.
 
-The two reusable standards are **active**. Three source modules are directly registered and **waiting for their own activation tickets**. The latest actual readyAt is **2026-11-04T08:38:09Z (17:38:09 KST)**. Neither elapsed time nor an active standard proves an individual module executable. No new trade or positive fee payment is claimed yet.
+Two reusable synthetic standards remain enabled. Three independently configured source modules were registered directly by their controller, activated after their actual tickets, traded and paid fees, then deliberately stopped for cleanup. Live registration/trading targeted stage 1 (pool). A new partner creates its **own** conforming source; these stopped test modules are not reusable live trading targets. A real issuer, source implementation and independent review have not been selected.
 
 | Required boundary | Classification | Actual scope |
 | --- | --- | --- |
-| Public package/default installation and original SDK/core proof | REUSED | Same qualified0.3.9 archive/runtime, frozen artifacts and41 transitive source inputs; original local/synthetic scope retained |
-| Existing Creator/Partner/multiple-recipient and LP delegation payouts | REUSED | Original assets, authority, canonical receipts and exact-block payments; no new LP transaction |
-| New example/operations boundaries and mandatory interfaces | REUSED | Ten example and six extraction cases passed; types and267TS/198-command audit passed; executable inputs unchanged by checkpoint docs/data commits |
-| Deployment/runtime/actual holder consent | PASSED_THIS_RUN | Fresh roots, separate role actors and three Source/Port/Vault instances; every runtime byte, immutable input, factory mapping and initial rights verified |
-| Actual bootstrap and standard activation | PASSED_THIS_RUN | Both real3600-second gates honored; two templates activated permissionlessly |
-| Supported/unsupported configuration diagnosis | PASSED_THIS_RUN | Three compatible source instances and eight exact unsupported source/registry/driver/economic/token/dependency/stage cases |
-| Direct source registration and SDK recovery | PASSED_THIS_RUN | Three nongovernance controller requests; same V3 standard reused twice; genuine local-plan provenance, SDK observed receipt and receipt-only recovery/mayResubmit=false |
-| Actual waiting and authority refusals | PASSED_THIS_RUN | SDK waiting matched the ticket; early activation rejected TimelockPending and guardian registration rejected Unauthorized; no negative broadcast |
-| Synthetic inventory and allowances | PASSED_THIS_RUN | Ten value-zero mints/approvals; exact-block balances and30000raw Router allowances verified; managed custody still0 |
-| Module activation, six trades, twelve positive payments, stopped-state denials and final cleanup | BLOCKED | Actual third readyAt08:38:09Z and subsequent execution/verification pending |
-| Real issuer/production standard admission | BLOCKED | Actual source/dependencies/token behavior, rights, independent review and operating acceptance not supplied |
+| Public package/default install, SDK/core/compiler proof | REUSED | Same qualified 0.3.9 archive/runtime, frozen artifacts and 41 transitive source inputs; original scope retained |
+| Existing Creator/Partner/multiple-recipient and LP delegation payouts | REUSED | Original canonical receipts, authority and exact-block payments; no new LP transaction |
+| Example and extraction interfaces | REUSED | Ten example and six extraction cases, root types,267 TS/198 commands; executable/test/dependency inputs unchanged |
+| Deployment/runtime and holder consents | PASSED_THIS_RUN | Exact full runtimes, factory mappings and consent for all 3 Source/Port/Vault instances |
+| Bootstrap and standards | PASSED_THIS_RUN | Two common templates enabled after genuine serial 3600-second gates |
+| Compatibility and direct registration | PASSED_THIS_RUN | Three compatible sources, eight unsupported cases; same V3 standard reused twice, no per-instance governance call |
+| SDK activation and recovery | PASSED_THIS_RUN | Three actual activations after their third real delay; genuine local plans and observed receipt-only recovery, mayResubmit=false |
+| Managed exact-input trades | PASSED_THIS_RUN | Six trades, both directions across 3 modules;10,000 raw input,9,900 raw output,100 raw newly secured fee each |
+| Fixed-beneficiary payments | PASSED_THIS_RUN | Twelve official SDK planClaim sends;20 raw Ammora and 80 raw partner per asset/module, Paid/Transfer and receipt-block balance increases |
+| Authority and stopped-state refusals | PASSED_THIS_RUN | Earlier two waiting/wrong-controller refusals plus six stopped/debtless-holder refusals; no negative broadcasts |
+| Final cleanup and signer handoff | PASSED_THIS_RUN | Three test modules stopped, source beneficiaries restored, all task allowances and Router/Port/Vault cash/debt/liability 0; own writer lease released |
+| Real issuer/production standard | BLOCKED | Source/dependencies/token behavior, actual rights, independent review and operating acceptance not supplied |
 | SDK republication, GitHub CI, mainnet, production | NOT_APPLICABLE | Excluded and not executed |
 
-## Actual owned deployments
+## Registration and activation
 
-| Source | Module | Vault | Canonical deployment |
+| Source | Module | Actual ticket readyAt Unix | Activation |
 | --- | --- | --- | --- |
-| sourceV3A | `0x357295bda8D847e3Be59f1a2cD0E3A7555c65bAc` | `0x8ACAfA72b15a0316270DFDc53395c2581Cf9623E` | [deployment](https://sepolia-explorer.giwa.io/tx/0xb51ae73eb0f8c41c34f910bbd7be54a5b2b35a25557fb529562a7e38501084b5) |
-| sourceV3B | `0x64B7Eb4e601E0fa365cb3478a5817a56B4Eb89cf` | `0x34DA16821c1fc28337C5Df43a871Fc47a3dcF94e` | [deployment](https://sepolia-explorer.giwa.io/tx/0x36b6978221f1e12ab1807a1ed1503ebf1f4ad59a8cb2ab00e246336782d79392) |
-| sourceV4 | `0x3F5735c0E2C525e98267db0D16b03eEc9667be44` | `0xD584b9d34fb953094202961860dD7120E74e54E8` | [deployment](https://sepolia-explorer.giwa.io/tx/0x780c554fd23571caf9b608707a1d02c26e17f7d9263a62bbf71fd61934df6531) |
+| sourceV3A | `0x357295bda8D847e3Be59f1a2cD0E3A7555c65bAc` | 1793781401 | [receipt](https://sepolia-explorer.giwa.io/tx/0x57420edf02cbbe371a6e449002791b51ede6ca07f794f8b82c537606d2853eb2) |
+| sourceV3B | `0x64B7Eb4e601E0fa365cb3478a5817a56B4Eb89cf` | 1793781445 | [receipt](https://sepolia-explorer.giwa.io/tx/0x68e7e39e2396adfa42ec98d6561d6951dc621dc50804252fe17690a798a9e0b1) |
+| sourceV4 | `0x3F5735c0E2C525e98267db0D16b03eEc9667be44` | 1793781489 | [receipt](https://sepolia-explorer.giwa.io/tx/0xbe6aefcb11440a142dd0015f7fddc1a9fed6365fa283a5e6eab0cadff726416a) |
 
-## Direct controller registrations
+The final ticket readyAt was 2026-11-04T08:38:09Z. Fresh chain-time, epochs, nonce, runtime and inventory checks preceded signing. Elapsed wall time alone was never accepted. Governance, guardian and partner are different controlled contract role addresses, but share one physical test signer; this is not independent production custody. Registration, activation and cancellation retained genuine SDK plan/client authority and used receipt-only recovery after submission.
 
-| Source | Enabled common template | Actual ticket readyAt Unix | Canonical registration |
-| --- | --- | --- | --- |
-| sourceV3A | `0x170fe40d872e93e5c9202209e95b7e57d695e4fbf1b8d45813b7e72afc72e603` | 1793781401 | [registration](https://sepolia-explorer.giwa.io/tx/0xcd22db94ece5210a4623c3b96cfc40a05e54c5ebe3c26779ecfa35ecf13a6a52) |
-| sourceV3B | `0x170fe40d872e93e5c9202209e95b7e57d695e4fbf1b8d45813b7e72afc72e603` | 1793781445 | [registration](https://sepolia-explorer.giwa.io/tx/0x013ef6512516eecdad12853ccd8158a3407fa1371e88b210e0740e5701623405) |
-| sourceV4 | `0x4e4411357fa62327071a2b6685aeee18970433f8b506c569e12d39c924268720` | 1793781489 | [registration](https://sepolia-explorer.giwa.io/tx/0x6dc183ac9634e11743604ddfafdcb15f7d037ec37ad9b53ba265da7371b9f108) |
+## Six actual managed trades
 
-The source controller is the approved managed EOA; governance, guardian and partner are separate controlled contract addresses. They share one physical signer, so this is not independent production custody. The three source beneficiaries are connected to their modules. There was no extra platform/governance transaction for each registration. An outside team must create its **own** conforming source and use its own controller/rights holders; do not reuse these owned source addresses.
+| Source | Input asset | Owner input decrease raw | Owner output increase raw | Newly secured fee raw | Receipt |
+| --- | --- | --- | --- | --- | --- |
+| sourceV3A | quote | 10000 | 9900 | 100 | [receipt](https://sepolia-explorer.giwa.io/tx/0xad86a072779824827ed54af3ece8f8bd94198e816502892ee00ba71be0f49e50) |
+| sourceV3A | base | 10000 | 9900 | 100 | [receipt](https://sepolia-explorer.giwa.io/tx/0xdc929bdcfa9e85ff8f848f8366cf359a13f65a0775b9a2945a67ea62d2ce3b74) |
+| sourceV3B | quote | 10000 | 9900 | 100 | [receipt](https://sepolia-explorer.giwa.io/tx/0xf0d297e87407b8f4f4396d91cc933eae144ba08f2609394881b7d8ad44a65f60) |
+| sourceV3B | base | 10000 | 9900 | 100 | [receipt](https://sepolia-explorer.giwa.io/tx/0xdd4aef7e99640eb9e52ada0975c14f2b9186bc26f5037f10514500cd10656a62) |
+| sourceV4 | quote | 10000 | 9900 | 100 | [receipt](https://sepolia-explorer.giwa.io/tx/0xac602b687c8323e000ca284b86f54da932024605c9276d7053e5c13fd1e7678a) |
+| sourceV4 | base | 10000 | 9900 | 100 | [receipt](https://sepolia-explorer.giwa.io/tx/0xd91d3beebf5042d5951f01ec93c4a133112973c38a094de5c1627131799819df) |
 
-## Current assets are inventory, not payments
+Actual ManagedExecuted/Routed/Executed/Allocated receipt evidence and exact-block input/output, secured fee and 20:80 debt changes were checked. Native flags were false: the quote fixture is not WETH. No mint, observation-only receipt or zero-fee no-op was counted as revenue payment.
 
-All assets here are openly mintable, valueless test fixtures with synthetic1:1 exact-input transfers and a1% source fee. They do not demonstrate issuer reserves, real DEX price discovery, Graduation or exact-output. The quote fixture is not WETH and must not be used for native deposit/withdraw.
+## Twelve positive fixed-beneficiary payments
 
-At the canonical final funding block, the owner held30000raw of each token, each source held50000raw of each (150000raw total per asset), and Router allowances were exactly30000raw per asset. Partner, Router, Port and Vault cash was0. Minted balances are not fee payouts. Only later positive Paid/Transfer events and receipt-block beneficiary balance increases may establish a payment. Final task allowances/custody and stopped-module behavior remain pending.
+| Module | Asset | Beneficiary | Amount raw | Balance before raw | Balance after raw | Receipt |
+| --- | --- | --- | --- | --- | --- | --- |
+| sourceV3A | quote | Ammora EOA | 20 | 29700 | 29720 | [receipt](https://sepolia-explorer.giwa.io/tx/0x2bdbb6e58157cee93051a403d32751bde907e72ae199355b16e8981865fa9803) |
+| sourceV3A | quote | Controlled partner holder | 80 | 0 | 80 | [receipt](https://sepolia-explorer.giwa.io/tx/0x37d5f57e0ebd63be3fdc5f8bb970a63b6a8d440d96c69e6bf7a6e0d8a2225dfe) |
+| sourceV3A | base | Ammora EOA | 20 | 29700 | 29720 | [receipt](https://sepolia-explorer.giwa.io/tx/0x54916bdfe7f61a13c39b25caafaec0776e6666b6e0f5c6bfe3f4459346b9ea63) |
+| sourceV3A | base | Controlled partner holder | 80 | 0 | 80 | [receipt](https://sepolia-explorer.giwa.io/tx/0x1a1ae516e9f8a8c1e407bd046e11a92d9759ee5eed23ae1db0d190fd80abd4ba) |
+| sourceV3B | quote | Ammora EOA | 20 | 29720 | 29740 | [receipt](https://sepolia-explorer.giwa.io/tx/0x78b9b3f3a84bd2cf38143d9d5bf0aa8279312e3d1bb64b0a0229db5f8f008d9b) |
+| sourceV3B | quote | Controlled partner holder | 80 | 80 | 160 | [receipt](https://sepolia-explorer.giwa.io/tx/0xbe6c8aa44680cab688ca602f55d19569d295ccef44e04c44d3a53d5c5e075ea9) |
+| sourceV3B | base | Ammora EOA | 20 | 29720 | 29740 | [receipt](https://sepolia-explorer.giwa.io/tx/0x2cbb031d3506406f656805851e77f24ea34faca6ce9963a03d8d7ea141196dc1) |
+| sourceV3B | base | Controlled partner holder | 80 | 80 | 160 | [receipt](https://sepolia-explorer.giwa.io/tx/0x16f9d32d6e3c8d74d7cbb09a13be5d5438ff73268d252cb8e29639fb62594e13) |
+| sourceV4 | quote | Ammora EOA | 20 | 29740 | 29760 | [receipt](https://sepolia-explorer.giwa.io/tx/0x88086c549c8fbae7d933b9812d27c0aa7568c5f3a5e4f6a7c1ec019408944398) |
+| sourceV4 | quote | Controlled partner holder | 80 | 160 | 240 | [receipt](https://sepolia-explorer.giwa.io/tx/0x9140c8ed4f430f4509b7f4ee98a78f0312836c00ea896ed2e248919894a9e462) |
+| sourceV4 | base | Ammora EOA | 20 | 29740 | 29760 | [receipt](https://sepolia-explorer.giwa.io/tx/0xccdf9b864d14a7c0c08b9f9538e9dc0f6cf5760d56d5f4937d6717b53e17919d) |
+| sourceV4 | base | Controlled partner holder | 80 | 160 | 240 | [receipt](https://sepolia-explorer.giwa.io/tx/0x00d950cc0d314280ff745d2b576be19617b49a38559e9a93be8d9a994b28985a) |
 
-## Original failures and canonical observations
+Every payment used official SDK 0.3.9 `createPartnerExtensionClientV2.planClaim`, matched the frozen Vault ABI exactly and required a positive Paid event, matching ERC20 Transfer, receipt-1/receipt-block recipient balance increase, and matching debt/liability decrease. The controlled contract holder used its reviewed outer execute call. Claims remained payable after cancellation/guardian stop. These are fixed-beneficiary rights, not arbitrary payout-address or LP delegation powers; the latter products retain their separate REUSED proofs.
 
-A standalone child Registry artifact differed from the exact parent-embedded compiler metadata. The original successful transaction was recovered read-only by deriving the exact embedded bytes and requiring all9265 runtime bytes; no mask or relaxed gate. The Factory validly used one code store; its original successful transaction was recovered by checking the entire reconstructed module creation code against the public SDK constant. Neither was resent or redeployed.
+## Refusals and final cleanup
 
-The original test-only type error and private preparation-path/generator failures remain preserved. The literal type correction had identical emitted JavaScript, allowing its passed runtime cases to be reused. No unchanged failed command is automatically retried.
+Actual early activation returned TimelockPending; an outer guardian attempting controller registration returned Unauthorized. After two controller cancellations and one guardian stop, all 3 modules rejected re-registration with exact Unsupported(10). A debtless guardian could not take partner fees (InvalidRights). Refusals used real outer-actor eth_call simulations; no contract was impersonated as an EOA and no failed test transaction was broadcast.
 
-Initial receipt/header hashes disagreed for41 of49 transactions. Each was reconciled using the **same hash** with a canonical matching receipt and13 confirmations; originals were retained and nothing was resent. These are observed canonical proofs, not a finalized-status guarantee. The evidence does not assert whether each original disagreement was provider caching or a chain reorg.
+Final canonical state has no pending task nonce, zero owner-to-Router allowances, zero Router/Port/Vault cash, zero task internal allowances, zero vault liability/debt/pass-through/unattributed balances, and zero module claimable at each source. Each module/asset secured and paid 100 raw. Original source beneficiaries were restored. The task's own writer lease was released and signing/sending stopped.
 
-## Reuse invalidation and main closure
+Each source still holds 50,000 raw quote and 50,000 raw base; total **150,000 raw per asset**. These openly mintable assets are valueless inventory in a fixture with no withdrawal method. This is not withdrawn principal, issuer reserves or money recovered. Synthetic1:1 exact-input / 1% fee behavior does not certify actual DEX pricing, Graduation, exact-output, arbitrary proxies/Hooks/tokens, issuer support or an independent audit.
 
-Relevant source/ABI/compiler/artifact, SDK/dependency, chain/genesis/runtime, role/rights/epoch, canonical receipt or preserved-seal changes invalidate affected reuse. Old validations retain their exact scope. Installing an SDK, a successful mint or an observed action receipt does not certify all features or a positive payment.
+## Preserved failures and reuse
 
-The existing PR remains Draft until actual activation/trade/payment/refusal/cleanup gates pass. Normal main integration is a separate final step; no CI/protection bypass is permitted. No production or Docs deployment is included in this test task.
+The initial standalone Registry metadata mismatch and one-code-store assumption were recovered read-only against the original successful hashes, requiring every exact embedded/runtime byte. No resend, redeploy, metadata mask or verifier bypass occurred. Original type-only/runtime-identity and private preparation failures remain preserved; unchanged failed commands were not automatically retried.
+
+Initial receipt/header hashes disagreed for 66 of 76 transactions. Bounded **same-hash** observation required a matching canonical block and 13 confirmations, retaining all originals with zero resends. This is observed canonical inclusion, not finalized status; the evidence does not assign caching versus reorg causes. Transport dispatch counts are not account billing.
+
+Relevant source/ABI/compiler/artifact, SDK/dependency, chain/genesis/runtime, role/rights/epoch, canonical receipt or preserved-evidence changes invalidate affected reuse. Old fee/LP and SDK tests retain their original asset/authority scope. Main integration is separately established by the linked PR's merge metadata; passing this synthetic flow is not whole-service or real-partner certification. No production or Docs deployment is included.

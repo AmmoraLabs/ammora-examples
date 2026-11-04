@@ -10,7 +10,7 @@ Install Node24, clone this repository and run `npm ci --ignore-scripts`. Its loc
 
 Use GIWA Sepolia (chain91342) with native test ETH for gas. Quote/base ERC20 balances are separate from native ETH. Own the source/controller wallet, obtain the actual source owner's and every initial rights holder's consent, and fund only the assets your source needs. Fee rights do not authorize spending another holder's tokens.
 
-Load a locally reviewed profile containing chain/genesis and the exact admission, registry, factory, router and wrapper runtime pins. It is plain data, not a plugin. The SDK checks chain and live code independently. Do not manufacture a profile by trusting a remote listing or copying hashes from the same unchecked endpoint. Synthetic GIWA test configuration and its current qualification stage are recorded in [self-service validation](docs/SELF-SERVICE-VALIDATION.md). They do not certify a real issuer or production source.
+Load a locally reviewed profile containing chain/genesis and the exact admission, registry, factory, router and wrapper runtime pins. It is plain data, not a plugin. The SDK checks chain and live code independently. Do not manufacture a profile by trusting a remote listing or copying hashes from the same unchecked endpoint. The [completed synthetic GIWA qualification](docs/SELF-SERVICE-VALIDATION.md) records three activations, six trades, twelve positive payments and cleanup. Both common test standards remain enabled, while the demonstrated modules were deliberately stopped. Create your own conforming source and honor its new ticket delay. These synthetic tests do not certify a real issuer or production source.
 
 ## 1. Find a supported standard
 
