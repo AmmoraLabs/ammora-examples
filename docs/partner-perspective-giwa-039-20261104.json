@@ -1,0 +1,771 @@
+{
+  "schema": "ammora.public.partner-perspective-qualification/1",
+  "classification": "PASSED_THIS_RUN",
+  "chainId": 91342,
+  "SDKVersion": "0.3.9",
+  "SDKArchiveSHA256": "c07db2b89c3f13292f40f7cf89236dca82e0c575ae175776f73072e56e593fb3",
+  "environment": {
+    "node": "24.18.0",
+    "os": "darwin",
+    "architecture": "arm64"
+  },
+  "publicAnonymousCheckout": {
+    "classification": "PASSED_THIS_RUN",
+    "sourceCommit": "9313c5eeef12a11e03bc3e757c50746ef6027d2c",
+    "sourceTree": "8e38d110f71d9fec8a8ab36f676653d499dc975a",
+    "publicAnonymousCheckout": true,
+    "GitHubCredentialHelperDisabled": true,
+    "privateProtocolCheckoutRequiredByApplication": false,
+    "SDKVersion": "0.3.9",
+    "installation": "REUSED same preserved public-package lock, Node24.18/macOS arm64 and archive; no redundant npm ci",
+    "packageLockSHA256": "686a9efa94984260e0c1ad0a6980616bce7dc7a4225bb920b0006e13788c97bf",
+    "dependencyMaterialization": "Qualified public installed-package directories reused; no SDK source import"
+  },
+  "inputsSHA256": {
+    "fixtures/self-service-configuration-input.template.json": "dccabaed769b131e64eea776120f7382fab5a7efda6b91b8d50305214b771611",
+    "fixtures/self-service-giwa.test.json": "a89f7e677a9aa0ccfe417445c4cdef265f548218e6ae3f7def80f3c603064727",
+    "fixtures/self-service-known-deployment.template.json": "4618ba0969e663de09fb30e7f05ed4a5fa13a63b942aa904d8f38ac80ca4c9ef",
+    "fixtures/self-service-source-input.template.json": "e41d2d70b830ec591ed65a68ff08a4a40ea0a91e56aa4291e73982cf2adb27ee",
+    "fixtures/self-service-standard-terms.test.json": "9bb3c8375132e131cb506df7bac9e49f6078abad258fc8020a246a0ae2b3dcdc",
+    "fixtures/self-service-test-artifacts.json": "c6ca780014ccc2cb4385ead765a81763b4b634c94ef53d924b80f8463b5f3ba1",
+    "fixtures/self-service-trade-input.template.json": "1681a30cd372c48b7ca39614fec2b2f7ea2b057c562bd67894451a2b82f2f641",
+    "package-lock.json": "686a9efa94984260e0c1ad0a6980616bce7dc7a4225bb920b0006e13788c97bf",
+    "package.json": "75c4bf6791d78665785cd000912279dc756164039d56f3f989411ba81e35b877",
+    "src/partner/self-service/activate.ts": "d8e33a900f97bfa351f1d032fc59d8926977702efafbbd1b43699e7eda11c9c4",
+    "src/partner/self-service/cancel.ts": "9b75f7a3af28b52fda5bf75c41356b64df5cfbc54a8ada009eacdec5237433d2",
+    "src/partner/self-service/claim.ts": "1af9b0ad3721df11260540a575a2719f74e5ed84ce17fe2eea523833511cbc11",
+    "src/partner/self-service/configuration.ts": "834b2f54db27c3ee9c87822855e27eaff11bf8373d13825b1e5812149a55304f",
+    "src/partner/self-service/context.ts": "fa34b5cba6fd9b850d61f561b22e47c7ecf01754c9c67db99d54511ada88c66b",
+    "src/partner/self-service/deploy.ts": "538bf4efe981c9cb5cee08972ebd7f0bc2229e6dce46a620f21680b7ec2a3592",
+    "src/partner/self-service/deployment-pin.ts": "7f859f50bcced6b682a8f72b48bad6c67804865e7f75c55d96847d0e7dabb79d",
+    "src/partner/self-service/diagnose.ts": "57859d4da5d088f88d98b72ec1917cd41b80e8b7eff77be5f33eadaf464feebe",
+    "src/partner/self-service/extension.ts": "3627d5d6536382a781678c1759643f8daea11c75392ed1af1c4354f6c3aaf2cb",
+    "src/partner/self-service/reconcile.ts": "a451032a30f7c357d62054ee90079f82898b54432be26cc7b19255cfaea77848",
+    "src/partner/self-service/register.ts": "7090503d5e1d4599317aeea819f24962570d95243ed04d89f48bb2b5a04e2dcc",
+    "src/partner/self-service/rpc.ts": "76ebc5308df101e763e22ecce79dbde31bc110984b3877df21333d900ae0d55f",
+    "src/partner/self-service/standards.ts": "649595c86bf2bac191dae87cb88508a72ad6257938e498732d5bcb3256f36165",
+    "src/partner/self-service/test-assets.ts": "83505689e64e50a227e3f196b0bc0f8d4e923e4c1c8e76a129473868c0b3a109",
+    "src/partner/self-service/test-source.ts": "1f47eba6d048494d4621493cabfb2597869b372167e7b1f42e509a9524dce7a8",
+    "src/partner/self-service/trade.ts": "b670b9a8432be4f86faf3032ab6a5eaeb5d29ea2827c3904c74d4d0112282c01",
+    "tests/self-service-configuration.test.ts": "2ee9d4f65ba69b3046fd3ad5954c401ee4c1a71017096dc0d7eb4bc4435921fc",
+    "tests/self-service-deployment-pin.test.ts": "80bcdfbf961c0b18778a9fa9e5a13fbb8d04181bc1b1e52a4460371ddbc76290",
+    "tests/self-service-execution.test.ts": "f90ca169129f436e37cfa7c01d7821547b9e1232b3744d6c44451ce2b59852a1",
+    "tests/self-service.test.ts": "124ac381eb9b3a9792e0fac120c8f001ffb4396fe27244b459842bd424bade20"
+  },
+  "canonicalTransactions": 28,
+  "initialNonce": 2064,
+  "nextNonce": 2092,
+  "actualNativeFeesWei": "3054093350",
+  "nativeBudgetWei": "50000000000000",
+  "transactionValueWei": "0",
+  "standardTemplateId": "0x170fe40d872e93e5c9202209e95b7e57d695e4fbf1b8d45813b7e72afc72e603",
+  "newGovernanceTransactions": 0,
+  "newAddresses": {
+    "partnerA": "0x95979BF9661A89be9975b8669Cd8abD331cf1d1D",
+    "partnerB": "0x30Bf1C2aDA019202179BF0dD0b8a5574759F016f",
+    "quote": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+    "base": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+    "market": "0x4572Da5c8E154809aB300EB8b1ECD139cFd9867b",
+    "partnerSource": "0xB1A2c7ab9814E08a76E2DC31a39E1AD1A7dbf60A"
+  },
+  "modulePin": {
+    "address": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+    "runtimeHash": "0x2369d4694bc55e735e5d2a94cc644f0b84abaa3ddf9681294f2fc0ac26ded097",
+    "vault": {
+      "address": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "runtimeHash": "0x928a4b5ac93cb0a4c8a9f5976e64b70e7f5fbd0efca36781fc7f5f25f6278167"
+    }
+  },
+  "registrationReadyAt": "1793794599",
+  "transactions": [
+    {
+      "step": "01-wallet-partnerA",
+      "hash": "0x3c59cca6bac5856b40fdcde3af41c8a0c853d10dcdaede2a61f4810da7bf17e6",
+      "nonce": 2064,
+      "status": "success",
+      "blockNumber": "40445257",
+      "blockHash": "0xd8c169cb939b20ac061b3f12d186353abc31ed6734296388cecf636775e58417",
+      "nativeFeesWei": "51058088",
+      "operation": "deploy",
+      "label": "partnerA"
+    },
+    {
+      "step": "02-wallet-partnerB",
+      "hash": "0x8ea90e0b9fc6e63a7392658dd4a2e776dfc441770ba4b2fb6eed78a4f8401d04",
+      "nonce": 2065,
+      "status": "success",
+      "blockNumber": "40445279",
+      "blockHash": "0xd390e199c9bb09c6c67373a956b0757ffa291838a6dccaeb5331b951c7f10451",
+      "nativeFeesWei": "51058088",
+      "operation": "deploy",
+      "label": "partnerB"
+    },
+    {
+      "step": "03-new-quote",
+      "hash": "0x8e580e71e80ad78af7716bceb1fc46c9447f7d44829804413440ac9c27c72da4",
+      "nonce": 2066,
+      "status": "success",
+      "blockNumber": "40445301",
+      "blockHash": "0x65503386b2e57d5e4fcd99a6d1e44db4a725a1107e1949acb8c8362e93090b76",
+      "nativeFeesWei": "129206477",
+      "operation": "deploy",
+      "label": "quote"
+    },
+    {
+      "step": "04-new-base",
+      "hash": "0x6b93904b39222082c640816f0644f150edffbd2f93a2b935ef4434b9ff9a6658",
+      "nonce": 2067,
+      "status": "success",
+      "blockNumber": "40445322",
+      "blockHash": "0x40f2bba3ffb83512b35de9957172fe927ba88d446a5df03c532ef0db881c11f6",
+      "nativeFeesWei": "129206477",
+      "operation": "deploy",
+      "label": "base"
+    },
+    {
+      "step": "05-new-market-v2",
+      "hash": "0xb36f0ce9cd1acf5c4ef6852745e27a32be871135605189401048f0f2411a9b6d",
+      "nonce": 2068,
+      "status": "success",
+      "blockNumber": "40445729",
+      "blockHash": "0xe4c2190cedbede351d88c58259eb1dd6d9a69b622359ade2d51d797dbee6ef70",
+      "nativeFeesWei": "21455036",
+      "operation": "deploy",
+      "label": "market"
+    },
+    {
+      "step": "06-new-source",
+      "hash": "0xd6fbb7868f623a4eb0afb5079d7eb6c1029b27ba73d1ffab7292bd5aa2f0503c",
+      "nonce": 2069,
+      "status": "success",
+      "blockNumber": "40445750",
+      "blockHash": "0x405b8fd1eb65bc82ec54727fa0b4ec0eb968900b32d04649c2c6778bd66f41cc",
+      "nativeFeesWei": "224401578",
+      "operation": "deploy",
+      "label": "partnerSource"
+    },
+    {
+      "step": "07-consent-partnerA",
+      "hash": "0x1bb3bdfbaea57ca6e72b9e292b952172fa2c06d555d80dac5ca4137e14f189a0",
+      "nonce": 2070,
+      "status": "success",
+      "blockNumber": "40445778",
+      "blockHash": "0x480ef3b6ce516fbc9a9fc347e0da31daf4f2fd83a1e10de5dad2d87a5efb8b2d",
+      "nativeFeesWei": "12941434",
+      "operation": "call",
+      "label": "partnerA"
+    },
+    {
+      "step": "08-consent-partnerB",
+      "hash": "0x8b9ada2186cc46d1b88fcfcd14bccc61e2b138f521fcbbf3777631a5305f1fd0",
+      "nonce": 2071,
+      "status": "success",
+      "blockNumber": "40445804",
+      "blockHash": "0x272fc220e51de7551bc608be337805bf6e1b9fa28e5d27b23212dcd7a4ce5034",
+      "nativeFeesWei": "12941434",
+      "operation": "call",
+      "label": "partnerB"
+    },
+    {
+      "step": "09-create-module",
+      "hash": "0xbd2fdea66efc035d02ce0051daf82eec03fa501f803c496c214f009b88f59b06",
+      "nonce": 2072,
+      "status": "success",
+      "blockNumber": "40445829",
+      "blockHash": "0xca6046353d694f7e5d3ce2258dc96818f1e83bd5042c7e3120372657dca3dba0",
+      "nativeFeesWei": "1464232666",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "10-connect-source",
+      "hash": "0x6ca9f70ed45f1fc84dde028269a7e00cfa4453b43e26cccfb256b87cb931bdca",
+      "nonce": 2073,
+      "status": "success",
+      "blockNumber": "40445852",
+      "blockHash": "0xa240f536af3b39cab65a559e116f722c0414498505d6378000e43bd65fcc4274",
+      "nativeFeesWei": "7447027",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "11-register-source",
+      "hash": "0x2df08cd7e3cd7b977b54fd5f0525446e018ecc744d05a5d97b57eaffa6f4f87b",
+      "nonce": 2074,
+      "status": "success",
+      "blockNumber": "40445883",
+      "blockHash": "0x241584d8df2706edeff75697703caa97299e416a5e7c7187e4a2e7217c53950a",
+      "nativeFeesWei": "147466995",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "12-mint-quote-source",
+      "hash": "0x3394d774180481a6d8acd996d024a9fc655c2456613d8069e2b0fbba0b893e5e",
+      "nonce": 2075,
+      "status": "success",
+      "blockNumber": "40445921",
+      "blockHash": "0x9874dc0900b3a4781180a96af16c5b1541b31291d75ab8f349133ea20ad73bb0",
+      "nativeFeesWei": "18111715",
+      "operation": "call",
+      "label": "0"
+    },
+    {
+      "step": "13-mint-quote-owner",
+      "hash": "0x9bdc07aaa7dbc9dc3f2db0489395f900a8ee11fe0efb301701bec29066bef32a",
+      "nonce": 2076,
+      "status": "success",
+      "blockNumber": "40445944",
+      "blockHash": "0x454cbf541b003b453d22066d289527395544ca7f946bdaa348995b77a7ec1493",
+      "nativeFeesWei": "13753015",
+      "operation": "call",
+      "label": "1"
+    },
+    {
+      "step": "14-mint-base-source",
+      "hash": "0x66dd918278d19b21875c313cb509f772d4af99179414e636cf25e62d8628860a",
+      "nonce": 2077,
+      "status": "success",
+      "blockNumber": "40445966",
+      "blockHash": "0x96045f79799ad4483cc5e6a4965c1b60d18a576da58dd7b4f4c7e8575b7dd0fc",
+      "nativeFeesWei": "18181915",
+      "operation": "call",
+      "label": "2"
+    },
+    {
+      "step": "15-mint-base-owner",
+      "hash": "0x298dc5614fbada69bff0f85e223eb272c8dd37857aad9496fbbf999e1e16e09e",
+      "nonce": 2078,
+      "status": "success",
+      "blockNumber": "40445988",
+      "blockHash": "0x77ea6bc90e8d9596cd83b53c600cb89eb3023ef285bc36d5238c157cb477ae72",
+      "nativeFeesWei": "13753015",
+      "operation": "call",
+      "label": "3"
+    },
+    {
+      "step": "16-approve-quote",
+      "hash": "0xeb551ec16769416f1864a840d547bb9360ca851124d05855a411dd46b3b4ee95",
+      "nonce": 2079,
+      "status": "success",
+      "blockNumber": "40446010",
+      "blockHash": "0x5aae05b7a4fcdff6bb740c9aeb5b71d31e018d277ac586c7bba0f9ec4632c3f4",
+      "nativeFeesWei": "11887438",
+      "operation": "call",
+      "label": "quote"
+    },
+    {
+      "step": "17-approve-base",
+      "hash": "0x6f058d1cc445d7268bdfd56a4d10e86486ab8f877828cc2adf9edc5f6c1910cc",
+      "nonce": 2080,
+      "status": "success",
+      "blockNumber": "40446031",
+      "blockHash": "0xa59689ce98da707284e23054885d85191e2ea3d8a0e07dc7b3256e59a405f67d",
+      "nativeFeesWei": "11887438",
+      "operation": "call",
+      "label": "base"
+    },
+    {
+      "step": "18-activate-source",
+      "hash": "0x44a43d87759bd4d62e51597868990d29df1c121aeb4838203ad1aba251e22925",
+      "nonce": 2081,
+      "status": "success",
+      "blockNumber": "40449529",
+      "blockHash": "0xf9be17e6a513f10947acb7cf9ec59ccf93ce0586a2050b29031b8f0cb773c4d6",
+      "nativeFeesWei": "94902389",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "19-trade-quote",
+      "hash": "0x1cd09c944072d6091d1f7253a1a72803cc34131cbfefe0802932eecb4a5738d7",
+      "nonce": 2082,
+      "status": "success",
+      "blockNumber": "40449582",
+      "blockHash": "0x3bd491bd30605fc878d2063713460e916f27dc6b4756e60673b8671587f0f5ab",
+      "nativeFeesWei": "216932613",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "20-trade-base",
+      "hash": "0x6cb9e9380aa65b62e5d4bd916a9189d77f82cfdff92accb56da5cb34609ff1c0",
+      "nonce": 2083,
+      "status": "success",
+      "blockNumber": "40449627",
+      "blockHash": "0xa4946abb68dbb30f243644609a8f1033709c9aa3849eb250c96eb152fd172f40",
+      "nativeFeesWei": "216992028",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "21-cancel-source",
+      "hash": "0x7c4344f3613f0f31a4a60be8cdfe40309edcd1fd6abee039834a873a6a1117e5",
+      "nonce": 2084,
+      "status": "success",
+      "blockNumber": "40449662",
+      "blockHash": "0xc8c02b4516f0a6ebb52e8f564b4b947c7ae0e735c85135137f833ac7d194a92c",
+      "nativeFeesWei": "30853941",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "22-claim-quote-ammora",
+      "hash": "0x178b9d3a3adf8284228f1786e270a7c4edfb34859471d9e2aad5ec33c8dc9cbe",
+      "nonce": 2085,
+      "status": "success",
+      "blockNumber": "40449700",
+      "blockHash": "0x2c30745c2b54fb56f43a5a4eda059ce5efb09e4232d5eeda67e4a72dfff1a7b9",
+      "nativeFeesWei": "24754585",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "23-claim-quote-partnerA",
+      "hash": "0x74d7f2463e155d2d48b278ccf71fd713ed0cd6c055125656734d3250e13679fb",
+      "nonce": 2086,
+      "status": "success",
+      "blockNumber": "40449723",
+      "blockHash": "0x3e7e9b61a2ab817edbdefef6ee228cc110c47f4e6f660da3bcfc77e7c1500d47",
+      "nativeFeesWei": "25864190",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "24-claim-quote-partnerB",
+      "hash": "0x8db9020e2d7a705885a338d5bf3ff64b047d321e38cd87fe4d83a4ab0fc8b2c1",
+      "nonce": 2087,
+      "status": "success",
+      "blockNumber": "40449750",
+      "blockHash": "0xeb233a0f1252007c96d9bc84c4cd5f1c05f7cb1b663f615fb6eb4487c47d1817",
+      "nativeFeesWei": "23099682",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "25-claim-base-ammora",
+      "hash": "0x488f5d2876a0cb83540e3d826f578a9d08ca92da619ee508fe620c0e582991b8",
+      "nonce": 2088,
+      "status": "success",
+      "blockNumber": "40449773",
+      "blockHash": "0x38be70252cba95314468f4a7bcfeb1cfcd1ce07265ede2b7089851973ae452da",
+      "nativeFeesWei": "24596967",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "26-claim-base-partnerA",
+      "hash": "0xe3f0190b7704f9a67f8a15181ebf2f6c74bdb7235c2c3d2515f03367a1ec9202",
+      "nonce": 2089,
+      "status": "success",
+      "blockNumber": "40449800",
+      "blockHash": "0x1e6e5c0742ee06101891e05fa53916456e860061a7712cb07a2b81fe97c86b41",
+      "nativeFeesWei": "25788178",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "27-claim-base-partnerB",
+      "hash": "0x45e484489f73e75372b1c5c87081703f6727fbf0e88520c9a43b95adcad8f392",
+      "nonce": 2090,
+      "status": "success",
+      "blockNumber": "40449824",
+      "blockHash": "0x14d6a0f01cdb112c81ba3cfa1017c74825455c7e7a9f2c89f88e01312bac09a4",
+      "nativeFeesWei": "23033172",
+      "operation": "call",
+      "label": "partnerSource"
+    },
+    {
+      "step": "28-restore-source",
+      "hash": "0xcc3fa365b241b2d76a40617e165911550fc9afa813e3a54743b4721e50e0316e",
+      "nonce": 2091,
+      "status": "success",
+      "blockNumber": "40449846",
+      "blockHash": "0x9ee79c55be5b3fe8777b16e6c850e17bd004f69944d0ec2ebead7cc7d42ad92c",
+      "nativeFeesWei": "8285769",
+      "operation": "call",
+      "label": "partnerSource"
+    }
+  ],
+  "trades": [
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x1cd09c944072d6091d1f7253a1a72803cc34131cbfefe0802932eecb4a5738d7",
+      "label": "partnerSource",
+      "assetIn": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+      "assetOut": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+      "SDKReceipt": {
+        "status": "observed",
+        "transactionHash": "0x1cd09c944072d6091d1f7253a1a72803cc34131cbfefe0802932eecb4a5738d7",
+        "blockHash": "0x3bd491bd30605fc878d2063713460e916f27dc6b4756e60673b8671587f0f5ab",
+        "blockNumber": "40449582",
+        "spent": "10000",
+        "received": "9900",
+        "refund": "0",
+        "hops": [
+          {
+            "executionId": "0x66b4a2d2e5d7749847ad6fb50a92c2fce31888990cd5cc767c4ccda345d1795c",
+            "assetIn": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+            "spent": "10000",
+            "received": "9900",
+            "refund": "0",
+            "fee": "100",
+            "rightsEpoch": "1",
+            "allocation": {
+              "asset": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+              "fee": "100",
+              "ammoraAmount": "20",
+              "partnerAmount": "80",
+              "epoch": "1"
+            }
+          }
+        ]
+      },
+      "actualInputDecreaseRaw": "10000",
+      "actualOutputIncreaseRaw": "9900",
+      "newSecuredFeeRaw": "100",
+      "ammoraDebtIncreaseRaw": "20",
+      "partnerDebtIncreaseRaw": "80",
+      "partnerADebtIncreaseRaw": "48",
+      "partnerBDebtIncreaseRaw": "32",
+      "receiptBlock": "40449582",
+      "receiptBlockHash": "0x3bd491bd30605fc878d2063713460e916f27dc6b4756e60673b8671587f0f5ab",
+      "payoutVerified": false,
+      "nativeValueWei": "0",
+      "fixtureOnly": true
+    },
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x6cb9e9380aa65b62e5d4bd916a9189d77f82cfdff92accb56da5cb34609ff1c0",
+      "label": "partnerSource",
+      "assetIn": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+      "assetOut": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+      "SDKReceipt": {
+        "status": "observed",
+        "transactionHash": "0x6cb9e9380aa65b62e5d4bd916a9189d77f82cfdff92accb56da5cb34609ff1c0",
+        "blockHash": "0xa4946abb68dbb30f243644609a8f1033709c9aa3849eb250c96eb152fd172f40",
+        "blockNumber": "40449627",
+        "spent": "10000",
+        "received": "9900",
+        "refund": "0",
+        "hops": [
+          {
+            "executionId": "0x084282e3ba6841f04ef04cef1f786ce72f8446b6b2d1b780627999b70bc24826",
+            "assetIn": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+            "spent": "10000",
+            "received": "9900",
+            "refund": "0",
+            "fee": "100",
+            "rightsEpoch": "1",
+            "allocation": {
+              "asset": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+              "fee": "100",
+              "ammoraAmount": "20",
+              "partnerAmount": "80",
+              "epoch": "1"
+            }
+          }
+        ]
+      },
+      "actualInputDecreaseRaw": "10000",
+      "actualOutputIncreaseRaw": "9900",
+      "newSecuredFeeRaw": "100",
+      "ammoraDebtIncreaseRaw": "20",
+      "partnerDebtIncreaseRaw": "80",
+      "partnerADebtIncreaseRaw": "48",
+      "partnerBDebtIncreaseRaw": "32",
+      "receiptBlock": "40449627",
+      "receiptBlockHash": "0xa4946abb68dbb30f243644609a8f1033709c9aa3849eb250c96eb152fd172f40",
+      "payoutVerified": false,
+      "nativeValueWei": "0",
+      "fixtureOnly": true
+    }
+  ],
+  "payments": [
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x178b9d3a3adf8284228f1786e270a7c4edfb34859471d9e2aad5ec33c8dc9cbe",
+      "module": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+      "vault": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "asset": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+      "recipient": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "amountRaw": "20",
+      "balanceBeforeRaw": "49900",
+      "balanceAfterRaw": "49920",
+      "receiptBlock": "40449700",
+      "receiptBlockHash": "0x2c30745c2b54fb56f43a5a4eda059ce5efb09e4232d5eeda67e4a72dfff1a7b9",
+      "PaidEvent": true,
+      "actualERC20Transfer": true,
+      "positiveBalanceIncrease": true,
+      "payoutVerified": true,
+      "scope": "Fresh partner-owned valueless token/source addresses; 20:48:32 fixed rights, not alternate-payout or LP delegation"
+    },
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x74d7f2463e155d2d48b278ccf71fd713ed0cd6c055125656734d3250e13679fb",
+      "module": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+      "vault": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "asset": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+      "recipient": "0x95979BF9661A89be9975b8669Cd8abD331cf1d1D",
+      "amountRaw": "48",
+      "balanceBeforeRaw": "0",
+      "balanceAfterRaw": "48",
+      "receiptBlock": "40449723",
+      "receiptBlockHash": "0x3e7e9b61a2ab817edbdefef6ee228cc110c47f4e6f660da3bcfc77e7c1500d47",
+      "PaidEvent": true,
+      "actualERC20Transfer": true,
+      "positiveBalanceIncrease": true,
+      "payoutVerified": true,
+      "scope": "Fresh partner-owned valueless token/source addresses; 20:48:32 fixed rights, not alternate-payout or LP delegation"
+    },
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x8db9020e2d7a705885a338d5bf3ff64b047d321e38cd87fe4d83a4ab0fc8b2c1",
+      "module": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+      "vault": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "asset": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+      "recipient": "0x30Bf1C2aDA019202179BF0dD0b8a5574759F016f",
+      "amountRaw": "32",
+      "balanceBeforeRaw": "0",
+      "balanceAfterRaw": "32",
+      "receiptBlock": "40449750",
+      "receiptBlockHash": "0xeb233a0f1252007c96d9bc84c4cd5f1c05f7cb1b663f615fb6eb4487c47d1817",
+      "PaidEvent": true,
+      "actualERC20Transfer": true,
+      "positiveBalanceIncrease": true,
+      "payoutVerified": true,
+      "scope": "Fresh partner-owned valueless token/source addresses; 20:48:32 fixed rights, not alternate-payout or LP delegation"
+    },
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x488f5d2876a0cb83540e3d826f578a9d08ca92da619ee508fe620c0e582991b8",
+      "module": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+      "vault": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "asset": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+      "recipient": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+      "amountRaw": "20",
+      "balanceBeforeRaw": "49900",
+      "balanceAfterRaw": "49920",
+      "receiptBlock": "40449773",
+      "receiptBlockHash": "0x38be70252cba95314468f4a7bcfeb1cfcd1ce07265ede2b7089851973ae452da",
+      "PaidEvent": true,
+      "actualERC20Transfer": true,
+      "positiveBalanceIncrease": true,
+      "payoutVerified": true,
+      "scope": "Fresh partner-owned valueless token/source addresses; 20:48:32 fixed rights, not alternate-payout or LP delegation"
+    },
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0xe3f0190b7704f9a67f8a15181ebf2f6c74bdb7235c2c3d2515f03367a1ec9202",
+      "module": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+      "vault": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "asset": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+      "recipient": "0x95979BF9661A89be9975b8669Cd8abD331cf1d1D",
+      "amountRaw": "48",
+      "balanceBeforeRaw": "0",
+      "balanceAfterRaw": "48",
+      "receiptBlock": "40449800",
+      "receiptBlockHash": "0x1e6e5c0742ee06101891e05fa53916456e860061a7712cb07a2b81fe97c86b41",
+      "PaidEvent": true,
+      "actualERC20Transfer": true,
+      "positiveBalanceIncrease": true,
+      "payoutVerified": true,
+      "scope": "Fresh partner-owned valueless token/source addresses; 20:48:32 fixed rights, not alternate-payout or LP delegation"
+    },
+    {
+      "classification": "PASSED_THIS_RUN",
+      "hash": "0x45e484489f73e75372b1c5c87081703f6727fbf0e88520c9a43b95adcad8f392",
+      "module": "0x28Bea01E11e42dc3893a10Db3b323204C4Ac3b7A",
+      "vault": "0xBa7381255376aCf8891255c78F0773cf2F0282E4",
+      "asset": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+      "recipient": "0x30Bf1C2aDA019202179BF0dD0b8a5574759F016f",
+      "amountRaw": "32",
+      "balanceBeforeRaw": "0",
+      "balanceAfterRaw": "32",
+      "receiptBlock": "40449824",
+      "receiptBlockHash": "0x14d6a0f01cdb112c81ba3cfa1017c74825455c7e7a9f2c89f88e01312bac09a4",
+      "PaidEvent": true,
+      "actualERC20Transfer": true,
+      "positiveBalanceIncrease": true,
+      "payoutVerified": true,
+      "scope": "Fresh partner-owned valueless token/source addresses; 20:48:32 fixed rights, not alternate-payout or LP delegation"
+    }
+  ],
+  "typedDenials": [
+    {
+      "label": "early activation",
+      "expected": "TimelockPending()",
+      "classification": "PASSED_THIS_RUN"
+    },
+    {
+      "label": "rights holder is not source controller",
+      "expected": "Unauthorized()",
+      "classification": "PASSED_THIS_RUN"
+    },
+    {
+      "label": "cancelled module cannot self-reregister",
+      "expected": "Unsupported(uint8)",
+      "classification": "PASSED_THIS_RUN"
+    },
+    {
+      "label": "platform guardian has no holder rights for quote",
+      "expected": "InvalidRights()",
+      "classification": "PASSED_THIS_RUN"
+    },
+    {
+      "label": "platform guardian has no holder rights for base",
+      "expected": "InvalidRights()",
+      "classification": "PASSED_THIS_RUN"
+    }
+  ],
+  "cleanup": {
+    "classification": "PASSED_THIS_RUN",
+    "block": "40449864",
+    "blockHash": "0x87ebf02329d4e5715dedbe7893ddc0e04e5fc834ac0763264428784706e707be",
+    "canonicalTransactions": 28,
+    "nextNonce": 2092,
+    "nativeFeesWei": "3054093350",
+    "assets": [
+      {
+        "asset": "0xF8A4Ac8b115d7349A86E8dFAFD5725eaAf353D9f",
+        "ownerRaw": "49920",
+        "partnerARaw": "48",
+        "partnerBRaw": "32",
+        "securedAndClaimedRaw": "100",
+        "taskCustodyDebtAllowancesRaw": "0",
+        "remainingValuelessSourceInventoryRaw": "50000",
+        "principalWithdrawn": false
+      },
+      {
+        "asset": "0x93cE816a2fE0114915CfA575A4D3f237fD19260A",
+        "ownerRaw": "49920",
+        "partnerARaw": "48",
+        "partnerBRaw": "32",
+        "securedAndClaimedRaw": "100",
+        "taskCustodyDebtAllowancesRaw": "0",
+        "remainingValuelessSourceInventoryRaw": "50000",
+        "principalWithdrawn": false
+      }
+    ],
+    "standardLeftEnabled": true,
+    "moduleStopped": true,
+    "originalNewPartnerBeneficiaryRestored": true,
+    "oldSourceBalancesUnchanged": true,
+    "newTokenSourceAddresses": true,
+    "positivePayments": 6,
+    "physicalSignerCount": 1,
+    "independentProductionCustody": false,
+    "signingMustStop": true
+  },
+  "proofSHA256": {
+    "partner-final-execution-v1.result.json": "2deeffa386a497857ffa61dc7598e7cb0946ed3ea38d0c40d3d6e0af9afddaaa",
+    "partner-final-cleanup-v1.result.json": "da6f4c53aca19f90a2f0f235aa77d7665f3063e546c4f71b281e13a8879fd305",
+    "partner-own-lease-release-v1.result.json": "45f6c9ac1be9849c84dce2310e7a8e432c530e510a67f5f1fcc20d7da023cfab",
+    "partner-final-event-audit-v1.result.json": "2d5064e385a018a4d46616de04a23c6c649345bfef3b3ccf100c0d2a9a183e30",
+    "public-deployment-pin-live-v1.result.json": "31fa422c7034f6d24e35f060665c90e9a7ae28c4fd1e04ad0162f810d481f700",
+    "partner-registration-waiting-v1.result.json": "08d44d97ef1e3095e1962dababed6d3e3ab3c3ef7710264ca38ef316d024fcd0",
+    "partner-stopped-denials-v1.result.json": "cad584b10be895432a0407f97341ea6ffc4ae0b17bc52c9c7f6611c99918b9e6"
+  },
+  "checks": [
+    {
+      "gate": "Anonymous public checkout and new-address onboarding",
+      "classification": "PASSED_THIS_RUN"
+    },
+    {
+      "gate": "Published package materialization/default installation",
+      "classification": "REUSED",
+      "scope": "Exact qualified SDK archive, lock and dependency environment; no new npm ci"
+    },
+    {
+      "gate": "Changed helper boundaries",
+      "classification": "PASSED_THIS_RUN",
+      "distinctCases": 16,
+      "strictTypes": true,
+      "TypeScriptFiles": 273,
+      "commands": 203
+    },
+    {
+      "gate": "Existing SDK/core/compiler, 188 example cases and prior fee/LP proofs",
+      "classification": "REUSED",
+      "scope": "Original unchanged runtime, source, caller, assets and canonical receipt scope"
+    },
+    {
+      "gate": "Direct registration, delayed activation, two trades, six positive payments, five typed denials and cleanup",
+      "classification": "PASSED_THIS_RUN"
+    },
+    {
+      "gate": "Real issuer/arbitrary standard certification",
+      "classification": "BLOCKED",
+      "scope": "No real issuer, novel implementation or independent custody review supplied; does not block a conforming synthetic instance"
+    },
+    {
+      "gate": "SDK publication, GitHub CI, mainnet and production changes",
+      "classification": "NOT_APPLICABLE"
+    }
+  ],
+  "originalFailures": [
+    {
+      "gate": "Initial configuration strict typing",
+      "status": "SUPERSEDED_AFTER_TYPE_FIX",
+      "originalFailurePreserved": true,
+      "wireRuntimeUnchanged": true
+    },
+    {
+      "gate": "Initial market constructor simulation",
+      "status": "SUPERSEDED_AFTER_REQUIRED_UINT8_FAMILY_FIX",
+      "beforeKeyOrBroadcast": true,
+      "successfulPrefixReused": 4
+    },
+    {
+      "gate": "Receipt/header mismatch, where recorded",
+      "status": "SAME_HASH_CANONICAL_RECOVERY_ONLY",
+      "originalsPreserved": true,
+      "transactionResends": 0,
+      "initialReceiptHeaderMismatches": 25,
+      "observedConfirmationsAtLeast": 13,
+      "rootCauseClaimed": false
+    }
+  ],
+  "scope": {
+    "newValuelessTokens": true,
+    "singlePhysicalSigner": true,
+    "independentCustody": false,
+    "realIssuer": false,
+    "DEXPriceDiscovery": false,
+    "Graduation": false,
+    "nativeAssetTrading": false,
+    "SDKPublished": false,
+    "GitHubCI": false,
+    "mainnet": false,
+    "production": false,
+    "observedNotFinalized": true
+  },
+  "reuseInvalidation": "Relevant source/ABI/SDK archive or dependency environment, runtime/profile, roles/epochs, actual inputs, canonical receipt or preserved evidence integrity change reopens the affected gate only.",
+  "originalFailureSHA256": {
+    "01-wallet-partnerA.original-canonical-mismatch.json": "31b38e17e339c492b809e9db259da83d784920138162f06d66f9b9c3e4431e3d",
+    "02-wallet-partnerB.original-canonical-mismatch.json": "edf2eb119c0240e596f647823eb6eb5fea6d4bb223fd1a91b7fb9b976c5fa60f",
+    "03-new-quote.original-canonical-mismatch.json": "6aef728c1fab5b9420acc4e77f6d2db93955094fec2246afa8697a473bf4c84d",
+    "04-new-base.original-canonical-mismatch.json": "b84396007aa2a7c6426ad69f0e2b1271d5c98cad0991a95ce3e7227ae9266ff8",
+    "05-new-market-v2.original-canonical-mismatch.json": "415e9353cf77324af145bd8b8c3b1d0e8247ea64bfa4f75891e814c6d08a975a",
+    "06-new-source.original-canonical-mismatch.json": "b3ee4eab0be0422afa51e688a385f498a345d7d39a4d0e3df8aa279557713c0c",
+    "07-consent-partnerA.original-canonical-mismatch.json": "7ca31dec638805361a6a5580495137150db91def18d89bd6202fa596b88fe619",
+    "08-consent-partnerB.original-canonical-mismatch.json": "6fa86873b140f6252af91fce9a9f24fd50ca48ea4c86690feae856b78077be6f",
+    "09-create-module.original-canonical-mismatch.json": "ace565613bf48c3fdc9d36a5e3b5bf3738b43d0ebca2b8baea669ef275590381",
+    "10-connect-source.original-canonical-mismatch.json": "f19574a7182c52d63c08a15176d519492ece7dbd40f45d68a1994d3642fd89cc",
+    "12-mint-quote-source.original-canonical-mismatch.json": "11b2149629608b8300c94b934e163431573f1d13cbd8d4320c00db31cf6c9d41",
+    "13-mint-quote-owner.original-canonical-mismatch.json": "e057d0c2e7809e1a5207044bd4931b3d6b68aa731580b63ba9e42eff7707e59f",
+    "14-mint-base-source.original-canonical-mismatch.json": "cf91d033d321cb5ceeb06d2471ec5c5660df00198a08123021620000d68854cd",
+    "15-mint-base-owner.original-canonical-mismatch.json": "fb947068a9e30368dc51d5495d7cb25108f4c9987235aabe8e34578f4baa10ac",
+    "16-approve-quote.original-canonical-mismatch.json": "a9814539404507f9bc75081bbacdb8983ed3c544e59145f31b55c1f6f57954a0",
+    "18-activate-source.original-canonical-mismatch.json": "62774d441efd08c38f01692f7aadeabc40cee42c468118c5706d652638df4caa",
+    "19-trade-quote.original-canonical-mismatch.json": "5261b226bb565bfb86137c04e82ec4acc401a6c7471f74e3b837e3145ec0e210",
+    "20-trade-base.original-canonical-mismatch.json": "c23bf45f00a678a10fc2e2ba8047fffef2356c0af419ec6cc4066c12fa4a15bb",
+    "21-cancel-source.original-canonical-mismatch.json": "d91e8af515e4293545b053e9bd6c462f2f23866764715b487b3df7507b042de0",
+    "22-claim-quote-ammora.original-canonical-mismatch.json": "047c5f5b08d814cfe9fd2fac197a301e96e7bd39b5d8f1ba9ffe95e5ff1c2154",
+    "23-claim-quote-partnerA.original-canonical-mismatch.json": "4297dcebc4293aabaac6df6fbfaf51c25c79f62b957cbf2b961bfcb85199999a",
+    "24-claim-quote-partnerB.original-canonical-mismatch.json": "86e39a11133aba2bc3e0b32395c7291b08f4c14c99c85dd3f65b4f897657cfd0",
+    "26-claim-base-partnerA.original-canonical-mismatch.json": "e433fc037058d9215c578619e3ffef4ace01e64bf7e3e382f46b35a3d8f13dc1",
+    "27-claim-base-partnerB.original-canonical-mismatch.json": "4a34fa150de7ceba170f94d5b910e96802a51d26a582af7ae29cd7d9ef6ae035",
+    "28-restore-source.original-canonical-mismatch.json": "61a0ee115560183db8b04a8aa079c80d78f0b96b42e1ae1a7e56936a9f4101bc"
+  }
+}

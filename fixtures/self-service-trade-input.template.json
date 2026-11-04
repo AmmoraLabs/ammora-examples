@@ -1,0 +1,11 @@
+{
+  "assetIn": "YOUR_INPUT_TOKEN_ADDRESS",
+  "amountRaw": "10000",
+  "minOutputRaw": "9900",
+  "payer": "YOUR_PAYER_ADDRESS",
+  "recipient": "YOUR_RECIPIENT_ADDRESS",
+  "refundTo": "YOUR_REFUND_ADDRESS",
+  "executor": "YOUR_SUBMITTING_WALLET_ADDRESS",
+  "nonce": "YOUR_UNUSED_MANAGED_TRADE_NONCE",
+  "ttlSeconds": "240"
+}

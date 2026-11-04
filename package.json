@@ -211,7 +211,12 @@
     "partner:activate": "tsx src/partner/self-service/activate.ts",
     "partner:cancel-registration": "tsx src/partner/self-service/cancel.ts",
     "partner:reconcile-registration": "tsx src/partner/self-service/reconcile.ts",
-    "partner:create-test-source": "tsx src/partner/self-service/test-source.ts"
+    "partner:create-test-source": "tsx src/partner/self-service/test-source.ts",
+    "partner:configure-test-source": "tsx src/partner/self-service/configuration.ts",
+    "partner:create-test-assets": "tsx src/partner/self-service/test-assets.ts",
+    "partner:quote-module": "tsx src/partner/self-service/trade.ts",
+    "partner:prepare-module-claim": "tsx src/partner/self-service/claim.ts",
+    "partner:verify-module-deployment": "tsx src/partner/self-service/deployment-pin.ts"
   },
   "dependencies": {
     "@ammora-protocol/sdk": "0.3.9",
