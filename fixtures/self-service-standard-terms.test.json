@@ -36,10 +36,12 @@
       "ammoraReceiver": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
       "ammoraManagedRevenueBps": 2000,
       "partnerManagedRevenueBps": 8000,
-      "status": "STANDARD_TIMELOCK_PENDING",
+      "status": "ACTIVE_SYNTHETIC_STANDARD",
       "evidence": "0xc5a4a05bc70d768f3cf746d61b4a628c18cdbbdb36516a954abb7546220927d5",
       "readyAt": "1793777305",
-      "enabled": false
+      "enabled": true,
+      "activationHash": "0x5b4bdb49a2b73f1ed97bc0ca6ab4668f539c955deeb7f92ba7bdb4fd061d0cd5",
+      "moduleActivationNote": "Each newly registered source still needs its own actual ticket delay and current consent/eligibility"
     },
     {
       "label": "V4",
@@ -64,10 +66,12 @@
       "ammoraReceiver": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
       "ammoraManagedRevenueBps": 2000,
       "partnerManagedRevenueBps": 8000,
-      "status": "STANDARD_TIMELOCK_PENDING",
+      "status": "ACTIVE_SYNTHETIC_STANDARD",
       "evidence": "0xc5a4a05bc70d768f3cf746d61b4a628c18cdbbdb36516a954abb7546220927d5",
       "readyAt": "1793777326",
-      "enabled": false
+      "enabled": true,
+      "activationHash": "0x17eeccc1baecd438ab2982ef933dd5ef9f694e10802df16d521edb17092e1af3",
+      "moduleActivationNote": "Each newly registered source still needs its own actual ticket delay and current consent/eligibility"
     }
   ],
   "callerInput": "Use your own sourceOwner/controller and original partner/rights holders; partner must differ from Ammora receiver. Do not reuse an Ammora-owned source address.",
