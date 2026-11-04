@@ -12,7 +12,7 @@ import { receiptProof } from "./proof.js";
 
 export async function executeReviewed(file:string,plan:Plan,reviewHash:string) {
   const {reviewHash:stored,...payload}=plan;
-  if(stored!==reviewHash||digest(payload)!==reviewHash||!/^[a-f0-9]{64}$/.test(reviewHash)||plan.sdkVersion!=="0.3.8"||plan.schemaVersion!==1)throw new Error("Review hash/schema mismatch");
+  if(stored!==reviewHash||digest(payload)!==reviewHash||!/^[a-f0-9]{64}$/.test(reviewHash)||plan.sdkVersion!=="0.3.9"||plan.schemaVersion!==1)throw new Error("Review hash/schema mismatch");
   if(process.env.AMMORA_SEND!=="1")throw new Error("Execution needs AMMORA_SEND=1; planning is always unsigned");
   const refreshed=await makePlan(plan.operation,file,plan.request,plan.expiresAt),binding=(p:Plan)=>({operation:p.operation,manifestDigest:p.manifestDigest,caller:p.caller,assets:p.assets,request:p.request,transactions:p.transactions,approvals:p.approvals,expectation:p.expectation});
   if(digest(binding(refreshed))!==digest(binding(plan)))throw new Error("Plan changed with current state; review a NEW plan, never reuse the old hash");

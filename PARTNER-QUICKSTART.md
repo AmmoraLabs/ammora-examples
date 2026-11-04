@@ -1,4 +1,4 @@
-# Partner quickstart — Ammora SDK 0.3.8
+# Partner quickstart — Ammora SDK 0.3.9
 
 Create new tokens with Ammora contracts and connect trading and fee sharing before and after graduation. The default path is **GIWA Sepolia · auto-route V4 · Concentrated Graduation**. Each financial operation calls contracts through the SDK and your configured RPC.
 
@@ -16,10 +16,10 @@ npm ci --ignore-scripts
 cp .env.giwa.example .env
 ```
 
-The project pins public `@ammora-protocol/sdk@0.3.8`. To install only the SDK in your own application, use the following. This does not install the examples' npm commands.
+The project pins public `@ammora-protocol/sdk@0.3.9`. To install only the SDK in your own application, use the following. This does not install the examples' npm commands.
 
 ```bash
-npm install --save-exact @ammora-protocol/sdk@0.3.8 viem dotenv
+npm install --save-exact @ammora-protocol/sdk@0.3.9 viem dotenv
 ```
 
 ## 2. Configure GIWA and make the first reads
@@ -81,7 +81,7 @@ Read [current validation](https://github.com/AmmoraLabs/ammora-examples/blob/mai
 
 ## Contract agents
 
-Follow the [public agent quickstart](https://docs.ammora.org/guides/agent-quickstart) for a complete download, SDK 0.3.8 installation, 12 tool schemas and a keyless GIWA read. No GitHub invitation is needed. Your Config and agent wallet policy are selected by your own team; see [permission boundaries](https://docs.ammora.org/guides/self-service-access).
+Follow the [public agent quickstart](https://docs.ammora.org/guides/agent-quickstart) for a complete download, SDK 0.3.9 installation, 12 tool schemas and a keyless GIWA read. No GitHub invitation is needed. Your Config and agent wallet policy are selected by your own team; see [permission boundaries](https://docs.ammora.org/guides/self-service-access).
 
 ## Share this with a partner
 
@@ -94,6 +94,6 @@ Send this quickstart URL first, followed by the guide matching their product:
 
 A short introduction you can forward:
 
-> Start with the Ammora SDK 0.3.8 partner quickstart, then follow the launchpad, agent or stablecoin guide for your product. The examples connect directly to GIWA Sepolia contracts. Prepare your team's sender, fee recipient, LP owner and payout addresses; fund native ETH for gas and separate WETH or other input assets. First run deployment reads and unsigned previews. A valid launchpad Config can be created without individual Ammora approval. Stablecoin asset policies and administrator operations retain their on-chain role requirements. Review each approval and confirm each receipt before the next step.
+> Start with the Ammora SDK 0.3.9 partner quickstart, then follow the launchpad, agent or stablecoin guide for your product. The examples connect directly to GIWA Sepolia contracts. Prepare your team's sender, fee recipient, LP owner and payout addresses; fund native ETH for gas and separate WETH or other input assets. First run deployment reads and unsigned previews. A valid launchpad Config can be created without individual Ammora approval. Stablecoin asset policies and administrator operations retain their on-chain role requirements. Review each approval and confirm each receipt before the next step.
 
 Collect the team's intended product, network, token addresses/decimals, wallet roles and fee split before selecting a sample request. Token-policy administrators need their actual contract roles; no repository invitation or customer account grants those rights. Use the existing templates with the partner's own values instead of distributing funded wallets or live signer files.

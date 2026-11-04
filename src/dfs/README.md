@@ -20,7 +20,7 @@ Use [the fee-sharing guide](https://docs.ammora.org/guides/fee-sharing#multi-rec
 
 ## Connect revenue sources directly
 
-Configure DFS-owner source registration separately from beneficiary/NFT-owner permissions. This flow was introduced with public SDK 0.3.7 and remains available in 0.3.8. `AMMORA_ACCOUNT` is each step's actual signing wallet; default to `AMMORA_SEND=0`.
+Configure DFS-owner source registration separately from beneficiary/NFT-owner permissions. This flow was introduced with public SDK 0.3.7 and remains available in 0.3.9. `AMMORA_ACCOUNT` is each step's actual signing wallet; default to `AMMORA_SEND=0`.
 
 | Step | Command | Caller |
 |---|---|---|

@@ -2,7 +2,7 @@
 
 **Follow this one guide from wallets and funding → asset review → token policy registration → pools and LP → trading → fee claims.** Connect ERC20 assets already issued on GIWA. No Launch token reissuance or graduation is required.
 
-Target **GIWA Sepolia 91342** with the explicit opt-in profile **`giwa-almm-unified-v1`**. Use public SDK **0.3.8** with this repository's [source-pinned fee compatibility module](https://docs.ammora.org/examples/source/extensions/almm-unified/fee-claims-compat.ts.txt); do not assume the new fee API is already included in the npm SDK. The [profile JSON](https://docs.ammora.org/examples/source/extensions/almm-unified/giwa-profile.json.txt) separates protocol configuration from assets. Do not copy its synthetic test tokens, Ammora wallets or existing NFTs into partner configuration.
+Target **GIWA Sepolia 91342** with the explicit opt-in profile **`giwa-almm-unified-v1`**. Use public SDK **0.3.9** with official fee-routing exports from `@ammora-protocol/sdk`. The retained [import path](https://docs.ammora.org/examples/source/extensions/almm-unified/fee-claims-compat.ts.txt) only re-exports the SDK; install the public npm package and retain the reviewed GIWA profile. The [profile JSON](https://docs.ammora.org/examples/source/extensions/almm-unified/giwa-profile.json.txt) separates protocol configuration from assets. Do not copy its synthetic test tokens, Ammora wallets or existing NFTs into partner configuration.
 
 ## 1. Prepare wallets and funds
 
@@ -323,4 +323,3 @@ Also inspect quote/Manager, base/POOL and quote/POOL. `approve(0)`, revocation a
 ## Validation scope
 
 Read [current validation](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md) before using historical test targets.
-

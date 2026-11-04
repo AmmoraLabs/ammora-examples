@@ -1,6 +1,6 @@
-# FeeVault delegation and batch claims — SDK 0.3.8
+# FeeVault delegation and batch claims — SDK 0.3.9
 
-Start with the [complete guide](https://docs.ammora.org/guides/launchpad), then [fee configuration and claims](https://docs.ammora.org/guides/fee-sharing). These examples use public SDK 0.3.8 and the GIWA `auto-route` deployment.
+Start with the [complete guide](https://docs.ammora.org/guides/launchpad), then [fee configuration and claims](https://docs.ammora.org/guides/fee-sharing). These examples use public SDK 0.3.9 and the GIWA `auto-route` deployment.
 
 ```bash
 export AMMORA_CHAIN_ID=91342 AMMORA_GIWA_GENERATION=auto-route

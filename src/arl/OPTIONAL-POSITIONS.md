@@ -1,6 +1,6 @@
 # Optional ARL operations: direct positions and managed NFTs
 
-Use public SDK **0.3.8**. Follow the [complete guide](https://docs.ammora.org/guides/launchpad) for the default launchpad flow. This page covers partial fills, zaps, direct position management, and other optional operations.
+Use public SDK **0.3.9**. Follow the [complete guide](https://docs.ammora.org/guides/launchpad) for the default launchpad flow. This page covers partial fills, zaps, direct position management, and other optional operations.
 
 `AMMORA_ACCOUNT` is the actual caller. The CLI defaults to unsigned preview without loading a key or sending. SEND=1 follows the root README's signer, nonce, and simulation procedure. Preview success is not evidence of payment, liquidity changes, or increased balances.
 
@@ -47,7 +47,7 @@ npm run arl:prepare-single-side-pool -- BASE_TOKEN QUOTE_TOKEN base AMOUNT_RAW S
 
 Lock units follow the pool's `activationType`: timestamps or blocks, not necessarily seconds. A new time lock must extend the existing release point; these examples do not modify permanent locks. Merges require matching ownership and lock conditions.
 
-SDK 0.3.6 normalized viem `uint40` decoding for checked merge/time-lock operations. Ownership, authority, identical-lock, permanent-lock, and extension-only checks remain. Extend an existing lock with the same `arl:lock-compounding-position` command and a larger releasePoint. If pinned to older 0.3.4/0.3.5, run `npm ci` to use this project's current 0.3.8 lockfile.
+SDK 0.3.6 normalized viem `uint40` decoding for checked merge/time-lock operations. Ownership, authority, identical-lock, permanent-lock, and extension-only checks remain. Extend an existing lock with the same `arl:lock-compounding-position` command and a larger releasePoint. If pinned to older 0.3.4/0.3.5, run `npm ci` to use this project's current 0.3.9 lockfile.
 
 Raw reward/merge/lock builders are used only to **compare calldata after checked planning succeeds**. A raw builder does not prove authority; do not send twice for comparison.
 

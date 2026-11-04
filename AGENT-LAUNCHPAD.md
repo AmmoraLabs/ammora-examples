@@ -5,7 +5,7 @@ It downloads the complete source project without a GitHub invitation. After the
 keyless smoke, use [the connected walkthrough](#11-connect-the-whole-lifecycle)
 to pass confirmed identities and approvals between the steps below.
 
-Use these examples to connect an agent to public SDK `@ammora-protocol/sdk@0.3.8`
+Use these examples to connect an agent to public SDK `@ammora-protocol/sdk@0.3.9`
 on GIWA Sepolia. The agent can read Configs and balances, issue tokens, buy and
 sell before graduation, migrate a ready launch, swap after graduation and collect
 authorized Creator, Partner or LP fees. Calls go directly to contracts through
@@ -450,7 +450,7 @@ fund a wallet or revoke residual allowances implicitly.
 ## Supported scope
 
 This is a direct-contract, GIWA testnet integration example using public SDK
-0.3.8. It has no automatic SDK publication, mainnet activation, production
+0.3.9. It has no automatic SDK publication, mainnet activation, production
 deployment, on-chain session-key creation, fee-split change or unrestricted
 shell/ABI tool. Existing valid fee and LP evidence remains in its original
 scope; the [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md)

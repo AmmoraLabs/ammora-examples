@@ -1,6 +1,6 @@
 # Ammora examples
 
-Contract integration examples for **@ammora-protocol/sdk 0.3.8** on GIWA Sepolia.
+Contract integration examples for **@ammora-protocol/sdk 0.3.9** on GIWA Sepolia.
 MIT licensed. No Ammora invitation is required to read, install or use these examples.
 Creating a launchpad Config is permissionless; a wallet owner still authorizes their transactions. Token-policy and administrator-only operations retain their contract permission checks.
 
@@ -31,6 +31,7 @@ Partner teams should start with [PARTNER-QUICKSTART.md](PARTNER-QUICKSTART.md), 
 - [Stablecoin pool onboarding](STABLECOIN-QUICKSTART.md)
 - [Vesting](VESTING.md)
 - [All 190 contract/tool commands](docs/CONTRACT-FEATURES.md)
+- [SDK 0.3.9 module availability and deployment requirements](SDK-STATUS.md)
 - [Validation and execution scope](VALIDATION.md)
 
 Browse [public documentation](https://docs.ammora.org/) or [source downloads](https://docs.ammora.org/examples).

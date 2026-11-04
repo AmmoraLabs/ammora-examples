@@ -1,11 +1,11 @@
-# Build a launchpad with SDK 0.3.8
+# Build a launchpad with SDK 0.3.9
 
 Start with the **[single end-to-end launchpad guide](https://docs.ammora.org/guides/launchpad)** for the
 complete Config → issuance/ALC → trading → Graduation → ARL → fee/LP claim flow,
 platform roles and the prioritized feature review. This page is the source-level reference.
 
 These examples cover the user flow from an immutable Config to a trading token and its
-Graduation pool. Use the published `@ammora-protocol/sdk@0.3.8` (the version pinned by this repository). Examples use an RPC endpoint and the selected chain. Standalone creation/trading
+Graduation pool. Use the published `@ammora-protocol/sdk@0.3.9` (the version pinned by this repository). Examples use an RPC endpoint and the selected chain. Standalone creation/trading
 files read the adjacent reviewed `runtime-pins.giwa.json` (or `AMMORA_RUNTIME_PINS_FILE`)
 and verify actual bytecode against it. Use Node 22 or 24;
 the commands below run after `npm ci --ignore-scripts`.
@@ -39,7 +39,7 @@ All commands run as `npm run <command> -- <arguments>` from the repository root.
 
 For ALC and graduated swaps, use [safe-swap.ts](https://docs.ammora.org/examples/source/src/quickstart/safe-swap.ts.txt) as in the guide.
 Creator transfer uses [transfer-creator.ts](https://docs.ammora.org/examples/source/src/launch/transfer-creator.ts.txt) and its [guide](https://docs.ammora.org/guides/src-launch-creator-transfer).
-Atomic Config + launch + first buy uses [the SDK 0.3.7 convenience example](https://docs.ammora.org/examples/source/src/launch/team/create-config-and-pool-with-first-buy.ts.txt)
+Atomic Config + launch + first buy uses [the convenience example introduced in SDK 0.3.7](https://docs.ammora.org/examples/source/src/launch/team/create-config-and-pool-with-first-buy.ts.txt)
 and [the integrated first-buy instructions](https://docs.ammora.org/guides/launchpad#atomic-first-buy). Quick Create itself has no first buy.
 For beneficiary delegation and sequential batch claims, see [FeeVault examples](https://docs.ammora.org/guides/src-fees-readme).
 

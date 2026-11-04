@@ -34,7 +34,7 @@ try {
   const tools = agentTools(agent);
   const context = await rpc.bounded(() => tools.agent_get_context({}));
   const config = await rpc.bounded(() => tools.agent_get_config({ configId: '6' }));
-  if (context.chainId !== 91342 || context.sdkVersion !== '0.3.8' || config.configHash !== template.configHash || !config.enabled) throw new Error('GIWA agent read mismatch');
+  if (context.chainId !== 91342 || context.sdkVersion !== '0.3.9' || config.configHash !== template.configHash || !config.enabled) throw new Error('GIWA agent read mismatch');
   console.log(JSON.stringify({ sdk: context.sdkVersion, chainId: context.chainId, configId: '6', configHash: config.configHash,
     quoteToken: config.config.quoteToken, snapshot: context.snapshot, toolDefinitions: toolDefinitions.length,
     signerConnected: false, transactionsSubmitted: 0, rpc: rpc.stats() }, null, 2));

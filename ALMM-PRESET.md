@@ -1,8 +1,8 @@
-# Low-fee ALMM presets — public SDK 0.3.8
+# Low-fee ALMM presets — public SDK 0.3.9
 
 [Complete stablecoin flow](https://docs.ammora.org/guides/stablecoin-partner) · [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md)
 
-Use the existing `createPoolFromPreset` path for **reviewed, exact-transfer ERC20s issued on GIWA**. This does not reissue tokens, use Launch Config/curve/graduation, or change existing fee sharing and LP locks. It uses public **0.3.8** without republishing the SDK.
+Use the existing `createPoolFromPreset` path for **reviewed, exact-transfer ERC20s issued on GIWA**. This does not reissue tokens, use Launch Config/curve/graduation, or change existing fee sharing and LP locks. It uses public **0.3.9** without republishing the SDK.
 
 ## Support status
 
@@ -10,7 +10,7 @@ Use the existing `createPoolFromPreset` path for **reviewed, exact-transfer ERC2
 |---|---|
 | Default GIWA ALMM catalog | Default fee is 30bp. The controlled wallet is not factory owner; inspected indexed logs did not provide a reviewable low-fee preset. **Creating a 1bp pool on the default factory is BLOCKED** |
 | Isolated synthetic test | An immutable 1bp preset in an opt-in manifest was tested for creation, LP supply, swaps in both directions, claims, and withdrawal. New creation with that test preset was disabled during cleanup. These are not official FDUSD/cUSD assets or the default catalog |
-| Public SDK | 0.3.8 provides `getALMMPresetReadiness`, `getALMMPositionReadiness`, and `hashALMMPreset` |
+| Public SDK | 0.3.9 provides `getALMMPresetReadiness`, `getALMMPositionReadiness`, and `hashALMMPreset` |
 | Examples | The [existing import path](https://docs.ammora.org/examples/source/src/stablecoin/almm-readiness-compat.ts.txt) re-exports the public SDK; readiness and authority checks use the installed SDK |
 | ARL 25bp floor / final 1 raw liquidity | Existing limits remain; ALMM 1bp success does not resolve ARL limits |
 | Real issuer pilot | Requires issuer approval, asset addresses, code/authority review, reference prices, liquidity, and a reviewed canonical preset; separate from test success |
@@ -32,7 +32,7 @@ Reads require no key. Sends require the reviewed LP wallet's GIWA gas ETH, small
 ## One operation per call
 
 1. Review the preset ID already registered by factory owner and every preset field: binStep, base fee, maximum dynamic fee, protocol share, function/collection mode, and enabled state. Do not automatically trust live values or change factory settings from examples.
-2. Pin `hashALMMPreset(reviewedPreset)` for the complete preset; import directly from `@ammora-protocol/sdk` in 0.3.8. The [sample request](https://docs.ammora.org/examples/source/src/stablecoin/fixtures/almm-lowfee-preset-request.json.txt) contains an **ID/hash for the synthetic test deployment only**.
+2. Pin `hashALMMPreset(reviewedPreset)` for the complete preset; import directly from `@ammora-protocol/sdk` in 0.3.9. The [sample request](https://docs.ammora.org/examples/source/src/stablecoin/fixtures/almm-lowfee-preset-request.json.txt) contains an **ID/hash for the synthetic test deployment only**.
 3. Read actual readiness and blockers with `stablecoin:check-almm-preset`.
 4. Plan empty-pool creation with `stablecoin:create-almm-preset` and use reviewed execution. The example supports only PermissionlessV2 with an empty lifecycle; review other lifecycle/activation requirements separately.
 5. Before seeding, reconcile the creation receipt's expected address, factory membership, actual fee/dynamic settings, and modes with the reviewed inputs.
@@ -63,4 +63,4 @@ Historical manifests use `observedAt: 0` to prevent automatic new exposure. To r
 
 ## Integrating one ALMM model
 
-See the [ALMM unified guide](https://docs.ammora.org/guides/almm-unified) for low fees, fee-only delegation, separate payout, full LP withdrawal, and re-entry. It uses public SDK 0.3.8 with a source-pinned compatibility module while preserving existing deployments and evidence.
+See the [ALMM unified guide](https://docs.ammora.org/guides/almm-unified) for low fees, fee-only delegation, separate payout, full LP withdrawal, and re-entry. It uses public SDK 0.3.9 with official fee-routing functions while preserving existing deployments and evidence.

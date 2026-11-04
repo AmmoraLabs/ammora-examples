@@ -1,7 +1,7 @@
-# From recipients to fee claims — SDK 0.3.8
+# From recipients to fee claims — SDK 0.3.9
 
 Use this guide at the Config step of the [integrated launchpad guide](https://docs.ammora.org/guides/launchpad).
-It uses the public `@ammora-protocol/sdk@0.3.8` for direct contract calls.
+It uses the public `@ammora-protocol/sdk@0.3.9` for direct contract calls.
 Choose recipients and the Creator/Partner split for a new Config, preview distributions before and after graduation, then follow the claim path for each role.
 
 ## 1. Who configures and who claims?
@@ -164,7 +164,7 @@ Use the JSON creation path in the [DFS/AFS examples](https://docs.ammora.org/gui
 ```bash
 cp src/dfs/sharing.example.json sharing.json
 # Replace owner/token/base/recipients/userSalt with actual values.
-# Factory is the public SDK 0.3.8 GIWA auto-route catalog address.
+# Factory is the public SDK 0.3.9 GIWA auto-route catalog address.
 export AMMORA_ACCOUNT='REPLACE_WITH_VAULT_CREATOR'
 npm run dfs:create-json -- preview sharing.json
 AMMORA_SEND=1 npm run dfs:create-json -- create sharing.json 'REPLACE_WITH_SHARING_REVIEW_HASH'

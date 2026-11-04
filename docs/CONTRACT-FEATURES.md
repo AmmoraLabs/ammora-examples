@@ -1,4 +1,4 @@
-# Contract example inventory — SDK 0.3.8
+# Contract example inventory — SDK 0.3.9
 
 Each command calls a contract operation or exposes an agent tool. Shared helpers handle transport, previews and owner authorization.
 

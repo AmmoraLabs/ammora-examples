@@ -1,6 +1,6 @@
-# Token vesting examples — SDK 0.3.8
+# Token vesting examples — SDK 0.3.9
 
-Use public SDK **0.3.8** and Math **0.3.0**. Existing launch, revenue, and LP examples remain available; the new CLI is in `src/vesting/`. Commands default to reads or unsigned plans. A send requires `AMMORA_SEND=1`, your own signing wallet, and the reviewed reviewHash.
+Use public SDK **0.3.9** and Math **0.3.0**. Existing launch, revenue, and LP examples remain available; the new CLI is in `src/vesting/`. Commands default to reads or unsigned plans. A send requires `AMMORA_SEND=1`, your own signing wallet, and the reviewed reviewHash.
 
 ## 0. First installation
 
@@ -27,7 +27,7 @@ npm run launch:vesting-config -- src/vesting/allocation.example.json
 npm run token-lock:inspect -- 0x852Dc7B07361C9bab17024f20F25804502728f07
 ```
 
-For a separate ESM app, install `npm install --save-exact @ammora-protocol/sdk@0.3.8 viem`. That alone does not add `npm run token-lock:*` commands. The complete [public-package-only sample](https://docs.ammora.org/examples/source/onboarding/vesting-smoke.mjs.txt) runs without relative imports, deployment JSON, or internal environment files. In this examples project, run `node onboarding/vesting-smoke.mjs`. It performs current reads, an unsigned creation plan, and **historical-block reconciliation of an existing claim**; it cannot sign. The public Docs Token vesting quickstart includes the same file.
+For a separate ESM app, install `npm install --save-exact @ammora-protocol/sdk@0.3.9 viem`. That alone does not add `npm run token-lock:*` commands. The complete [public-package-only sample](https://docs.ammora.org/examples/source/onboarding/vesting-smoke.mjs.txt) runs without relative imports, deployment JSON, or internal environment files. In this examples project, run `node onboarding/vesting-smoke.mjs`. It performs current reads, an unsigned creation plan, and **historical-block reconciliation of an existing claim**; it cannot sign. The public Docs Token vesting quickstart includes the same file.
 
 ## 1. Calculate a launch vesting allocation
 
@@ -147,7 +147,7 @@ npm run stablecoin:check-almm-preset -- <reviewed-manifest.json> <preset-request
 npm run stablecoin:check-almm-position -- <reviewed-manifest.json> <pool> <tokenId>
 ```
 
-The compatibility module path remains, but it re-exports public SDK `getALMMPresetReadiness`, `getALMMPositionReadiness`, and `hashALMMPreset`. New stablecoin plans use SDK 0.3.8; replan and review stored 0.3.7 send plans. Historical execution evidence remains in separate original snapshots. Default factory/preset, fee settings, and LP authority are unchanged.
+The compatibility module path remains, but it re-exports public SDK `getALMMPresetReadiness`, `getALMMPositionReadiness`, and `hashALMMPreset`. New stablecoin plans use SDK 0.3.9; replan and review stored 0.3.7 send plans. Historical execution evidence remains in separate original snapshots. Default factory/preset, fee settings, and LP authority are unchanged.
 
 ## Validation scope
 
