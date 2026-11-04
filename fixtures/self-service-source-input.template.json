@@ -1,0 +1,8 @@
+{
+  "controller": "YOUR_CONTROLLER_ADDRESS",
+  "partner": "YOUR_ORIGINAL_PARTNER_ADDRESS",
+  "quote": "0x895Accaa08592db82FE689f3453AD81C8D319027",
+  "base": "0xD75683D949180970F500fF791de97Df9ab728aaa",
+  "market": "0xc81083Bf204d4A261b14C4f90D9Ba04342381ebD",
+  "family": 0
+}

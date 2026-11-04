@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "label": "Ammora isolated GIWA synthetic admission test; not a reviewed real-partner or issuer deployment",
+  "testOnly": true,
+  "evidence": "docs/SELF-SERVICE-VALIDATION.md",
+  "chainId": 91342,
+  "genesisHash": "0xca1b5fee64a196abfca007b3a4d4e3ec2b37be83a452d452bf4e45937004cab2",
+  "admission": {
+    "address": "0x9f732f91Fe04a11a048A27D83Ab834bdbf65aD8A",
+    "runtimeHash": "0x0c0a31dc51d7f7df4257283e9dc8347bbcf60e7cb5a1ea5729dddd734757b715"
+  },
+  "registry": {
+    "address": "0xC7D923f7344Fb3036C5Ac6cCd77A82F28ae388B6",
+    "runtimeHash": "0x125d5c8f972d00b9613ca35561feafb7edaf54120c8539c394d997830d9cb497"
+  },
+  "factory": {
+    "address": "0x5F3755CbC430970e4c5ECf6A614A55A81495B51e",
+    "runtimeHash": "0x35c25d6da718f76dc9813b982efa3e1cc78db88d48d6c50291dd161806c88ef9"
+  },
+  "router": {
+    "address": "0xeFeB008a05EeCDa5D1a5f45D01d187EB70c17B6b",
+    "runtimeHash": "0xae099beca27b7d9283a7a98c6acf2b63eb6d4510c81fc5d8c93104966313183e"
+  },
+  "wrapper": {
+    "address": "0x895Accaa08592db82FE689f3453AD81C8D319027",
+    "runtimeHash": "0xa23d806a2bc27dfd6d96db5c3cd736828e1314bef677dad18e8c3bca9b909295"
+  }
+}

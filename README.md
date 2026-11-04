@@ -29,8 +29,9 @@ Partner teams should start with [PARTNER-QUICKSTART.md](PARTNER-QUICKSTART.md), 
 - [Agent tools and connected lifecycle](AGENT-LAUNCHPAD.md)
 - [Fee splits, Creator/Partner claims and LP delegation](FEE-SHARING.md)
 - [Stablecoin pool onboarding](STABLECOIN-QUICKSTART.md)
+- [External-source self-service registration](SELF-SERVICE.md)
 - [Vesting](VESTING.md)
-- [All 190 contract/tool commands](docs/CONTRACT-FEATURES.md)
+- [All 198 contract/tool commands](docs/CONTRACT-FEATURES.md)
 - [SDK 0.3.9 module availability and deployment requirements](SDK-STATUS.md)
 - [Validation and execution scope](VALIDATION.md)
 

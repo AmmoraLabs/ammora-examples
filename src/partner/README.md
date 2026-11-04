@@ -1,12 +1,14 @@
-# SDK 0.3.4 partner examples
+# SDK 0.3.9 partner examples
 
 The [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md)
 maps SDK coverage and remaining operational gates. These commands retain the local
 synthetic scope below. Direct FeeVault/LP examples have separate
 [validation scope](https://github.com/AmmoraLabs/ammora-examples/blob/main/VALIDATION.md).
 
+For external-source registration on GIWA, use the [self-service guide](../../../SELF-SERVICE.md) and the feature examples in `self-service/`. They use the public 0.3.9 package and are separate from the offline fixtures below.
+
 These five commands are deterministic **SYNTHETIC_OFFLINE** examples. They use local
-installed SDK 0.3.4 APIs, chain **31337** and a bounded in-memory RPC fixture. No API service,
+installed SDK 0.3.9 APIs, chain **31337** and a bounded in-memory RPC fixture. No API service,
 network, key, signer, wallet prompt or broadcast is involved. Unset `AMMORA_SEND`;
 setting it to `1` makes every command refuse to run.
 
@@ -101,7 +103,7 @@ No existing C1 automation or public contract is restarted by these examples. See
 ## Direct contract state examples
 
 `partner:graduation-state` and `partner:pool-state` read deployed contracts through
-SDK0.3.1 and RPC. They are separate from the offline examples above and require a
+the installed SDK 0.3.9 and RPC. They are separate from the offline examples above and require a
 raw deployment manifest with independently reviewed addresses, runtime hashes,
 start blocks, source/destination versions and source-review/admission fields:
 
