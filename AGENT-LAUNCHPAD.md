@@ -283,7 +283,8 @@ fresh plan and review.
 import { finalFill, graduate, buy, sell } from "./src/agent/index.js";
 
 const terminal = await connection.bounded(() => finalFill(connection.agent, "final-fill-001", curve, maximumQuoteRaw));
-// Approve, submit and reconcile terminal. Inspect actual consumed input and refund.
+// Approve, submit and reconcile terminal. Inspect actual consumed and unused input.
+// On this GIWA ERC20 path unused input stays in the wallet; it is not a refund payment.
 const migration = await connection.bounded(() => graduate(connection.agent, "migration-001", curve));
 // Separately approve, submit and reconcile migration. Save its canonicalPool.
 const afterBuy = await connection.bounded(() => buy(connection.agent, "pool-buy-001", curve, quoteInputRaw));

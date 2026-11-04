@@ -39,6 +39,7 @@ For a ready-to-forward Korean introduction with product links and permission bou
 
 ## Choose a flow
 
+- [Partner onboarding review](docs/PARTNER-ONBOARDING-REVIEW.md)
 - [Permission and review matrix](PERMISSIONS.md)
 - [Partner quickstart](PARTNER-QUICKSTART.md)
 - [Config → issuance → trading → graduation → claims](LAUNCHPAD.md)
