@@ -55,3 +55,5 @@ export AMMORA_SEND=0
 상세 조건은 [승인·검토 기준](https://docs.ammora.org/guides/permissions)을 확인해주세요. 공개 API·Indexer 연동 없이 컨트랙트 중심으로 시작할 수 있습니다. 이 안내는 GIWA 테스트넷 기준이며 실제 발행사 지원·메인넷 운영·공개 앱 노출은 별도 확인 대상입니다.
 
 최종 [온보딩 점검 결과](https://docs.ammora.org/guides/docs-partner-onboarding-review)는 문서·예제 연결 검사와 기존 GIWA 검증의 재사용 범위를 구분합니다. 새 파트너의 자산·권한·잔액을 새로 검증했다는 뜻은 아닙니다.
+
+[새 프로젝트의 SDK 0.3.9 실제 GIWA 실행 결과](https://docs.ammora.org/guides/docs-fresh-partner-giwa-039): 새 Config·발행·졸업 전후 거래·실제 수수료 지급과 승인 회수 18건을 확인했습니다. 스테이블코인·외부 수익원·베스팅·기존 위임 지급은 새 조회/계획 실행과 과거 유효한 온체인 검증 재사용을 구분했습니다. 다른 팀의 테스트 자산·NFT를 자기 입력으로 복사하지 마세요.

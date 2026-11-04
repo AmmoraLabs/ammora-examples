@@ -1,0 +1,559 @@
+{
+  "schema": "ammora.fresh-partner-giwa/1",
+  "date": "2026-11-05",
+  "classification": "PASSED_THIS_RUN",
+  "network": {
+    "chainId": 91342,
+    "name": "GIWA Sepolia",
+    "rpc": "https://sepolia-rpc.giwa.io"
+  },
+  "source": {
+    "repository": "https://github.com/AmmoraLabs/ammora-examples",
+    "commit": "35b67bd042153fbe3386bad1a4f683b23b3db347",
+    "tree": "223c0ee7cfd271982b2c6c36cffbc8e51f3a5229",
+    "SDK": "0.3.9",
+    "SDKRuntimeSHA256": "b511c00514e90aaf18f52f29833f5eda72423659bd34e5f80bce46ba3489b3ad",
+    "lockfileSHA256": "686a9efa94984260e0c1ad0a6980616bce7dc7a4225bb920b0006e13788c97bf",
+    "environment": "Node24.18.0/macOS arm64; anonymous fresh clone and npm ci --ignore-scripts"
+  },
+  "contracts": {
+    "config": {
+      "id": "25",
+      "hash": "0xdddfff9e47ef1b8e950f6e1302923c280da3c80dda4198fa1a61b4b27bbeca93"
+    },
+    "token": "0xeFD0b74cB733534D6554894c0FdF5931a711BCFB",
+    "curve": "0xCc803Eb81b7Cf3a71dBF17d25E342e45F17be209",
+    "pool": "0xD912Fa18061E5665136AE5dBc002aDa0fc0D3c28",
+    "manager": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+    "LPTokenIds": [
+      "35",
+      "36",
+      "37"
+    ]
+  },
+  "transactions": [
+    {
+      "nonce": 2092,
+      "hash": "0x646d114e693fe58d4b64354448e415833f0c0312430969fddc72d50cc92a8385",
+      "action": "config",
+      "blockNumber": "40471009",
+      "blockHash": "0x4ff4d4c77436813541fb549536d556b57bef729da1dad75a73853e8e755c8d4b",
+      "executionGasFeeWei": "131016960",
+      "l1FeeWei": "470"
+    },
+    {
+      "nonce": 2093,
+      "hash": "0xe7e60b5c7edd591ef69f7d05f77c56829ae9f7dc0b32d6fdecb02a1c61bfb93b",
+      "action": "launch",
+      "blockNumber": "40471062",
+      "blockHash": "0x96c13d5623f8f57f3eb1b33c38ce8b8385795ec2d53777566e51e03f67306ca1",
+      "executionGasFeeWei": "373804283",
+      "l1FeeWei": "196"
+    },
+    {
+      "nonce": 2094,
+      "hash": "0xbb0ea5eb61dea456c1d261c1c44ab6f7334b8a1670643e67e7ce30175b4e6806",
+      "action": "approval",
+      "blockNumber": "40471129",
+      "blockHash": "0x5873d5d51322bc06e58039888b2e8bcfacc0615ac15a6dc5a6353e8a332dd199",
+      "executionGasFeeWei": "12454830",
+      "l1FeeWei": "115"
+    },
+    {
+      "nonce": 2095,
+      "hash": "0xcb02b80e544b56c5c9bfc2d103e8b8d0da697ebc800519eb4376b0b038c4083c",
+      "action": "trade",
+      "blockNumber": "40471204",
+      "blockHash": "0x71e6c996270a2df805ca41d1748b9b507a1c266b97ddbb19077ef1ea8ec6f1fd",
+      "executionGasFeeWei": "77700608",
+      "l1FeeWei": "118"
+    },
+    {
+      "nonce": 2096,
+      "hash": "0x2c9d497c4e8cc72d10d8cd3a4cfdbda1cac273e856ae24c294ea731027d307d7",
+      "action": "approval",
+      "blockNumber": "40471276",
+      "blockHash": "0x35a2b04253121e98c47ff63c19767af0a9f41bd92826916e89481206f94aaa24",
+      "executionGasFeeWei": "13219472",
+      "l1FeeWei": "193"
+    },
+    {
+      "nonce": 2097,
+      "hash": "0xbd511feb606f44fb780060d4678c0916139b46894d9ba0e2fa69160e52422655",
+      "action": "trade",
+      "blockNumber": "40471349",
+      "blockHash": "0xd5d7fef6dfb86744d1da57556fd8c8ee4453fa141ef3e8c93e96be12ba630c29",
+      "executionGasFeeWei": "58748066",
+      "l1FeeWei": "122"
+    },
+    {
+      "nonce": 2098,
+      "hash": "0xb809bbce71033d014e50b2fe4321ab0a6946dd4631689280cce3d168a3cdafe9",
+      "action": "approval",
+      "blockNumber": "40471421",
+      "blockHash": "0x3c669a1e986525bd3090a5538b0de3f945a59d5af3f3ab4fa14675a6034b3062",
+      "executionGasFeeWei": "12642634",
+      "l1FeeWei": "110"
+    },
+    {
+      "nonce": 2099,
+      "hash": "0x12d1e4c020c8b56819d9f6010e82c4e8a8c1855aebfb0bcdab9c2a8a013f2c90",
+      "action": "trade",
+      "blockNumber": "40471496",
+      "blockHash": "0xc9f2d2b47b18258fd2418e9bae28eebbda2b10b69be1855ef4a0dc6d7d6292ea",
+      "executionGasFeeWei": "61058976",
+      "l1FeeWei": "122"
+    },
+    {
+      "nonce": 2100,
+      "hash": "0x433f2c803f3dbb3b1d9090b3da848f7b7e35304346cafb9ab753a4d90601b276",
+      "action": "migrate",
+      "blockNumber": "40471573",
+      "blockHash": "0x7a09c8c3c55356d021796ab445f55a7a7387afe6e84162f69cf82cb748dbe319",
+      "executionGasFeeWei": "516205710",
+      "l1FeeWei": "191"
+    },
+    {
+      "nonce": 2101,
+      "hash": "0xaae971080b6479f4e96761a83804f6f7bc20672f0a644a73bbef90e418772e39",
+      "action": "approval",
+      "blockNumber": "40471664",
+      "blockHash": "0x5c50643a496057436a8982f49c29a3dcc229753a77975002d628747fff554c79",
+      "executionGasFeeWei": "12267122",
+      "l1FeeWei": "191"
+    },
+    {
+      "nonce": 2102,
+      "hash": "0xd8cffa8f41120ec583f1a85e49738128587b06d8745d1721c6dc69e4feca8e25",
+      "action": "trade",
+      "blockNumber": "40471746",
+      "blockHash": "0x0a25eb21606e6a1140110d2078350b00159c43762273584bb7cccd4eda9aa893",
+      "executionGasFeeWei": "68144274",
+      "l1FeeWei": "219"
+    },
+    {
+      "nonce": 2103,
+      "hash": "0x2b00818f59b28b24081dcc9e3989fd45f32fcaaacca8b5f99bf56702cfb0826f",
+      "action": "approval",
+      "blockNumber": "40471827",
+      "blockHash": "0x2236098a2982635ed41f213175e8f412bc552dc2455a92d6fb0f20c9acb7298a",
+      "executionGasFeeWei": "13122270",
+      "l1FeeWei": "193"
+    },
+    {
+      "nonce": 2104,
+      "hash": "0x74914d0c0fbb4b3f53bc7e68cd0099d50da1cfbb77f2341cc89be3dde5a7d85d",
+      "action": "trade",
+      "blockNumber": "40471909",
+      "blockHash": "0x4857f73fb47ad95b6832e4a8a767c30c47eae63811907a937f65fb213436ce96",
+      "executionGasFeeWei": "82382128",
+      "l1FeeWei": "244"
+    },
+    {
+      "nonce": 2105,
+      "hash": "0xd53386a278eacc29c4cf0f43c81898bf30ea9c2cc4dfd973c62174e6e2c3db49",
+      "action": "claim-launch",
+      "blockNumber": "40471987",
+      "blockHash": "0xf97e12a2de24fda5ee0d950ac3652d9aacc25e37766153eac7084a6c0838d5f3",
+      "executionGasFeeWei": "13552966",
+      "l1FeeWei": "193"
+    },
+    {
+      "nonce": 2106,
+      "hash": "0xaacaf278dfcd58f3ecc9bdfe7255d60f6fc9c2799aefc623bc5c7d98857ca23d",
+      "action": "claim-launch",
+      "blockNumber": "40472064",
+      "blockHash": "0x951320ead0f28ad6b12c010c79f1344507a36517c09df0b8d3bb3f6b92d6c9f4",
+      "executionGasFeeWei": "11851224",
+      "l1FeeWei": "219"
+    },
+    {
+      "nonce": 2107,
+      "hash": "0xe99284ddf00ea057c51c1442a406e2459e4318d230bc66edc6304038ad429993",
+      "action": "claim-lp",
+      "blockNumber": "40472147",
+      "blockHash": "0x50419b352ba43b221780c65f538235a78f7894efd9758d3d9105807210154e22",
+      "executionGasFeeWei": "68865633",
+      "l1FeeWei": "204"
+    },
+    {
+      "nonce": 2108,
+      "hash": "0xcff24c987fc1ff3a37d6907aaa2d09f17b9d6a8715909c53366d4356c5328ef3",
+      "action": "claim-lp",
+      "blockNumber": "40472461",
+      "blockHash": "0xf68a821a776568e61044ff106972bc7b77a99d91882fd74d09936a42fe3a7633",
+      "executionGasFeeWei": "70448751",
+      "l1FeeWei": "199"
+    },
+    {
+      "nonce": 2109,
+      "hash": "0x291cd56266c301f271d31f5f73d30d7ab208b02025de88b591ef42f929147b08",
+      "action": "task-allowance-revoke",
+      "blockNumber": "40472534",
+      "blockHash": "0x1c11406f6cb74891523e2f95310b5628b46512682b84ba2b2996abc39591ae06",
+      "executionGasFeeWei": "6480508",
+      "l1FeeWei": "199"
+    }
+  ],
+  "positiveClaimTransactions": [
+    {
+      "action": "claim-own-quote",
+      "hash": "0xd53386a278eacc29c4cf0f43c81898bf30ea9c2cc4dfd973c62174e6e2c3db49",
+      "nonce": 2105,
+      "proof": {
+        "attribution": "Aggregate beneficiary/token FeeVault payout, not per-launch",
+        "blockHash": "0xf97e12a2de24fda5ee0d950ac3652d9aacc25e37766153eac7084a6c0838d5f3",
+        "blockNumber": "40471987",
+        "confirmationScope": "Canonical with at least 13 confirmations; not a claim of finalized status",
+        "hash": "0xd53386a278eacc29c4cf0f43c81898bf30ea9c2cc4dfd973c62174e6e2c3db49",
+        "payment": {
+          "balance": {
+            "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+            "afterRaw": "3347160099390078",
+            "balanceIncreased": true,
+            "beforeRaw": "3339927997494599",
+            "blockDeltaRaw": "7232101895479",
+            "otherBlockDeltaRaw": "0",
+            "receiptDeltaRaw": "7232101895479",
+            "token": "0x4200000000000000000000000000000000000006"
+          },
+          "beneficiary": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+          "grossAmountRaw": "7232101895479",
+          "netAmountRaw": "7232101895479",
+          "payout": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+          "payoutVerified": true,
+          "token": "0x4200000000000000000000000000000000000006"
+        },
+        "payoutVerified": true,
+        "receiptVerified": true
+      }
+    },
+    {
+      "action": "claim-own-base",
+      "hash": "0xaacaf278dfcd58f3ecc9bdfe7255d60f6fc9c2799aefc623bc5c7d98857ca23d",
+      "nonce": 2106,
+      "proof": {
+        "attribution": "Aggregate beneficiary/token FeeVault payout, not per-launch",
+        "blockHash": "0x951320ead0f28ad6b12c010c79f1344507a36517c09df0b8d3bb3f6b92d6c9f4",
+        "blockNumber": "40472064",
+        "confirmationScope": "Canonical with at least 13 confirmations; not a claim of finalized status",
+        "hash": "0xaacaf278dfcd58f3ecc9bdfe7255d60f6fc9c2799aefc623bc5c7d98857ca23d",
+        "payment": {
+          "balance": {
+            "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+            "afterRaw": "1000030188932",
+            "balanceIncreased": true,
+            "beforeRaw": "1000009780769",
+            "blockDeltaRaw": "20408163",
+            "otherBlockDeltaRaw": "0",
+            "receiptDeltaRaw": "20408163",
+            "token": "0xeFD0b74cB733534D6554894c0FdF5931a711BCFB"
+          },
+          "beneficiary": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+          "grossAmountRaw": "20408163",
+          "netAmountRaw": "20408163",
+          "payout": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+          "payoutVerified": true,
+          "token": "0xeFD0b74cB733534D6554894c0FdF5931a711BCFB"
+        },
+        "payoutVerified": true,
+        "receiptVerified": true
+      }
+    },
+    {
+      "action": "claim-lp",
+      "hash": "0xe99284ddf00ea057c51c1442a406e2459e4318d230bc66edc6304038ad429993",
+      "nonce": 2107,
+      "proof": {
+        "balances": [
+          {
+            "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+            "afterRaw": "1000030238931",
+            "balanceIncreased": true,
+            "beforeRaw": "1000030188932",
+            "blockDeltaRaw": "49999",
+            "otherBlockDeltaRaw": "0",
+            "receiptDeltaRaw": "49999",
+            "token": "0xeFD0b74cB733534D6554894c0FdF5931a711BCFB"
+          },
+          {
+            "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+            "afterRaw": "3347160104390077",
+            "balanceIncreased": true,
+            "beforeRaw": "3347160099390078",
+            "blockDeltaRaw": "4999999",
+            "otherBlockDeltaRaw": "0",
+            "receiptDeltaRaw": "4999999",
+            "token": "0x4200000000000000000000000000000000000006"
+          }
+        ],
+        "blockHash": "0x50419b352ba43b221780c65f538235a78f7894efd9758d3d9105807210154e22",
+        "blockNumber": "40472147",
+        "confirmationScope": "Canonical with at least 13 confirmations; not a claim of finalized status",
+        "hash": "0xe99284ddf00ea057c51c1442a406e2459e4318d230bc66edc6304038ad429993",
+        "payment": {
+          "baseAmount": "49999",
+          "coordinate": {
+            "blockHash": "0x50419b352ba43b221780c65f538235a78f7894efd9758d3d9105807210154e22",
+            "blockNumber": "40472147",
+            "chainId": 91342,
+            "emitter": "0x089163706d9956d7baecedf4eab4ad6cce7ca2d6",
+            "logIndex": 33,
+            "transactionHash": "0xe99284ddf00ea057c51c1442a406e2459e4318d230bc66edc6304038ad429993",
+            "transactionIndex": 85
+          },
+          "positionManager": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+          "quoteAmount": "4999999",
+          "recipient": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+          "tokenId": "35"
+        },
+        "payoutVerified": true,
+        "receiptVerified": true
+      }
+    },
+    {
+      "action": "extra-lp-37",
+      "hash": "0xcff24c987fc1ff3a37d6907aaa2d09f17b9d6a8715909c53366d4356c5328ef3",
+      "nonce": 2108,
+      "proof": {
+        "balances": [
+          {
+            "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+            "afterRaw": "1000030268930",
+            "balanceIncreased": true,
+            "beforeRaw": "1000030238931",
+            "blockDeltaRaw": "29999",
+            "otherBlockDeltaRaw": "0",
+            "receiptDeltaRaw": "29999",
+            "token": "0xeFD0b74cB733534D6554894c0FdF5931a711BCFB"
+          },
+          {
+            "account": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+            "afterRaw": "3347160107390076",
+            "balanceIncreased": true,
+            "beforeRaw": "3347160104390077",
+            "blockDeltaRaw": "2999999",
+            "otherBlockDeltaRaw": "0",
+            "receiptDeltaRaw": "2999999",
+            "token": "0x4200000000000000000000000000000000000006"
+          }
+        ],
+        "blockHash": "0xf68a821a776568e61044ff106972bc7b77a99d91882fd74d09936a42fe3a7633",
+        "blockNumber": "40472461",
+        "confirmationScope": "Canonical with at least 13 confirmations; not a claim of finalized status",
+        "hash": "0xcff24c987fc1ff3a37d6907aaa2d09f17b9d6a8715909c53366d4356c5328ef3",
+        "payment": {
+          "baseAmount": "29999",
+          "coordinate": {
+            "blockHash": "0xf68a821a776568e61044ff106972bc7b77a99d91882fd74d09936a42fe3a7633",
+            "blockNumber": "40472461",
+            "chainId": 91342,
+            "emitter": "0x089163706d9956d7baecedf4eab4ad6cce7ca2d6",
+            "logIndex": 26,
+            "transactionHash": "0xcff24c987fc1ff3a37d6907aaa2d09f17b9d6a8715909c53366d4356c5328ef3",
+            "transactionIndex": 20
+          },
+          "positionManager": "0x089163706d9956d7baeCeDF4eAb4aD6CcE7Ca2D6",
+          "quoteAmount": "2999999",
+          "recipient": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+          "tokenId": "37"
+        },
+        "payoutVerified": true,
+        "receiptVerified": true
+      }
+    }
+  ],
+  "zeroFeePosition": {
+    "tokenId": "36",
+    "classification": "NOT_APPLICABLE",
+    "status": "NO_CLAIMABLE_FEES",
+    "signed": false,
+    "paymentCounted": false
+  },
+  "authorityRefusals": [
+    {
+      "name": "FeeVault foreign beneficiary redirection",
+      "denied": true,
+      "error": "Unauthorized",
+      "authorizedSimulationSucceeded": true
+    },
+    {
+      "name": "New LP foreign caller",
+      "denied": true,
+      "error": "InvalidPermission",
+      "authorizedSimulationSucceeded": true
+    }
+  ],
+  "nonGovernanceConfigSimulation": {
+    "classification": "PASSED_THIS_RUN",
+    "caller": "0x000000000000000000000000000000000000dEaD",
+    "registrationRole": false,
+    "signature": false,
+    "transactionSubmitted": false,
+    "evidenceSHA256": "0393d2aaca9456dfaf3b0c7689919b7e281ca6992d7a98053e06af905fbedc67"
+  },
+  "financialCloseout": {
+    "transactionCount": 18,
+    "initialNonce": 2092,
+    "latestAndPendingNonce": 2110,
+    "nativeReceiptFeesWei": "1603969913",
+    "executionGasFeesWei": "1603966415",
+    "l1FeeWei": "3498",
+    "nativeCapWei": "250000000000000",
+    "allFourTaskAllowancesZero": true,
+    "ownLeaseReleased": true,
+    "signingAndSendingStopped": true,
+    "positionsRetained": [
+      {
+        "tokenId": "35",
+        "owner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+        "position": {
+          "pool": "0xD912Fa18061E5665136AE5dBc002aDa0fc0D3c28",
+          "poolPositionId": "2",
+          "unlockedLiquidity": "0",
+          "vestedLiquidity": "0",
+          "permanentLockedLiquidity": "1660424769105735575315338649401",
+          "feeBaseOwed": "0",
+          "feeQuoteOwed": "0",
+          "rewardsOwed": [
+            "0",
+            "0"
+          ],
+          "innerVesting": {
+            "cliffPoint": "0",
+            "periodFrequency": "0",
+            "numberOfPeriod": 0,
+            "cliffUnlockLiquidity": "0",
+            "liquidityPerPeriod": "0",
+            "totalReleasedLiquidity": "0"
+          }
+        }
+      },
+      {
+        "tokenId": "36",
+        "owner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+        "position": {
+          "pool": "0xD912Fa18061E5665136AE5dBc002aDa0fc0D3c28",
+          "poolPositionId": "3",
+          "unlockedLiquidity": "1",
+          "vestedLiquidity": "0",
+          "permanentLockedLiquidity": "0",
+          "feeBaseOwed": "0",
+          "feeQuoteOwed": "0",
+          "rewardsOwed": [
+            "0",
+            "0"
+          ],
+          "innerVesting": {
+            "cliffPoint": "0",
+            "periodFrequency": "0",
+            "numberOfPeriod": 0,
+            "cliffUnlockLiquidity": "0",
+            "liquidityPerPeriod": "0",
+            "totalReleasedLiquidity": "0"
+          }
+        }
+      },
+      {
+        "tokenId": "37",
+        "owner": "0x13cD27a6E337097dB858C9C4FA472FbAd2F2c637",
+        "position": {
+          "pool": "0xD912Fa18061E5665136AE5dBc002aDa0fc0D3c28",
+          "poolPositionId": "1",
+          "unlockedLiquidity": "0",
+          "vestedLiquidity": "0",
+          "permanentLockedLiquidity": "996254861463441345189203189641",
+          "feeBaseOwed": "0",
+          "feeQuoteOwed": "0",
+          "rewardsOwed": [
+            "0",
+            "0"
+          ],
+          "innerVesting": {
+            "cliffPoint": "0",
+            "periodFrequency": "0",
+            "numberOfPeriod": 0,
+            "cliffUnlockLiquidity": "0",
+            "liquidityPerPeriod": "0",
+            "totalReleasedLiquidity": "0"
+          }
+        }
+      }
+    ],
+    "walletBalances": [
+      {
+        "token": "0x4200000000000000000000000000000000000006",
+        "balanceRaw": "3347160107390076"
+      },
+      {
+        "token": "0xeFD0b74cB733534D6554894c0FdF5931a711BCFB",
+        "balanceRaw": "1000030268930"
+      }
+    ],
+    "permanentLpPrincipalWithdrawn": false
+  },
+  "evidenceSHA256": {
+    "connected-live-v2.result.json": "60a46e525fac7d9751ca01265c27fb32831c1c87610f84fac7a0466c9a4ae652",
+    "claim-remaining-task-lp-v2.result.json": "c8cc04caef359922110da688e1f118ba64cd09146ee1407178aff6653c794645",
+    "cleanup-task-allowances-v1.result.json": "904d22d4dbd95b3161298e9ded989e43128de544a30c3ae204dd8d64fcbf809c",
+    "final-chain-audit-v1.result.json": "c71473625ced24cce98d90d8598bd742d1b8f325686e05be8fe235c42896c389",
+    "release-task-lease-v2.result.json": "fe3fdbb8378fa84f5cee3b9ddf17c47cfbc0c0e6871c636257151df7f8733d77",
+    "reuse-integrity-v2.result.json": "de8b2f70839d2383f1775fc3f7996fd7c29ad746c36e6e49fcfef19d3e51c225",
+    "readonly-products-v1.summary.json": "531b70256db4f1de63a73673e8114fd34c2cc2310086cd50ea01feb1baffdf5e",
+    "stable-policy-v1.result.json": "876c448289960a3f59e86b236395b7a6bd48752cf75577cd62daa44622afcbc4",
+    "stable-discover-v1.result.json": "56a169056e082b40f1381a5a6f2a96693bed214a74793e7493e1972d3b8ddd57",
+    "fresh-authority-denials-v1.result.json": "7ab2697a5947a78c77b783fd2c6c8a11c60cc04188b308167f0f8e963dd328da"
+  },
+  "preservedCanonicalReadFailures": [
+    {
+      "code": "CANONICAL_BLOCK_UNAVAILABLE",
+      "operationId": "8c5cbdf8-e419-4ed4-840f-6e8bbc9369d7",
+      "hash": "0xcb02b80e544b56c5c9bfc2d103e8b8d0da697ebc800519eb4376b0b038c4083c",
+      "attempt": 1
+    },
+    {
+      "code": "CANONICAL_BLOCK_UNAVAILABLE",
+      "operationId": "4d95d18a-2558-4b93-b847-be9feba421a9",
+      "hash": "0x2c9d497c4e8cc72d10d8cd3a4cfdbda1cac273e856ae24c294ea731027d307d7",
+      "attempt": 1
+    },
+    {
+      "code": "CANONICAL_BLOCK_UNAVAILABLE",
+      "operationId": "6320fb63-c1b9-4b30-af94-ed627bb00009",
+      "hash": "0xbd511feb606f44fb780060d4678c0916139b46894d9ba0e2fa69160e52422655",
+      "attempt": 1
+    },
+    {
+      "code": "CANONICAL_BLOCK_UNAVAILABLE",
+      "operationId": "68b9bbed-c168-452c-9815-ff0a6d240aa4",
+      "hash": "0xaacaf278dfcd58f3ecc9bdfe7255d60f6fc9c2799aefc623bc5c7d98857ca23d",
+      "attempt": 1
+    },
+    {
+      "code": "CANONICAL_BLOCK_UNAVAILABLE",
+      "operationId": "d15c95ac-47ac-4061-aabc-61d6f6ffdfbd",
+      "hash": "0xe99284ddf00ea057c51c1442a406e2459e4318d230bc66edc6304038ad429993",
+      "attempt": 1
+    }
+  ],
+  "reusedScope": [
+    "Unchanged SDK/examples type/helper/compiler proof",
+    "Prior synthetic stablecoin liquidity, swaps, delegated payouts, denials and cleanup",
+    "Prior external-source delayed admission, trades, weighted payouts, denials and cleanup",
+    "Prior Creator/Partner/distinct-payee and LP delegation evidence",
+    "Prior supported token-vesting creation/claim receipt scope; current completed lock inspection is not new payment"
+  ],
+  "invalidationTriggers": [
+    "Relevant executable/SDK/dependency/runtime/profile identity changes",
+    "Actor/authority/asset/amount/target state changes for a proposed new action",
+    "Canonical receipt evidence or preserved digest no longer matches"
+  ],
+  "notPerformed": [
+    "SDK publication",
+    "GitHub CI",
+    "Mainnet",
+    "API/Indexer integration or deployment",
+    "Real issuer qualification",
+    "Independent custody certification"
+  ]
+}
