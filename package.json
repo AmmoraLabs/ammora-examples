@@ -203,7 +203,15 @@
     "unified:typecheck": "tsc -p extensions/almm-unified/tsconfig.json --noEmit",
     "check:files": "node scripts/check-examples.mjs",
     "test": "node --import tsx --test tests/*.test.ts",
-    "test:agent": "node --import tsx --test tests/agent.test.ts tests/agent-walkthrough.test.ts"
+    "test:agent": "node --import tsx --test tests/agent.test.ts tests/agent-walkthrough.test.ts",
+    "partner:standards": "tsx src/partner/self-service/standards.ts",
+    "partner:diagnose-standard": "tsx src/partner/self-service/diagnose.ts",
+    "partner:deploy-module": "tsx src/partner/self-service/deploy.ts",
+    "partner:register": "tsx src/partner/self-service/register.ts",
+    "partner:activate": "tsx src/partner/self-service/activate.ts",
+    "partner:cancel-registration": "tsx src/partner/self-service/cancel.ts",
+    "partner:reconcile-registration": "tsx src/partner/self-service/reconcile.ts",
+    "partner:create-test-source": "tsx src/partner/self-service/test-source.ts"
   },
   "dependencies": {
     "@ammora-protocol/sdk": "0.3.9",

@@ -4,7 +4,7 @@ Each command calls a contract operation or exposes an agent tool. Shared helpers
 
 Start with [the launchpad guide](../LAUNCHPAD.md), [agent integration](../AGENT-LAUNCHPAD.md), or [stablecoin onboarding](../STABLECOIN-QUICKSTART.md).
 
-The 190 registered commands are listed below. A command being included does not imply that your assets, permissions, funding or deployment are ready. Use unsigned previews and read [validation scope](../VALIDATION.md).
+The 198 registered commands are listed below. A command being included does not imply that your assets, permissions, funding or deployment are ready. Use unsigned previews and read [validation scope](../VALIDATION.md).
 
 | Command | Executable source |
 | --- | --- |
@@ -198,3 +198,18 @@ The 190 registered commands are listed below. A command being included does not 
 | `npm run token-lock:claim-verified -- …` | [src/vesting/claim.ts](../src/vesting/claim.ts) |
 | `npm run agent:tool -- …` | [src/agent/cli.ts](../src/agent/cli.ts) |
 | `npm run agent:tools -- …` | [src/agent/list-tools.ts](../src/agent/list-tools.ts) |
+
+## External-source self-service admission
+
+Follow [SELF-SERVICE.md](../SELF-SERVICE.md). These commands read, prepare unsigned requests or reconcile receipts; they never send. A supported standard is admitted once, and each source controller registers independently with real holder consent and the on-chain delay.
+
+| Command | Executable source |
+| --- | --- |
+| `npm run partner:standards -- …` | [src/partner/self-service/standards.ts](../src/partner/self-service/standards.ts) |
+| `npm run partner:diagnose-standard -- …` | [src/partner/self-service/diagnose.ts](../src/partner/self-service/diagnose.ts) |
+| `npm run partner:deploy-module -- …` | [src/partner/self-service/deploy.ts](../src/partner/self-service/deploy.ts) |
+| `npm run partner:register -- …` | [src/partner/self-service/register.ts](../src/partner/self-service/register.ts) |
+| `npm run partner:activate -- …` | [src/partner/self-service/activate.ts](../src/partner/self-service/activate.ts) |
+| `npm run partner:cancel-registration -- …` | [src/partner/self-service/cancel.ts](../src/partner/self-service/cancel.ts) |
+| `npm run partner:reconcile-registration -- …` | [src/partner/self-service/reconcile.ts](../src/partner/self-service/reconcile.ts) |
+| `npm run partner:create-test-source -- …` | [src/partner/self-service/test-source.ts](../src/partner/self-service/test-source.ts) |
