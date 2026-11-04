@@ -35,6 +35,8 @@ The default environment is GIWA Sepolia, auto-route and unsigned mode. Keep priv
 
 Partner teams should start with [PARTNER-QUICKSTART.md](PARTNER-QUICKSTART.md), then select the guide for their product and use their own wallet/asset configuration.
 
+For a ready-to-forward Korean introduction with product links and permission boundaries, see [Partner introduction (한국어)](PARTNER-INTRO-KO.md).
+
 ## Choose a flow
 
 - [Permission and review matrix](PERMISSIONS.md)
