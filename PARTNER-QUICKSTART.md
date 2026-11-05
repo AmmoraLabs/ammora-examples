@@ -96,6 +96,8 @@ Send this quickstart URL first, followed by the guide matching their product:
 - Launchpad: [Config through graduation and fees](LAUNCHPAD.md).
 - Agent platform: [tool integration and connected lifecycle](AGENT-LAUNCHPAD.md).
 - Stablecoin issuer: [pool onboarding, trading and delegated claims](STABLECOIN-QUICKSTART.md).
+- External revenue: [supported-standard self-service onboarding](SELF-SERVICE.md).
+- Token vesting: [team and investor lock creation and claims](VESTING.md).
 - Every team: [fee recipients and claims](FEE-SHARING.md), [current validation](VALIDATION.md), and this [public source repository](https://github.com/AmmoraLabs/ammora-examples).
 
 A short introduction you can forward:

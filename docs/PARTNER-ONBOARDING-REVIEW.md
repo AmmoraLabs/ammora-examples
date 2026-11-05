@@ -1,6 +1,6 @@
 # Partner onboarding review — SDK 0.3.9
 
-Reviewed from the [Korean partner introduction](https://docs.ammora.org/guides/partner-intro-ko), following each product guide to public example source. This is a documentation and interface review; historical GIWA execution evidence is reused, not a new transaction run or qualification of a new issuer's assets.
+Reviewed from the [partner quickstart](https://docs.ammora.org/guides/partner-quickstart), following each product guide to public example source. This is a documentation and interface review; historical GIWA execution evidence is reused, not a new transaction run or qualification of a new issuer's assets.
 
 ## Follow one product path
 
@@ -15,7 +15,7 @@ Reviewed from the [Korean partner introduction](https://docs.ammora.org/guides/p
 
 ## Clarifications made
 
-The Korean entry now includes common installation and explicit testnet/unsigned environment settings, an agent quickstart, product-specific first interfaces, required partner inputs, and continuation paths. It distinguishes installing the SDK from installing this repository's npm commands, ordinary launchpads from issued stablecoin pools, and unsigned external-source preparation from partner-owned wallet execution. Existing projects should not repeat installation or overwrite environment files when switching guides.
+The partner quickstart includes common installation and explicit testnet/unsigned environment settings, an agent quickstart, product-specific first interfaces, required partner inputs, and continuation paths. It distinguishes installing the SDK from installing this repository's npm commands, ordinary launchpads from issued stablecoin pools, and unsigned external-source preparation from partner-owned wallet execution. Existing projects should not repeat installation or overwrite environment files when switching guides.
 
 The agent graduation example comment now calls the retained amount unused input. On the documented GIWA ERC20 path it stays in the payer wallet; it is not a refund payment. The underlying agent/SDK behavior is unchanged.
 

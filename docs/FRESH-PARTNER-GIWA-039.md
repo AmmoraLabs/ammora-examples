@@ -1,6 +1,6 @@
 # Fresh partner execution — public SDK 0.3.9
 
-On **2026-11-05 KST**, a new anonymous source project followed the [Korean partner introduction](https://docs.ammora.org/guides/partner-intro-ko) and its product guides. Public npm SDK **0.3.9** ran against **GIWA Sepolia (91342)** without a customer invitation or per-Config Ammora approval. Actual writes used an explicitly approved, controlled test wallet and a durable signer journal. This is a controlled partner-role test, not qualification of a real issuer or independent custody.
+On **2026-11-05 KST**, a new anonymous source project exercised the public partner onboarding instructions and product guides. Start new integrations with the [English partner quickstart](https://docs.ammora.org/guides/partner-quickstart). Public npm SDK **0.3.9** ran against **GIWA Sepolia (91342)** without a customer invitation or per-Config Ammora approval. Actual writes used an explicitly approved, controlled test wallet and a durable signer journal. This is a controlled partner-role test, not qualification of a real issuer or independent custody.
 
 The supported launchpad/agent lifecycle completed **18 unique canonical successful transactions**, nonces **2092–2109**. Final latest and pending nonce were **2110**. Creator/Partner FeeVault and two LP claims matched payment events, token Transfers and exact receipt-block balance increases. No public SDK or executable-example change was needed.
 
