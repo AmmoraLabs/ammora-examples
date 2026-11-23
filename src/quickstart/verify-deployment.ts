@@ -1,8 +1,7 @@
 /**
- * Standalone read-only trust-root check.
- *
- * Copy this file into a project, install @ammora-protocol/sdk, viem and dotenv, then run:
- *   AMMORA_CHAIN_ID=91342 npx tsx verify-deployment.ts
+ * Read-only GIWA deployment check. Save this file and runtime-pins.giwa.json in the same directory.
+ * In a Node.js ESM project, install @ammora-protocol/sdk@0.3.9, viem, dotenv and tsx, then run
+ *   AMMORA_CHAIN_ID=91342 AMMORA_GIWA_GENERATION=auto-route npx tsx verify-deployment.ts
  */
 import "dotenv/config";
 import { readFileSync } from "node:fs";
